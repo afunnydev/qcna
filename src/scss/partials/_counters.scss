@@ -1,0 +1,20 @@
+// Counters
+
+.counter {
+    text-align: center;
+}
+
+.counter .counter-number {
+    font-family: $base-heading-font-family;
+    font-size: 50px;
+    font-weight: 700;
+    color: $accent-color;
+    margin: 0 0 30px 0;
+}
+
+.counter .counter-text {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 30px 0;
+}

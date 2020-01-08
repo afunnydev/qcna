@@ -1,0 +1,61 @@
+{#
+ |------------------------------------------------------------------------------
+ | Header template
+ |------------------------------------------------------------------------------
+#}
+
+<div id="top-bar" class="uk-container uk-flex uk-flex-middle">
+    <ul class="list-inline">
+        <li class="uk-margin-right">{% include '_partials/switcher.twig' %}</li>
+        {% cache globally %}
+            {% for link in companySettings.socialLinks %}
+                <li class="uk-margin-right">
+                    <a href="{{ link.url }}" target="_blank" uk-icon="icon: {{ link.icon }}"></a>
+                </li>
+            {% endfor %}
+        {% endcache %}
+    </ul>
+    <ul class="list-inline uk-margin-auto-left">
+        <li class="uk-margin-left">
+            <a href="#" class="uk-button uk-button-primary uk-button-small">{{ "Journalism Login"|t }}</a>
+        </li>
+        <li class="uk-margin-left">
+            <a href="#" class="uk-button uk-button-primary uk-button-small">{{ "Members Area"|t }}</a>
+        </li>
+    </ul>
+</div>
+
+<header id="page-header" class="uk-cover-container uk-light">
+    <img src="/dist/img/hero-background.jpg" uk-cover>
+    <div class="uk-container uk-position-relative">
+        <nav class="uk-navbar-container uk-navbar-transparent uk-light" uk-navbar>
+            <div class="uk-navbar-left">
+                <a class="uk-navbar-item uk-logo uk-padding-remove-left" href="{{ siteUrl }}" aria-expanded="false">
+                    <img src="/dist/img/qcna-logo-navbar.png" alt="QCNA">
+                </a>
+            </div>
+            <div class="uk-navbar-right">
+                <ul class="uk-navbar-nav">
+                    {% for link in navigation.primaryNavigation.all() %}
+                        <li>{{ link.linkItem.getLink() }}</li>
+                    {% endfor %}
+                </ul>
+                 <div class="uk-navbar-item">
+                    <a class="uk-icon-button uk-icon" href="#" uk-icon="icon: search; ratio: 1.5" title="{{ 'Search this website'|t }}"></a>
+                 </div>
+            </div>
+        </nav>
+
+        <div class="uk-flex uk-flex-column uk-flex-center" uk-height-viewport="offset-top: true">
+            <div class="uk-width-3-4@m">
+                <h1>{{ entry.hero.heroTitle ?? 'Undefined content'|t }}</h1>
+                {% if entry.hero.heroContent|length %}
+                    <p>{{ entry.hero.heroContent }}</p>
+                {% endif %}
+                {{ entry.hero.heroButton.getLink({
+                    class: 'uk-button uk-button-default uk-button-large button-rounded',
+                }) }}
+            </div>
+        </div>
+    </div>
+</header>

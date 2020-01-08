@@ -1,0 +1,65 @@
+{#
+ |------------------------------------------------------------------------------
+ | Footer template
+ |------------------------------------------------------------------------------
+#}
+{% cache globally %}
+<footer id="page-footer" class="uk-light">
+    <div class="uk-container">
+        <div class="uk-child-width-1-4@s" uk-grid>
+            <div>
+                <a href="{{ siteUrl }}"><img src="/dist/img/qcna-logo-footer.png" alt="QCNA"></a>
+                <span class="phone">{{ companySettings.companyPhoneNumber }}</span>
+                <address class="address">
+                    {{ companySettings.companyEmail }} <br>
+                    {{ companySettings.companyAddress|raw }}
+                </address>
+                {% if companySettings.socialLinks|length %}
+                    <ul class="list-inline">
+                        {% for link in companySettings.socialLinks %}
+                            <li class="uk-margin-right">
+                                <a href="{{ link.url }}" target="_blank" uk-icon="icon: {{ link.icon }}; ratio: 1.5;"></a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            <div>
+                <h4 class="footer-title">{{ navigation.footerHeading1 ?? "Undefined content"|t }}</h4>
+                {% if navigation.footerLinks1|length %}
+                <ul class="uk-list">
+                    {% for link in navigation.footerLinks1.all() %}
+                        <li>{{ link.linkItem.getLink() }}</li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                    <p>{{ "Undefined content"|t }}</p>
+                {% endif %}
+            </div>
+            <div>
+                <h4 class="footer-title">{{ navigation.footerHeading2 ?? "Undefined content"|t }}</h4>
+                {% if navigation.footerLinks2|length %}
+                <ul class="uk-list">
+                    {% for link in navigation.footerLinks2.all() %}
+                        <li>{{ link.linkItem.getLink() }}</li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                    <p>{{ "Undefined content"|t }}</p>
+                {% endif %}
+            </div>
+            <div>
+                <h4 class="footer-title">{{ "News"|t }}</h4>
+                <article>
+                    <h5>Pariatur xcepteur sint occaecat cupidatat non proident</h5>
+                    <span>6 janvier 2020</span>
+                </article>
+                <article>
+                    <h5>Pariatur xcepteur sint occaecat cupidatat non proident</h5>
+                    <span>6 janvier 2020</span>
+                </article>
+            </div>
+        </div>
+    </div>
+</footer>
+{% endcache %}

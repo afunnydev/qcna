@@ -1,0 +1,133 @@
+{#
+ |------------------------------------------------------------------------------
+ | Home entry template
+ |------------------------------------------------------------------------------
+#}
+
+{% extends '_entries/default' %}
+
+{% block main %}
+
+    {# Our Services #}
+    <section id="services" class="section uk-background-muted">
+        <div class="uk-container">
+            <h2 class="section-title">{{ "Our Services"|t }}</h2>
+            <div class="uk-child-width-1-3@m" uk-grid>
+                {% for service in entry.services.all() %}
+                    <div class="service uk-text-center">
+                        {% set serviceIcon = service.serviceIcon.one() ?? null %}
+                        {% if serviceIcon %}
+                            <img src="{{ serviceIcon.url }}" alt="">
+                        {% endif %}
+                        <h3>{{ service.serviceTitle }}</h3>
+                        <p>{{ service.serviceDescription }}</p>
+                        {{ service.serviceLink.getLink({
+                            'class': 'uk-button uk-button-default button-rounded button-colored'
+                        }) }}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    {# About Us #}
+    <section id="about" class="section section-light uk-cover-container uk-light">
+        {% set aboutBackground = entry.aboutUs.background.one() ?? null %}
+        {% if aboutBackground %}
+            <img src="{{ aboutBackground.url }}" uk-cover>
+        {% else %}
+            <img src="/dist/img/about-background.jpg" uk-cover>
+        {% endif %}
+        <div class="uk-container uk-position-relative">
+            <div class="uk-child-width-1-2@m uk-flex uk-flex-middle" uk-grid>
+                <div>
+                    {% set aboutImage = entry.aboutUs.image.one() ?? null %}
+                    {% if aboutImage %}
+                        <img src="{{ aboutImage.url }}" alt="">
+                    {% else %}
+                        <img src="/dist/img/about-image.png" alt="">
+                    {% endif %}
+                </div>
+                <div>
+                    <h2>{{ entry.aboutUs.sectionTitle }}</h2>
+                    <p class="lead">{{ entry.aboutUs.leadParagraph }}</p>
+                    <p>{{ entry.aboutUs.text }}</p>
+                    {% if entry.aboutUs.button|length %}
+                        {{ entry.aboutUs.button.getLink({
+                            'class': 'uk-button uk-button-default button-rounded button-light'
+                        }) }}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {# Our Newspaper #}
+    <section id="newspaper" class="section uk-background-muted">
+        <div class="uk-container">
+            <h2 class="section-title">{{ "Our Newspapers"|t }}</h2>
+        </div>
+    </section>
+
+    {# Recent News #}
+    <section id="news" class="section">
+        <div class="uk-container">
+            <h2 class="section-title">{{ "Recent News"|t }}</h2>
+        </div>
+    </section>
+
+    {# Counters #}
+    {% if entry.facts|length %}
+        <section id="counters" class="section section-dark">
+            <div class="uk-container">
+                <div class="uk-child-width-1-{{ entry.facts|length }}@m" uk-grid>
+                    {% for fact in entry.facts.all() %}
+                        <div class="counter">
+                            <p class="counter-number">{{ fact.counterNumber }}</p>
+                            <p class="counter-text">{{ fact.counterText }}</p>
+                            {% set counterIcon = fact.counterIcon.one() ?? null %}
+                            {% if counterIcon %}
+                                <img class="counter-icon" src="{{ counterIcon.url }}" alt="">
+                            {% else %}
+                                <img class="counter-icon" src="/dist/img/counter-icon.png" alt="">
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    {% endif %}
+
+    {# Our Team #}
+    <section id="team" class="section section-light uk-cover-container uk-light">
+        {% set teamBackground = entry.ourTeam.background.one() ?? null %}
+        {% if teamBackground %}
+            <img src="{{ teamBackground.url }}" uk-cover>
+        {% else %}
+            <img src="/dist/img/team-background.jpg" uk-cover>
+        {% endif %}
+        <div class="uk-container uk-position-relative">
+            <div class="uk-child-width-1-2@m uk-flex uk-flex-middle" uk-grid>
+                <div>
+                    <h2>{{ entry.ourTeam.sectionTitle }}</h2>
+                    <p class="lead">{{ entry.ourTeam.leadParagraph }}</p>
+                    <p>{{ entry.ourTeam.text }}</p>
+                    {% if entry.ourTeam.button|length %}
+                        {{ entry.ourTeam.button.getLink({
+                            'class': 'uk-button uk-button-default button-rounded button-light'
+                        }) }}
+                    {% endif %}
+                </div>
+                <div>
+                    {% set teamImage = entry.ourTeam.image.one() ?? null %}
+                    {% if teamImage %}
+                        <img src="{{ teamImage.url }}" alt="">
+                    {% else %}
+                        <img src="/dist/img/team-image.png" alt="">
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

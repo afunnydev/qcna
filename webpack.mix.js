@@ -1,4 +1,7 @@
 let mix = require('laravel-mix');
+let ImageminPlugin = require('imagemin-webpack-plugin').default;
+let ImageminMozjpeg = require('imagemin-mozjpeg');
+let CopyWebpackPlugin = require('copy-webpack-plugin');
 
 /*
  |--------------------------------------------------------------------------
@@ -12,6 +15,29 @@ let mix = require('laravel-mix');
  */
 
 mix.js('src/js/main.js', 'web/dist/js').sass('src/scss/main.scss', 'web/dist/css');
+
+// Optimize assets and copy to web root
+mix.webpackConfig({
+    plugins: [
+        new CopyWebpackPlugin([{
+            from: 'src/img',
+            to: 'web/dist/img'
+        }]),
+        new ImageminPlugin({
+            test: /\.(jpe?g|png|gif|svg)$/i,
+            plugins: [
+                ImageminMozjpeg({
+                    quality: 80
+                })
+            ]
+        })
+    ]
+});
+
+// Versioning
+if (mix.inProduction()) {
+    mix.version();
+}
 
 // Full API
 // mix.js(src, output);

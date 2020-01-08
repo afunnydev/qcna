@@ -1,0 +1,57 @@
+// Header
+
+#top-bar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#top-bar .list-inline .uk-icon {
+    color: $global-primary-background;
+}
+
+#top-bar .list-inline .uk-button {
+    border-radius: 15px;
+    font-family: $base-heading-font-family;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+#language-switcher {
+    color: #464760;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#page-header h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0 0 60px 0;
+}
+
+#page-header p {
+    color: #fff;
+    font-size: 24px;
+    margin: 0 0 60px 0;
+}
+
+#page-header .uk-navbar {
+    margin-top: 30px;
+}
+
+#page-header .uk-navbar-nav a {
+    color: #fff;
+    font-family: $base-heading-font-family;
+    font-size: 17px;
+    text-transform: capitalize;
+    &:hover {
+        color: $accent-color;
+    }
+}
+
+#page-header .uk-navbar .uk-icon-button {
+    background: transparent;
+    color: #fff;
+    &:hover {
+        color: $accent-color;
+    }
+}
