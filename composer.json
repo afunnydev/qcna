@@ -7,7 +7,7 @@
     "misterbk/mix": "1.5.2",
     "sebastianlenz/linkfield": "1.0.19",
     "verbb/field-manager": "2.1.1",
-    "verbb/super-table": "2.3.1",
+    "verbb/super-table": "2.3.2",
     "vlucas/phpdotenv": "^3.4.0"
   },
   "autoload": {

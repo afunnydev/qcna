@@ -6,8 +6,11 @@
 
 {% extends '_entries/default' %}
 
-{% block main %}
+{% block header %}
+    {% include '_partials/header' %}
+{% endblock %}
 
+{% block main %}
     {# Our Services #}
     <section id="services" class="section uk-background-muted">
         <div class="uk-container">
@@ -63,9 +66,84 @@
     </section>
 
     {# Our Newspaper #}
+    {% set newspapers = entry.newspapers.all() ?? null %}
     <section id="newspaper" class="section uk-background-muted">
         <div class="uk-container">
             <h2 class="section-title">{{ "Our Newspapers"|t }}</h2>
+            {% if newspapers %}
+            <div uk-slider>
+                <div class="uk-position-relative">
+                    <div class="uk-slider-container">
+                        <ul class="uk-slider-items uk-child-width-1-1">
+                            <li>
+                                <div>
+                                    <div class="uk-child-width-1-3@m uk-grid-collapse" uk-grid>
+                                        {% for newspaper in newspapers|slice(0,9) %}
+                                            <div>
+                                                {% set logo = newspaper.newspaperLogo.one() ?? null %}
+                                                <a href="{{ newspaper.newspaperLink.getUrl() }}" target="{{ newspaper.newspaperLink.getTarget() }}">
+                                                    {% if logo %}
+                                                        <img src="{{ logo.url }}" alt="{{ newspaper.newspaperName }}">
+                                                    {% else %}
+                                                        {{ newspaper.newspaperName }}
+                                                    {% endif %}
+                                                </a>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <div class="uk-child-width-1-3@m uk-grid-collapse" uk-grid>
+                                        {% for newspaper in newspapers|slice(9,9) %}
+                                            <div>
+                                                {% set logo = newspaper.newspaperLogo.one() ?? null %}
+                                                <a href="{{ newspaper.newspaperLink.getUrl() }}" target="{{ newspaper.newspaperLink.getTarget() }}">
+                                                    {% if logo %}
+                                                        <img src="{{ logo.url }}" alt="{{ newspaper.newspaperName }}">
+                                                    {% else %}
+                                                        {{ newspaper.newspaperName }}
+                                                    {% endif %}
+                                                </a>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <div class="uk-child-width-1-3@m uk-grid-collapse" uk-grid>
+                                        {% for newspaper in newspapers|slice(18,9) %}
+                                            <div>
+                                                {% set logo = newspaper.newspaperLogo.one() ?? null %}
+                                                <a href="{{ newspaper.newspaperLink.getUrl() }}" target="{{ newspaper.newspaperLink.getTarget() }}">
+                                                    {% if logo %}
+                                                        <img src="{{ logo.url }}" alt="{{ newspaper.newspaperName }}">
+                                                    {% else %}
+                                                        {{ newspaper.newspaperName }}
+                                                    {% endif %}
+                                                </a>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="uk-hidden@s uk-light">
+                        <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                        <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slider-item="next"></a>
+                    </div>
+                    <div class="uk-visible@s">
+                        <a class="uk-position-center-left-out uk-position-small uk-slidenav-large" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                        <a class="uk-position-center-right-out uk-position-small uk-slidenav-large" href="#" uk-slidenav-next uk-slider-item="next"></a>
+                    </div>
+                </div>
+            </div>
+            {% else %}
+                <p>{{ 'Undefined content'|t }}</p>
+            {% endif %}
         </div>
     </section>
 
@@ -73,6 +151,56 @@
     <section id="news" class="section">
         <div class="uk-container">
             <h2 class="section-title">{{ "Recent News"|t }}</h2>
+            <div class="uk-child-width-1-4@m" uk-grid>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-hover uk-card-small uk-background-muted">
+                        <div class="uk-card-badge uk-label">QCNA</div>
+                        <div class="uk-card-media-top">
+                            <img src="https://place-hold.it/270x210" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h4 class="uk-card-title">Media Top</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-hover uk-card-small uk-background-muted">
+                        <div class="uk-card-badge uk-label">QCNA</div>
+                        <div class="uk-card-media-top">
+                            <img src="https://place-hold.it/270x210" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h4 class="uk-card-title">Media Top</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-hover uk-card-small uk-background-muted">
+                        <div class="uk-card-badge uk-label">QCNA</div>
+                        <div class="uk-card-media-top">
+                            <img src="https://place-hold.it/270x210" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h4 class="uk-card-title">Media Top</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-hover uk-card-small uk-background-muted">
+                        <div class="uk-card-badge uk-label">QCNA</div>
+                        <div class="uk-card-media-top">
+                            <img src="https://place-hold.it/270x210" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h4 class="uk-card-title">Media Top</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -129,5 +257,8 @@
             </div>
         </div>
     </section>
+{% endblock %}
 
+{% block footer %}
+    {% include "_partials/footer" %}
 {% endblock %}
