@@ -25,19 +25,19 @@ return [
 
         // Whether to save the project config out to config/project.yaml
         // (see https://docs.craftcms.com/v3/project-config.html)
-        'useProjectConfigFile' => false,
+        'useProjectConfigFile' => true,
 
-	// Allow extra file extensions
-	'extraAllowedFileExtensions' => 'xml',
+        // Allow extra file extensions
+        'extraAllowedFileExtensions' => 'xml',
 
-	// Error templates folder
-	'errorTemplatePrefix' => '_errors/',
+        // Error templates folder
+        'errorTemplatePrefix' => '_errors/',
 
-	// Aliases
-	'aliases' => [
-	    '@default_site_url'  => getenv('DEFAULT_SITE_URL'),
-	    '@default_site_path' => getenv('DEFAULT_SITE_PATH'),
-	],
+        // Aliases
+        'aliases' => [
+            '@default_site_url'  => getenv('DEFAULT_SITE_URL'),
+            '@default_site_path' => getenv('DEFAULT_SITE_PATH'),
+        ],
     ],
 
     // Dev environment settings

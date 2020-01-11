@@ -1,7 +1,13 @@
 {
   "require": {
     "craftcms/cms": "^3.0.0",
+    "craftcms/feed-me": "4.2.0",
+    "craftcms/redactor": "2.4.0",
+    "ether/seo": "3.6.3",
     "misterbk/mix": "1.5.2",
+    "sebastianlenz/linkfield": "1.0.19",
+    "verbb/field-manager": "2.1.1",
+    "verbb/super-table": "2.3.2",
     "vlucas/phpdotenv": "^3.4.0"
   },
   "autoload": {

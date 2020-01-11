@@ -1,0 +1,20 @@
+// Buttons
+
+.button-rounded {
+    border-radius: 30px;
+    border-width: 4px;
+    font-size: 21px;
+    text-transform: uppercase;
+}
+
+.button-colored {
+    border-color: $accent-color;
+    color: $accent-color;
+
+    &:hover,
+    &:focus {
+        background: $accent-color;
+        border-color: $accent-color;
+        color: #fff;
+    }
+}

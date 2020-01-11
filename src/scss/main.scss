@@ -1,0 +1,29 @@
+// 1. Custom variables and variable overwrites.
+$global-primary-background: #343fc3;
+$global-muted-background: #f2f2fb;
+$global-font-family: "Lato", sans-serif;
+$base-body-font-family: "Lato", sans-serif;
+$base-heading-font-family: "Montserrat", sans-serif;
+
+$secondary-color: #464760;
+$accent-color: #f98e3b;
+
+// 2. Import default variables and available mixins.
+@import "uikit/src/scss/variables-theme.scss";
+@import "uikit/src/scss/mixins-theme.scss";
+
+// 3. Custom mixin overwrites.
+
+// 4. Import UIkit.
+@import "uikit/src/scss/uikit-theme.scss";
+
+// 5. Custom styles.
+@import "components/list";
+@import "components/button";
+@import "components/heading";
+
+@import "partials/header";
+@import "partials/services";
+@import "partials/sections";
+@import "partials/counters";
+@import "partials/footer";

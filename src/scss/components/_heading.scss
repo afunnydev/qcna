@@ -1,0 +1,22 @@
+// Heading
+
+.section-title {
+    color: $secondary-color;
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 60px;
+    position: relative;
+
+    &:after {
+        content: "";
+        width: 150px;
+        height: 5px;
+        background-color: $accent-color;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+    }
+}
