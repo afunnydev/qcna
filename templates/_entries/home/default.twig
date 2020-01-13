@@ -7,7 +7,9 @@
 {% extends '_entries/default' %}
 
 {% block header %}
-    {% include '_partials/header' %}
+    {% include '_partials/header' with {
+        isHomePage: true
+    } %}
 {% endblock %}
 
 {% block main %}
@@ -257,8 +259,4 @@
             </div>
         </div>
     </section>
-{% endblock %}
-
-{% block footer %}
-    {% include "_partials/footer" %}
 {% endblock %}

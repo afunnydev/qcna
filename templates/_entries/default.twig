@@ -4,8 +4,14 @@
  |------------------------------------------------------------------------------
 #}
 
-{% block header %}{% endblock %}
+{% block header %}
+    {% include '_partials/header' with {
+        isHomePage: false
+    } %}
+{% endblock %}
 
 {% block main %}{% endblock %}
 
-{% block footer %}{% endblock %}
+{% block footer %}
+    {% include "_partials/footer" %}
+{% endblock %}

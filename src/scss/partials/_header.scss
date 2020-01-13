@@ -55,3 +55,32 @@
         color: $accent-color;
     }
 }
+
+#page-header .slider-item {
+    padding: 20px;
+    @media screen and (min-width: 768px) {
+        padding: 0 100px 0 0;
+    }
+}
+
+#page-header .header-inner h1 {
+    padding-bottom: 20px;
+    margin-bottom: 60px;
+    position: relative;
+
+    &:after {
+        content: "";
+        width: 150px;
+        height: 5px;
+        background-color: $accent-color;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+    }
+}
+
+#page-header .header-inner p {
+    margin: 0;
+    text-transform: uppercase;
+}

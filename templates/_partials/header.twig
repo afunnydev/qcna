@@ -4,6 +4,22 @@
  |------------------------------------------------------------------------------
 #}
 
+<div id="search-modal" class="uk-modal-full" uk-modal>
+    <div class="uk-modal-dialog">
+        <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+        <div class="uk-container">
+            <div class="uk-padding-large uk-flex uk-flex-column uk-flex-center uk-flex-middle" uk-height-viewport>
+                <h2>{{ 'Search this website'|t }}</h2>
+                {% set searchResultPage = craft.entries.section('search').one() ?? null %}
+                <form action="{{ searchResultPage.url }}" class="uk-inline">
+                    <button type="submit" class="uk-form-icon uk-form-icon-flip" uk-icon="icon: search"></button>
+                    <input class="uk-input uk-form-large uk-form-width-large" type="search" name="q" placeholder="{{ 'Search'|t }}">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div id="top-bar" class="uk-container uk-flex uk-flex-middle">
     <ul class="list-inline">
         <li class="uk-margin-right">{% include '_partials/switcher.twig' %}</li>
@@ -17,7 +33,11 @@
     </ul>
     <ul class="list-inline uk-margin-auto-left">
         <li class="uk-margin-left">
-            <a href="#" class="uk-button uk-button-primary uk-button-small">{{ "Journalism Login"|t }}</a>
+            {% if currentUser %}
+                <a href="/admin" class="uk-button uk-button-primary uk-button-small">{{ "My Dashboard"|t }}</a>
+            {% else %}
+                <a href="/admin" class="uk-button uk-button-primary uk-button-small">{{ "Journalism Login"|t }}</a>
+            {% endif %}
         </li>
         <li class="uk-margin-left">
             <a href="#" class="uk-button uk-button-primary uk-button-small">{{ "Members Area"|t }}</a>
@@ -41,21 +61,57 @@
                     {% endfor %}
                 </ul>
                  <div class="uk-navbar-item">
-                    <a class="uk-icon-button uk-icon" href="#" uk-icon="icon: search; ratio: 1.5" title="{{ 'Search this website'|t }}"></a>
+                    <a class="uk-icon-button uk-icon" href="#search-modal" uk-icon="icon: search; ratio: 1.5" title="{{ 'Search this website'|t }}" uk-toggle></a>
                  </div>
             </div>
         </nav>
 
-        <div class="uk-flex uk-flex-column uk-flex-center" uk-height-viewport="offset-top: true">
-            <div class="uk-width-3-4@m">
-                <h1>{{ entry.hero.heroTitle ?? 'Undefined content'|t }}</h1>
-                {% if entry.hero.heroContent|length %}
-                    <p>{{ entry.hero.heroContent }}</p>
-                {% endif %}
-                {{ entry.hero.heroButton.getLink({
-                    class: 'uk-button uk-button-default uk-button-large button-rounded',
-                }) }}
+        {% if isHomePage %}
+            <div class="header-homepage uk-flex uk-flex-column uk-flex-center" uk-height-viewport="offset-top: true">
+                <div uk-slider="autoplay: true">
+                    <div class="uk-position-relative">
+                        <div class="uk-slider-container uk-light">
+                            <ul class="uk-slider-items uk-child-width-1-1">
+                                {% for slide in entry.slider.all() %}
+                                    <li class="slider-item">
+                                        <h1>{{ slide.slideTitle }}</h1>
+                                        {% if slide.slideMicroCopy|length %}
+                                            <p>{{ slide.slideMicroCopy }}</p>
+                                        {% endif %}
+                                        {% if slide.slideButton|length %}
+                                            {{ slide.slideButton.getLink({
+                                                class: 'uk-button uk-button-default uk-button-large button-rounded',
+                                            }) }}
+                                        {% endif %}
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <div class="uk-hidden@s uk-light">
+                            <a class="uk-position-center-left uk-slidenav-large uk-position-large" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                            <a class="uk-position-center-right uk-slidenav-large uk-position-large" href="#" uk-slidenav-next uk-slider-item="next"></a>
+                        </div>
+                        <div class="uk-visible@s">
+                            <a class="uk-position-center-left-out uk-slidenav-large uk-position-large" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                            <a class="uk-position-center-right-out uk-slidenav-large uk-position-large" href="#" uk-slidenav-next uk-slider-item="next"></a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        {% else %}
+            <div class="header-inner uk-text-center uk-padding-large">
+                <div class="uk-width-1-1">
+                    <h1>{{ entry.hero.heroTitle ?? 'Undefined content'|t }}</h1>
+                    {% if entry.hero.heroContent|length %}
+                        <p>{{ entry.hero.heroContent }}</p>
+                    {% endif %}
+                    {% if entry.hero|length %}
+                        {{ entry.hero.heroButton.getLink({
+                            class: 'uk-button uk-button-default uk-button-large button-rounded',
+                        }) }}
+                    {% endif %}
+                </div>
+            </div>
+        {% endif %}
     </div>
 </header>

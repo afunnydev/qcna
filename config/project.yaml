@@ -1,4 +1,4 @@
-dateModified: 1578760501
+dateModified: 1578884792
 email:
   fromEmail: julien@hopsocial.ca
   fromName: QCNA
@@ -181,6 +181,23 @@ fields:
       selectionLabel: ''
     fieldGroup: a9590745-8a24-4ec5-9c14-7f72d5734273
     contentColumnType: string
+  791ad1aa-08a9-4599-a7ae-0abbc106e3c9:
+    name: Description
+    handle: description
+    instructions: 'Add the entry description.'
+    searchable: true
+    translationMethod: language
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: '1'
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
+    fieldGroup: f14bc424-75cb-420b-b102-71f411a661aa
   7a70b499-44c9-4f80-aed1-70fb7ab4dcd2:
     name: Facts
     handle: facts
@@ -206,6 +223,31 @@ fields:
       selectionLabel: 'Add a fact'
     fieldGroup: a9590745-8a24-4ec5-9c14-7f72d5734273
     contentColumnType: string
+  8813b1ac-da58-4e4f-83c7-e2d1d9ea5d88:
+    name: Slider
+    handle: slider
+    instructions: 'Add content to the homepage slider.'
+    searchable: true
+    translationMethod: site
+    translationKeyFormat: null
+    type: verbb\supertable\fields\SuperTableField
+    settings:
+      minRows: ''
+      maxRows: ''
+      contentTable: '{{%stc_slider}}'
+      propagationMethod: all
+      staticField: ''
+      columns:
+        2c17e851-5519-470e-a7e2-fd1e723474cc:
+          width: ''
+        5022ab8b-5482-4056-94fb-ad14387d0e56:
+          width: ''
+        6fcdbf12-7c02-419e-835f-7e9fa9fde91e:
+          width: ''
+      fieldLayout: row
+      selectionLabel: 'Add a slide'
+    contentColumnType: string
+    fieldGroup: a9590745-8a24-4ec5-9c14-7f72d5734273
   968a81d3-27c0-4e36-866d-7dbb91ae4bf1:
     name: 'Footer Heading - 1'
     handle: footerHeading1
@@ -693,6 +735,38 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.2.1
+  communicator:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      emailSupportContacts:
+        -
+          email: info@qcna.com
+          name: 'Contact Name'
+          jobTitle: 'Job Title'
+          phone: 123-123-1234
+      enableChangelog: '1'
+      enableEmailSupport: '1'
+      enableEmailSupportForm: '1'
+      enableGlobalWidget: '1'
+  express-forms:
+    edition: lite
+    enabled: true
+    schemaVersion: 1.0.1
+    settings:
+      name: null
+      enhancedUI: true
+      showErrorLogBanner: true
+      honeypotEnabled: '1'
+      honeypotBehaviour: simulate_success
+      honeypotInputName: journalist_id
+      recaptchaEnabled: ''
+      recaptchaLoadScript: '1'
+      recaptchaSiteKey: null
+      recaptchaSecretKey: null
+      emailNotificationsDirectoryPath: _forms/_notifications
+      duplicatePreventionEnabled: true
 sections:
   108495a8-0a10-4955-ac62-bdc8e88dd370:
     name: Articles
@@ -713,15 +787,22 @@ sections:
           7e8d313c-204a-4e2f-ad81-9661386e095e:
             tabs:
               -
-                name: Content
+                name: Hero
                 sortOrder: 1
+                fields:
+                  d09f8328-b9a7-4ab1-bc64-2b0bcf59a6cd:
+                    required: false
+                    sortOrder: 1
+              -
+                name: Body
+                sortOrder: 2
                 fields:
                   149b6835-f1fb-4ae5-b272-4b4551d44ffa:
                     required: false
                     sortOrder: 1
               -
                 name: SEO
-                sortOrder: 2
+                sortOrder: 3
                 fields:
                   a8ecf32b-98c2-4871-a920-c86c0b327bcd:
                     required: false
@@ -759,7 +840,7 @@ sections:
                 name: Hero
                 sortOrder: 1
                 fields:
-                  d09f8328-b9a7-4ab1-bc64-2b0bcf59a6cd:
+                  8813b1ac-da58-4e4f-83c7-e2d1d9ea5d88:
                     required: false
                     sortOrder: 1
               -
@@ -837,15 +918,22 @@ sections:
           d85a8cae-3421-4a81-85e2-329fe3a2e72c:
             tabs:
               -
-                name: Content
+                name: Hero
                 sortOrder: 1
+                fields:
+                  d09f8328-b9a7-4ab1-bc64-2b0bcf59a6cd:
+                    required: false
+                    sortOrder: 1
+              -
+                name: Body
+                sortOrder: 2
                 fields:
                   149b6835-f1fb-4ae5-b272-4b4551d44ffa:
                     required: false
                     sortOrder: 1
               -
                 name: SEO
-                sortOrder: 2
+                sortOrder: 3
                 fields:
                   a8ecf32b-98c2-4871-a920-c86c0b327bcd:
                     required: false
@@ -861,6 +949,104 @@ sections:
         hasUrls: true
         uriFormat: '{parent.uri}/{slug}'
         template: index
+  ad05f271-375c-47f2-93cb-595cce907994:
+    name: Contact
+    handle: contact
+    type: single
+    enableVersioning: true
+    propagationMethod: all
+    siteSettings:
+      5b81df98-3353-4519-b38a-9c7c6e3fc1e4:
+        enabledByDefault: true
+        hasUrls: true
+        uriFormat: contact
+        template: index
+      d7acb83a-8fb9-4143-b21e-34c7af63bf45:
+        enabledByDefault: true
+        hasUrls: true
+        uriFormat: contact
+        template: index
+    entryTypes:
+      c7457bc8-b863-4d99-9585-74a55560a757:
+        name: Contact
+        handle: contact
+        hasTitleField: true
+        titleLabel: Title
+        titleFormat: '{section.name|raw}'
+        sortOrder: 1
+        fieldLayouts:
+          71d681dd-b9df-4748-84a9-df5329236ac3:
+            tabs:
+              -
+                name: Hero
+                sortOrder: 1
+                fields:
+                  d09f8328-b9a7-4ab1-bc64-2b0bcf59a6cd:
+                    required: false
+                    sortOrder: 1
+              -
+                name: Body
+                sortOrder: 2
+                fields:
+                  149b6835-f1fb-4ae5-b272-4b4551d44ffa:
+                    required: false
+                    sortOrder: 1
+              -
+                name: SEO
+                sortOrder: 3
+                fields:
+                  a8ecf32b-98c2-4871-a920-c86c0b327bcd:
+                    required: false
+                    sortOrder: 1
+  cc17d150-3565-420c-86b9-994b072735e1:
+    name: Search
+    handle: search
+    type: single
+    enableVersioning: true
+    propagationMethod: all
+    siteSettings:
+      5b81df98-3353-4519-b38a-9c7c6e3fc1e4:
+        enabledByDefault: true
+        hasUrls: true
+        uriFormat: recherche
+        template: index
+      d7acb83a-8fb9-4143-b21e-34c7af63bf45:
+        enabledByDefault: true
+        hasUrls: true
+        uriFormat: search
+        template: index
+    entryTypes:
+      06b645b4-e08f-425d-8104-820afa11b8bf:
+        name: Search
+        handle: search
+        hasTitleField: true
+        titleLabel: Title
+        titleFormat: '{section.name|raw}'
+        sortOrder: 1
+        fieldLayouts:
+          7e0d31a1-0ca8-42f1-9924-f5dc442e45ec:
+            tabs:
+              -
+                name: Hero
+                sortOrder: 1
+                fields:
+                  d09f8328-b9a7-4ab1-bc64-2b0bcf59a6cd:
+                    required: false
+                    sortOrder: 1
+              -
+                name: Body
+                sortOrder: 2
+                fields:
+                  149b6835-f1fb-4ae5-b272-4b4551d44ffa:
+                    required: false
+                    sortOrder: 1
+              -
+                name: SEO
+                sortOrder: 3
+                fields:
+                  a8ecf32b-98c2-4871-a920-c86c0b327bcd:
+                    required: false
+                    sortOrder: 1
 siteGroups:
   8acb1704-27cb-427a-aaf3-cdb9d2f132a7:
     name: QCNA
@@ -1273,6 +1459,105 @@ superTableBlockTypes:
           columnType: text
         fieldGroup: null
         contentColumnType: text
+  6f2341d0-48e8-4de6-b81d-38a6719646a1:
+    field: 8813b1ac-da58-4e4f-83c7-e2d1d9ea5d88
+    fields:
+      2c17e851-5519-470e-a7e2-fd1e723474cc:
+        name: 'Micro Copy'
+        handle: slideMicroCopy
+        instructions: 'Add the slide micro copy.'
+        searchable: true
+        translationMethod: language
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+      5022ab8b-5482-4056-94fb-ad14387d0e56:
+        name: Title
+        handle: slideTitle
+        instructions: 'Add the slide title.'
+        searchable: true
+        translationMethod: language
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+      6fcdbf12-7c02-419e-835f-7e9fa9fde91e:
+        name: Button
+        handle: slideButton
+        instructions: 'Add a button to the slide.'
+        searchable: true
+        translationMethod: language
+        translationKeyFormat: null
+        type: typedlinkfield\fields\LinkField
+        settings:
+          allowCustomText: '1'
+          allowedLinkNames: '*'
+          allowTarget: '1'
+          autoNoReferrer: ''
+          defaultLinkName: entry
+          defaultText: ''
+          enableAriaLabel: ''
+          enableTitle: ''
+          typeSettings:
+            asset:
+              sources: '*'
+              allowCustomQuery: ''
+            category:
+              sources: '*'
+              allowCustomQuery: ''
+            entry:
+              sources: '*'
+              allowCustomQuery: ''
+            site:
+              sites: '*'
+            user:
+              sources: '*'
+              allowCustomQuery: ''
+            custom:
+              disableValidation: ''
+              allowAliases: ''
+            email:
+              disableValidation: ''
+              allowAliases: ''
+            tel:
+              disableValidation: ''
+              allowAliases: ''
+            url:
+              disableValidation: ''
+              allowAliases: ''
+        contentColumnType: text
+        fieldGroup: null
+    fieldLayouts:
+      c87c3518-14bc-4847-8155-49ddff83b2d8:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              2c17e851-5519-470e-a7e2-fd1e723474cc:
+                required: false
+                sortOrder: 2
+              5022ab8b-5482-4056-94fb-ad14387d0e56:
+                required: true
+                sortOrder: 1
+              6fcdbf12-7c02-419e-835f-7e9fa9fde91e:
+                required: false
+                sortOrder: 3
   849aaaf5-d30a-4f8c-a7a8-8d5e20d82f52:
     field: 50ccb0fd-b20b-49cf-a1ad-f49b7e9c533d
     fieldLayouts:

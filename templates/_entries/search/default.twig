@@ -1,0 +1,33 @@
+{#
+ |------------------------------------------------------------------------------
+ | Search result page
+ |------------------------------------------------------------------------------
+#}
+
+{% extends '_entries/default' %}
+
+{% block main %}
+    <div class="uk-container uk-container-xsmall">
+        <div class="uk-margin-large-top uk-margin-large-bottom">
+            {% if entry.body|length %}
+                <div class="entry-body">{{ entry.body }}</div>
+            {% endif %}
+            {% set searchQuery = craft.app.request.getParam('q') %}
+            {% set entries = craft.entries()
+                .search(searchQuery)
+                .orderBy('score')
+                .all() %}
+            {% if entries|length %}
+                <h2>{{ 'You are searching for:'|t }} <strong>{{ searchQuery }}</strong></h2>
+                <p>{{ entries|length }} {{ 'result(s) found:'|t }}</p>
+                <ul>
+                    {% for entry in entries %}
+                        <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>Your search for “{{ searchQuery }}” didn’t return any results.</p>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
