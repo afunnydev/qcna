@@ -4,4 +4,21 @@
  |------------------------------------------------------------------------------
 #}
 
-{% extends '_entries/default' %}
+{% extends '_layouts/default' %}
+
+{% block page %}
+    {% include '_partials/header' with {
+        isHomePage: false,
+        isErrorPage: true,
+        errorPageTitle: 'Internal Server Error',
+    } %}
+
+    <div class="uk-section">
+        <div class="uk-container uk-container-small">
+            <p>{{ "Sorry, something wrong happened. Please contact the webmaster."|t }}</p>
+            <a href="{{ siteUrl }}">{{ 'Back to homepage'|t }}</a>
+        </div>
+    </div>
+
+    {% include "_partials/footer" %}
+{% endblock %}

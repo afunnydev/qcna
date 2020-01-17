@@ -6,7 +6,7 @@
 {% cache globally %}
 <footer id="page-footer" class="uk-light">
     <div class="uk-container">
-        <div class="uk-child-width-1-4@s" uk-grid>
+        <div class="uk-child-width-1-2@s uk-child-width-1-4@m" uk-grid>
             <div>
                 <a href="{{ siteUrl }}"><img src="/dist/img/qcna-logo-footer.png" alt="QCNA"></a>
                 <span class="phone">{{ companySettings.companyPhoneNumber }}</span>
@@ -49,17 +49,14 @@
                 {% endif %}
             </div>
             <div>
-                <h4 class="footer-title">{{ "News"|t }}</h4>
-                <article>
-                    <h5>Pariatur xcepteur sint occaecat cupidatat non proident</h5>
-                    <span>6 janvier 2020</span>
-                </article>
-                <article>
-                    <h5>Pariatur xcepteur sint occaecat cupidatat non proident</h5>
-                    <span>6 janvier 2020</span>
-                </article>
+                <h4 class="footer-title">{{ "Popular News"|t }}</h4>
+                <div id="footer-news-container"></div>
             </div>
         </div>
     </div>
 </footer>
+
+<div>
+    <p class="uk-padding-small uk-margin-remove uk-text-center">{{ 'Copyright'|t }} {{ now|date('Y') }} &copy; QCNA. {{ 'All rights reserved'|t }}.</p>
+</div>
 {% endcache %}

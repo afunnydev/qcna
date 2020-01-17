@@ -1,0 +1,28 @@
+{#
+ |------------------------------------------------------------------------------
+ | Pages default entry template
+ |------------------------------------------------------------------------------
+#}
+
+{% extends '_entries/default' %}
+
+{% block main %}
+    <section id="grants-instructions" class="uk-container">
+        <div class="uk-margin-large-top uk-margin-large-bottom">
+            <div class="grants-rte">
+                {{ entry.instructions }}
+            </div>
+        </div>
+    </section>
+    <section id="grants-application-form" class="uk-light">
+        <div class="uk-container">
+            <div class="uk-margin-large-top uk-margin-large-bottom uk-text-center">
+                <h2>{{ 'Apply Now'|t }}</h2>
+                {% set pdf = entry.applicationForm.one() ?? null %}
+                {% if pdf %}
+                    <a href="{{ pdf.url }}" target="_blank" class="uk-button uk-button-default button-rounded button-light">{{ 'Download the form'|t }}</a>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

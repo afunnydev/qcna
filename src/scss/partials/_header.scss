@@ -26,12 +26,20 @@
     font-size: 50px;
     font-weight: 700;
     margin: 0 0 60px 0;
+
+    @media screen and (max-width: 768px) {
+        font-size: 36px;
+    }
 }
 
 #page-header p {
     color: #fff;
     font-size: 24px;
     margin: 0 0 60px 0;
+
+    @media screen and (max-width: 768px) {
+        font-size: 21px;
+    }
 }
 
 #page-header .uk-navbar {

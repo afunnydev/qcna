@@ -1,0 +1,54 @@
+
+.grants-rte h2 {
+    font-size: 36px;
+    font-weight: 700;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+    position: relative;
+
+    &:after {
+        content: "";
+        width: 150px;
+        height: 5px;
+        background-color: $accent-color;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+.grants-rte p,
+.grants-rte ul {
+    font-size: 21px;
+}
+
+.grants-rte ul {
+    list-style: none;
+}
+
+.grants-rte ul li {
+    margin-bottom: 10px;
+}
+
+.grants-rte ul li::before {
+    content: "\2022";
+    color: $accent-color;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+
+#grants-application-form {
+    background-color: #353fc3;
+}
+
+#grants-application-form h2 {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0 0 50px 0;
+
+    @media screen and (max-width: 768px) {
+        font-size: 36px;
+    }
+}

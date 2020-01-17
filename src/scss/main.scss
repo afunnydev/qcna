@@ -20,10 +20,13 @@ $accent-color: #f98e3b;
 // 5. Custom styles.
 @import "components/list";
 @import "components/button";
+@import "components/card";
 @import "components/heading";
 
 @import "partials/header";
 @import "partials/services";
 @import "partials/sections";
 @import "partials/counters";
+@import "partials/contact";
+@import "partials/grants";
 @import "partials/footer";

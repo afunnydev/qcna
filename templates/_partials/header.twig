@@ -20,7 +20,53 @@
     </div>
 </div>
 
-<div id="top-bar" class="uk-container uk-flex uk-flex-middle">
+<div id="menu-offcanvas" uk-offcanvas="mode: push">
+    <div class="uk-offcanvas-bar">
+        <ul class="uk-nav uk-nav-primary uk-nav-default">
+            {% for link in navigation.primaryNavigation.all() %}
+                <li>{{ link.linkItem.getLink() }}</li>
+            {% endfor %}
+            <li>
+                {% if currentUser %}
+                    <a href="/admin">{{ "My Dashboard"|t }}</a>
+                {% else %}
+                    <a href="/admin">{{ "Journalism Login"|t }}</a>
+                {% endif %}
+            </li>
+            <li>
+                <a href="#">{{ "Members Area"|t }}</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="menu-modal" class="uk-modal-full" uk-modal>
+    <div class="uk-modal-dialog">
+        <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+        <div class="uk-container">
+            <div class="uk-padding-large uk-flex uk-flex-column uk-flex-center uk-flex-middle" uk-height-viewport>
+                <h2>{{ 'Menu'|t }}</h2>
+                <ul class="uk-list uk-text-center">
+                    {% for link in navigation.primaryNavigation.all() %}
+                        <li>{{ link.linkItem.getLink() }}</li>
+                    {% endfor %}
+                    <li>
+                        {% if currentUser %}
+                            <a href="/admin">{{ "My Dashboard"|t }}</a>
+                        {% else %}
+                            <a href="/admin">{{ "Journalism Login"|t }}</a>
+                        {% endif %}
+                    </li>
+                    <li>
+                        <a href="#">{{ "Members Area"|t }}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="top-bar" class="uk-container uk-flex uk-flex-middle uk-visible@s">
     <ul class="list-inline">
         <li class="uk-margin-right">{% include '_partials/switcher.twig' %}</li>
         {% cache globally %}
@@ -55,14 +101,17 @@
                 </a>
             </div>
             <div class="uk-navbar-right">
-                <ul class="uk-navbar-nav">
+                <ul class="uk-navbar-nav uk-visible@m">
                     {% for link in navigation.primaryNavigation.all() %}
                         <li>{{ link.linkItem.getLink() }}</li>
                     {% endfor %}
                 </ul>
-                 <div class="uk-navbar-item">
-                    <a class="uk-icon-button uk-icon" href="#search-modal" uk-icon="icon: search; ratio: 1.5" title="{{ 'Search this website'|t }}" uk-toggle></a>
+                <div class="uk-navbar-item uk-hidden@m">
+                    <a class="uk-icon-button uk-icon" href="#menu-offcanvas" uk-icon="icon: menu; ratio: 1.5" title="{{ 'Menu'|t }}" uk-toggle></a>
                  </div>
+                <div class="uk-navbar-item">
+                    <a class="uk-icon-button uk-icon" href="#search-modal" uk-icon="icon: search; ratio: 1.5" title="{{ 'Search this website'|t }}" uk-toggle></a>
+                </div>
             </div>
         </nav>
 
@@ -87,15 +136,17 @@
                                 {% endfor %}
                             </ul>
                         </div>
-                        <div class="uk-hidden@s uk-light">
-                            <a class="uk-position-center-left uk-slidenav-large uk-position-large" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-                            <a class="uk-position-center-right uk-slidenav-large uk-position-large" href="#" uk-slidenav-next uk-slider-item="next"></a>
-                        </div>
-                        <div class="uk-visible@s">
+                        <div class="uk-visible@l">
                             <a class="uk-position-center-left-out uk-slidenav-large uk-position-large" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
                             <a class="uk-position-center-right-out uk-slidenav-large uk-position-large" href="#" uk-slidenav-next uk-slider-item="next"></a>
                         </div>
                     </div>
+                </div>
+            </div>
+        {% elseif isErrorPage %}
+            <div class="header-inner uk-text-center uk-padding-large">
+                <div class="uk-width-1-1">
+                    <h1>{{ errorPageTitle }}</h1>
                 </div>
             </div>
         {% else %}

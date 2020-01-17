@@ -1,8 +1,13 @@
-dateModified: 1578884792
+dateModified: 1579288191
 email:
-  fromEmail: julien@hopsocial.ca
+  fromEmail: $EMAIL_USER
   fromName: QCNA
-  transportType: craft\mail\transportadapters\Sendmail
+  template: ''
+  transportType: craft\mail\transportadapters\Gmail
+  transportSettings:
+    username: $EMAIL_USER
+    password: $EMAIL_PASS
+    timeout: '10'
 fieldGroups:
   68c58b3e-d315-40d8-8eb8-3f89eb9e9ad6:
     name: 'Company Settings'
@@ -10,9 +15,29 @@ fieldGroups:
     name: Navigation
   a9590745-8a24-4ec5-9c14-7f72d5734273:
     name: Homepage
+  d4db5330-2888-41c6-bed1-5c393e75005e:
+    name: Grants
   f14bc424-75cb-420b-b102-71f411a661aa:
     name: Common
 fields:
+  072c0ac8-f775-4a30-90f1-0b0e46a32e9a:
+    name: Steps
+    handle: steps
+    instructions: 'Add the steps.'
+    searchable: true
+    translationMethod: site
+    translationKeyFormat: null
+    type: verbb\supertable\fields\SuperTableField
+    settings:
+      minRows: ''
+      maxRows: '6'
+      contentTable: '{{%stc_steps}}'
+      propagationMethod: all
+      staticField: ''
+      fieldLayout: row
+      selectionLabel: 'Add a step'
+    contentColumnType: string
+    fieldGroup: d4db5330-2888-41c6-bed1-5c393e75005e
   0e794d30-c907-4b51-b793-16281394576f:
     name: 'Footer Links - 2'
     handle: footerLinks2
@@ -223,6 +248,23 @@ fields:
       selectionLabel: 'Add a fact'
     fieldGroup: a9590745-8a24-4ec5-9c14-7f72d5734273
     contentColumnType: string
+  8624d695-e9ba-447b-af68-bcbe01854c4a:
+    name: 'Video Embed Code'
+    handle: videoEmbedCode
+    instructions: 'Add the video embed code.'
+    searchable: true
+    translationMethod: language
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: '1'
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
+    fieldGroup: d4db5330-2888-41c6-bed1-5c393e75005e
   8813b1ac-da58-4e4f-83c7-e2d1d9ea5d88:
     name: Slider
     handle: slider
@@ -265,6 +307,27 @@ fields:
       columnType: text
     fieldGroup: a4ce55ef-4198-4d3e-b967-b42975a28c54
     contentColumnType: text
+  9bf7a9ef-8e46-42a3-8845-9d24f4eca5eb:
+    name: Instructions
+    handle: instructions
+    instructions: 'Add the instructions.'
+    searchable: true
+    translationMethod: language
+    translationKeyFormat: null
+    type: craft\redactor\Field
+    settings:
+      redactorConfig: Standard.json
+      purifierConfig: ''
+      cleanupHtml: true
+      removeInlineStyles: '1'
+      removeEmptyTags: '1'
+      removeNbsp: '1'
+      purifyHtml: '1'
+      columnType: text
+      availableVolumes: '*'
+      availableTransforms: '*'
+    contentColumnType: text
+    fieldGroup: d4db5330-2888-41c6-bed1-5c393e75005e
   a8ecf32b-98c2-4871-a920-c86c0b327bcd:
     name: SEO
     handle: seo
@@ -345,6 +408,27 @@ fields:
       selectionLabel: ''
     fieldGroup: a9590745-8a24-4ec5-9c14-7f72d5734273
     contentColumnType: string
+  c9727bff-8b73-4f30-a37c-7378936e40b9:
+    name: Conditions
+    handle: conditions
+    instructions: 'Add the conditions.'
+    searchable: true
+    translationMethod: language
+    translationKeyFormat: null
+    type: craft\redactor\Field
+    settings:
+      redactorConfig: Standard.json
+      purifierConfig: ''
+      cleanupHtml: true
+      removeInlineStyles: '1'
+      removeEmptyTags: '1'
+      removeNbsp: '1'
+      purifyHtml: '1'
+      columnType: text
+      availableVolumes: '*'
+      availableTransforms: '*'
+    contentColumnType: text
+    fieldGroup: d4db5330-2888-41c6-bed1-5c393e75005e
   d088ec67-4a52-4d6d-bc95-7c5c45a328f4:
     name: 'Footer Links - 1'
     handle: footerLinks1
@@ -448,6 +532,33 @@ fields:
       columnType: text
     fieldGroup: 68c58b3e-d315-40d8-8eb8-3f89eb9e9ad6
     contentColumnType: text
+  e28522fa-ab8a-4ecf-9db2-d22fe3e64109:
+    name: 'Application Form'
+    handle: applicationForm
+    instructions: 'Add the application form PDF.'
+    searchable: true
+    translationMethod: site
+    translationKeyFormat: null
+    type: craft\fields\Assets
+    settings:
+      useSingleFolder: ''
+      defaultUploadLocationSource: 'volume:8015cbf1-7dd5-47c8-b212-ed0f7e4730f0'
+      defaultUploadLocationSubpath: ''
+      singleUploadLocationSource: 'volume:8015cbf1-7dd5-47c8-b212-ed0f7e4730f0'
+      singleUploadLocationSubpath: ''
+      restrictFiles: '1'
+      allowedKinds:
+        - pdf
+      sources: '*'
+      source: null
+      targetSiteId: null
+      viewMode: list
+      limit: '1'
+      selectionLabel: 'Add a PDF'
+      localizeRelations: ''
+      validateRelatedElements: ''
+    contentColumnType: string
+    fieldGroup: d4db5330-2888-41c6-bed1-5c393e75005e
   eb9d1edc-0477-4f13-9906-b71c0d9a7e3e:
     name: 'Company Email'
     handle: companyEmail
@@ -907,6 +1018,65 @@ sections:
       uid: 6bf634ae-4994-407f-b5a6-ad52eb6fb147
       maxLevels: null
     entryTypes:
+      78fcc0df-ddd4-444c-bd75-773f01d77d96:
+        name: Grants
+        handle: grants
+        hasTitleField: true
+        titleLabel: Title
+        titleFormat: ''
+        sortOrder: 2
+        fieldLayouts:
+          7afdb84e-8e6a-44c8-9997-fd9327fb8d41:
+            tabs:
+              -
+                name: Hero
+                sortOrder: 1
+                fields:
+                  d09f8328-b9a7-4ab1-bc64-2b0bcf59a6cd:
+                    required: false
+                    sortOrder: 1
+              -
+                name: Instructions
+                sortOrder: 2
+                fields:
+                  9bf7a9ef-8e46-42a3-8845-9d24f4eca5eb:
+                    required: false
+                    sortOrder: 1
+              -
+                name: Steps
+                sortOrder: 3
+                fields:
+                  072c0ac8-f775-4a30-90f1-0b0e46a32e9a:
+                    required: false
+                    sortOrder: 1
+              -
+                name: Conditions
+                sortOrder: 4
+                fields:
+                  c9727bff-8b73-4f30-a37c-7378936e40b9:
+                    required: false
+                    sortOrder: 1
+              -
+                name: 'Process Video'
+                sortOrder: 5
+                fields:
+                  8624d695-e9ba-447b-af68-bcbe01854c4a:
+                    required: false
+                    sortOrder: 1
+              -
+                name: Application
+                sortOrder: 6
+                fields:
+                  e28522fa-ab8a-4ecf-9db2-d22fe3e64109:
+                    required: false
+                    sortOrder: 1
+              -
+                name: SEO
+                sortOrder: 7
+                fields:
+                  a8ecf32b-98c2-4871-a920-c86c0b327bcd:
+                    required: false
+                    sortOrder: 1
       ebb03872-bd37-4972-b1ba-79827765ba28:
         name: Default
         handle: default
@@ -1558,6 +1728,86 @@ superTableBlockTypes:
               6fcdbf12-7c02-419e-835f-7e9fa9fde91e:
                 required: false
                 sortOrder: 3
+  7e35464e-a3b1-43f8-9b2a-72431c30b089:
+    field: 072c0ac8-f775-4a30-90f1-0b0e46a32e9a
+    fields:
+      b15f27f0-f09f-46ee-8bf6-4410cb3b98f5:
+        name: Title
+        handle: stepTitle
+        instructions: ''
+        searchable: true
+        translationMethod: language
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+      e4e3a2da-ef31-46be-9f06-221289ff039e:
+        name: Text
+        handle: stepText
+        instructions: ''
+        searchable: true
+        translationMethod: language
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+      efcabacf-b1dd-490b-b8cf-d983c4602d26:
+        name: Icon
+        handle: stepIcon
+        instructions: ''
+        searchable: true
+        translationMethod: site
+        translationKeyFormat: null
+        type: craft\fields\Assets
+        settings:
+          useSingleFolder: ''
+          defaultUploadLocationSource: 'volume:8015cbf1-7dd5-47c8-b212-ed0f7e4730f0'
+          defaultUploadLocationSubpath: ''
+          singleUploadLocationSource: 'volume:8015cbf1-7dd5-47c8-b212-ed0f7e4730f0'
+          singleUploadLocationSubpath: ''
+          restrictFiles: '1'
+          allowedKinds:
+            - image
+          sources: '*'
+          source: null
+          targetSiteId: null
+          viewMode: list
+          limit: '1'
+          selectionLabel: ''
+          localizeRelations: ''
+          validateRelatedElements: ''
+        contentColumnType: string
+        fieldGroup: null
+    fieldLayouts:
+      f475c948-0c05-45a8-b52d-813a64ff1cb6:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              b15f27f0-f09f-46ee-8bf6-4410cb3b98f5:
+                required: true
+                sortOrder: 2
+              e4e3a2da-ef31-46be-9f06-221289ff039e:
+                required: false
+                sortOrder: 3
+              efcabacf-b1dd-490b-b8cf-d983c4602d26:
+                required: false
+                sortOrder: 1
   849aaaf5-d30a-4f8c-a7a8-8d5e20d82f52:
     field: 50ccb0fd-b20b-49cf-a1ad-f49b7e9c533d
     fieldLayouts:

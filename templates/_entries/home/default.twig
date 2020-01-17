@@ -8,7 +8,8 @@
 
 {% block header %}
     {% include '_partials/header' with {
-        isHomePage: true
+        isHomePage: true,
+        isErrorPage: false,
     } %}
 {% endblock %}
 
@@ -24,7 +25,7 @@
                         {% if serviceIcon %}
                             <img src="{{ serviceIcon.url }}" alt="">
                         {% endif %}
-                        <h3>{{ service.serviceTitle }}</h3>
+                        <h3>{{ service.serviceTitle|raw }}</h3>
                         <p>{{ service.serviceDescription }}</p>
                         {{ service.serviceLink.getLink({
                             'class': 'uk-button uk-button-default button-rounded button-colored'
@@ -70,7 +71,7 @@
     {# Our Newspaper #}
     {% set newspapers = entry.newspapers.all() ?? null %}
     <section id="newspaper" class="section uk-background-muted">
-        <div class="uk-container">
+        <div class="uk-container uk-container-small">
             <h2 class="section-title">{{ "Our Newspapers"|t }}</h2>
             {% if newspapers %}
             <div uk-slider>
@@ -79,7 +80,7 @@
                         <ul class="uk-slider-items uk-child-width-1-1">
                             <li>
                                 <div>
-                                    <div class="uk-child-width-1-3@m uk-grid-collapse" uk-grid>
+                                    <div class="uk-child-width-1-3 uk-grid-collapse" uk-grid>
                                         {% for newspaper in newspapers|slice(0,9) %}
                                             <div>
                                                 {% set logo = newspaper.newspaperLogo.one() ?? null %}
@@ -97,7 +98,7 @@
                             </li>
                             <li>
                                 <div>
-                                    <div class="uk-child-width-1-3@m uk-grid-collapse" uk-grid>
+                                    <div class="uk-child-width-1-3 uk-grid-collapse" uk-grid>
                                         {% for newspaper in newspapers|slice(9,9) %}
                                             <div>
                                                 {% set logo = newspaper.newspaperLogo.one() ?? null %}
@@ -115,7 +116,7 @@
                             </li>
                             <li>
                                 <div>
-                                    <div class="uk-child-width-1-3@m uk-grid-collapse" uk-grid>
+                                    <div class="uk-child-width-1-3 uk-grid-collapse" uk-grid>
                                         {% for newspaper in newspapers|slice(18,9) %}
                                             <div>
                                                 {% set logo = newspaper.newspaperLogo.one() ?? null %}
@@ -133,11 +134,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="uk-hidden@s uk-light">
-                        <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-                        <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slider-item="next"></a>
-                    </div>
-                    <div class="uk-visible@s">
+                    <div class="uk-visible@l">
                         <a class="uk-position-center-left-out uk-position-small uk-slidenav-large" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
                         <a class="uk-position-center-right-out uk-position-small uk-slidenav-large" href="#" uk-slidenav-next uk-slider-item="next"></a>
                     </div>
@@ -153,56 +150,7 @@
     <section id="news" class="section">
         <div class="uk-container">
             <h2 class="section-title">{{ "Recent News"|t }}</h2>
-            <div class="uk-child-width-1-4@m" uk-grid>
-                <div>
-                    <div class="uk-card uk-card-default uk-card-hover uk-card-small uk-background-muted">
-                        <div class="uk-card-badge uk-label">QCNA</div>
-                        <div class="uk-card-media-top">
-                            <img src="https://place-hold.it/270x210" alt="">
-                        </div>
-                        <div class="uk-card-body">
-                            <h4 class="uk-card-title">Media Top</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-default uk-card-hover uk-card-small uk-background-muted">
-                        <div class="uk-card-badge uk-label">QCNA</div>
-                        <div class="uk-card-media-top">
-                            <img src="https://place-hold.it/270x210" alt="">
-                        </div>
-                        <div class="uk-card-body">
-                            <h4 class="uk-card-title">Media Top</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-default uk-card-hover uk-card-small uk-background-muted">
-                        <div class="uk-card-badge uk-label">QCNA</div>
-                        <div class="uk-card-media-top">
-                            <img src="https://place-hold.it/270x210" alt="">
-                        </div>
-                        <div class="uk-card-body">
-                            <h4 class="uk-card-title">Media Top</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-default uk-card-hover uk-card-small uk-background-muted">
-                        <div class="uk-card-badge uk-label">QCNA</div>
-                        <div class="uk-card-media-top">
-                            <img src="https://place-hold.it/270x210" alt="">
-                        </div>
-                        <div class="uk-card-body">
-                            <h4 class="uk-card-title">Media Top</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div id="homepage-news-container" class="uk-child-width-1-2 uk-child-width-1-4@m" uk-height-match="target: > div > .uk-card > .uk-card-body" uk-grid></div>
         </div>
     </section>
 
@@ -218,8 +166,6 @@
                             {% set counterIcon = fact.counterIcon.one() ?? null %}
                             {% if counterIcon %}
                                 <img class="counter-icon" src="{{ counterIcon.url }}" alt="">
-                            {% else %}
-                                <img class="counter-icon" src="/dist/img/counter-icon.png" alt="">
                             {% endif %}
                         </div>
                     {% endfor %}

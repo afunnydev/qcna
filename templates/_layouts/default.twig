@@ -21,6 +21,7 @@
         <body vocab="http://schema.org/" typeof="WebPage">
             {{ beginBody() }}
             {% block page %}{% endblock %}
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
             <script src="{{ mix('js/main.js') }}"></script>
             {{ endBody() }}
         </body>

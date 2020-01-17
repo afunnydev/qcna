@@ -14,10 +14,18 @@
     font-size: 24px;
     font-weight: 400;
     margin: 0 0 30px;
+
+    @media screen and (max-width: 600px) {
+        font-size: 21px;
+    }
 }
 
 .service p {
     color: #767886;
     font-size: 19px;
     margin: 0 0 30px;
+
+    @media screen and (max-width: 600px) {
+        font-size: 17px;
+    }
 }
