@@ -92,3 +92,9 @@
     margin: 0;
     text-transform: uppercase;
 }
+
+.uk-logo {
+    @media screen and (max-width: 768px) {
+        max-width: 130px;
+    }
+}
