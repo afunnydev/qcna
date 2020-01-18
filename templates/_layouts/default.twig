@@ -16,6 +16,7 @@
             {% block meta %}{% hook "seo" %}{% endblock %}
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Montserrat:400,700&display=swap">
             <link rel="stylesheet" href="{{ mix('css/main.css') }}">
+            {% include '_partials/favicon' %}
             {{ head() }}
         </head>
         <body vocab="http://schema.org/" typeof="WebPage">

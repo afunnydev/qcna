@@ -27,11 +27,13 @@
                 <li>{{ link.linkItem.getLink() }}</li>
             {% endfor %}
             <li>
+                {#
                 {% if currentUser %}
                     <a href="/admin">{{ "My Dashboard"|t }}</a>
                 {% else %}
                     <a href="/admin">{{ "Journalism Login"|t }}</a>
                 {% endif %}
+                #}
             </li>
             <li>
                 <a href="#">{{ "Members Area"|t }}</a>
@@ -51,11 +53,14 @@
                         <li>{{ link.linkItem.getLink() }}</li>
                     {% endfor %}
                     <li>
+                        <a href="{{ url('grants') }}">LJI Grant Application</a>
+                        {#
                         {% if currentUser %}
                             <a href="/admin">{{ "My Dashboard"|t }}</a>
                         {% else %}
                             <a href="/admin">{{ "Journalism Login"|t }}</a>
                         {% endif %}
+                        #}
                     </li>
                     <li>
                         <a href="#">{{ "Members Area"|t }}</a>
@@ -68,7 +73,7 @@
 
 <div id="top-bar" class="uk-container uk-flex uk-flex-middle uk-visible@s">
     <ul class="list-inline">
-        <li class="uk-margin-right">{% include '_partials/switcher.twig' %}</li>
+        {# <li class="uk-margin-right">{% include '_partials/switcher.twig' %}</li> #}
         {% cache globally %}
             {% for link in companySettings.socialLinks %}
                 <li class="uk-margin-right">
@@ -79,11 +84,14 @@
     </ul>
     <ul class="list-inline uk-margin-auto-left">
         <li class="uk-margin-left">
+            <a href="{{ url('grants') }}" class="uk-button uk-button-primary uk-button-small">LJI Grant Application</a>
+            {#
             {% if currentUser %}
                 <a href="/admin" class="uk-button uk-button-primary uk-button-small">{{ "My Dashboard"|t }}</a>
             {% else %}
                 <a href="/admin" class="uk-button uk-button-primary uk-button-small">{{ "Journalism Login"|t }}</a>
             {% endif %}
+            #}
         </li>
         <li class="uk-margin-left">
             <a href="#" class="uk-button uk-button-primary uk-button-small">{{ "Members Area"|t }}</a>
