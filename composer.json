@@ -8,7 +8,7 @@
     "sebastianlenz/linkfield": "1.0.19",
     "solspace/craft-express-forms": "1.0.4",
     "verbb/field-manager": "2.1.1",
-    "verbb/super-table": "2.3.2",
+    "verbb/super-table": "2.3.3",
     "vlucas/phpdotenv": "^3.4.0",
     "wbrowar/craft-communicator": "1.0.0"
   },
