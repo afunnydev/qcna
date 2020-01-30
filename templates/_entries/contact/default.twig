@@ -173,6 +173,14 @@
 
                     {% endfor %}
 
+                    <div class="uk-margin {% if form.recaptcha.hasErrors %} has-error{% endif %}">
+                        <label class="required">
+                            Please confirm you're not a robot...
+                        </label>
+                        {{ form.recaptcha.render }}
+                        {{ forms.renderErrors(form.recaptcha) }}
+                    </div>
+
                     <button type="submit" class="uk-button uk-button-default button-rounded button-colored">Submit</button>
 
                     {{ form.closeTag }}
