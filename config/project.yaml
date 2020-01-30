@@ -1,4 +1,4 @@
-dateModified: 1580343448
+dateModified: 1580344200
 email:
   fromEmail: $EMAIL_USER
   fromName: QCNA
@@ -874,8 +874,8 @@ plugins:
       honeypotInputName: journalist_id
       recaptchaEnabled: '1'
       recaptchaLoadScript: '1'
-      recaptchaSiteKey: $RECAPTCHA_KEY
-      recaptchaSecretKey: $RECAPTCHA_SECRET
+      recaptchaSiteKey: 6LdND9QUAAAAAOIKbd9cQZO6UF6c1yA5pBUB2J7x
+      recaptchaSecretKey: 6LdND9QUAAAAABLLvOlXKQ3tW4XM-F3HwpUd-4eu
       emailNotificationsDirectoryPath: _forms/_notifications
       duplicatePreventionEnabled: true
 sections:
