@@ -1,0 +1,18 @@
+---
+name: 'QCNA Email Notification'
+description: 'This template is used for the Admin notification.'
+fromName: '{name}'
+fromEmail: '{email}'
+replyTo: '{email}'
+cc: null
+bcc: null
+subject: 'New submission from your {{ form.name }} form'
+includeAttachments: true
+---
+<p>The following submission came in on {{ dateCreated|date('l, F j, Y \\a\\t g:ia') }}.</p>
+
+<ul>
+  {% for field in form.fields %}
+    <li>{{ field.label }}: {{ field.valueAsString }}</li>
+  {% endfor %}
+</ul>
