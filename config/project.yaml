@@ -1,4 +1,4 @@
-dateModified: 1579288191
+dateModified: 1580343448
 email:
   fromEmail: $EMAIL_USER
   fromName: QCNA
@@ -853,10 +853,10 @@ plugins:
     settings:
       emailSupportContacts:
         -
-          email: info@qcna.com
-          name: 'Contact Name'
-          jobTitle: 'Job Title'
-          phone: 123-123-1234
+          email: info@qcna.qc.ca
+          name: ''
+          jobTitle: ''
+          phone: ''
       enableChangelog: '1'
       enableEmailSupport: '1'
       enableEmailSupportForm: '1'
@@ -872,10 +872,10 @@ plugins:
       honeypotEnabled: '1'
       honeypotBehaviour: simulate_success
       honeypotInputName: journalist_id
-      recaptchaEnabled: ''
+      recaptchaEnabled: '1'
       recaptchaLoadScript: '1'
-      recaptchaSiteKey: null
-      recaptchaSecretKey: null
+      recaptchaSiteKey: $RECAPTCHA_KEY
+      recaptchaSecretKey: $RECAPTCHA_SECRET
       emailNotificationsDirectoryPath: _forms/_notifications
       duplicatePreventionEnabled: true
 sections:
