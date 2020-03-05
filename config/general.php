@@ -49,12 +49,12 @@ return [
     // Staging environment settings
     'staging' => [
         // Set this to `false` to prevent administrative changes from being made on staging
-        'allowAdminChanges' => false,
+        'allowAdminChanges' => true,
     ],
 
     // Production environment settings
     'production' => [
         // Set this to `false` to prevent administrative changes from being made on production
-        'allowAdminChanges' => false,
+        'allowAdminChanges' => true,
     ],
 ];
