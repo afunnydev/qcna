@@ -1,0 +1,25 @@
+{#
+ |------------------------------------------------------------------------------
+ | CTA section
+ |------------------------------------------------------------------------------
+#}
+
+{% if entry.callToAction.ctaButton.getText()|length %}
+    <section class="section-cta uk-light">
+        <div class="uk-container">
+            <div class="uk-margin-large-top uk-margin-large-bottom uk-text-center">
+                {% if entry.callToAction.ctaTitle|length %}
+                    <h2>{{ entry.callToAction.ctaTitle }}</h2>
+                {% endif %}
+                {% if entry.callToAction.ctaContent|length %}
+                    <p>{{ entry.callToAction.ctaContent }}</p>
+                {% endif %}
+                {% if entry.callToAction.ctaButton.getText()|length %}
+                    {{ entry.callToAction.ctaButton.getLink({
+                        class: 'uk-button uk-button-default button-rounded button-light'
+                    }) }}
+                {% endif %}
+            </div>
+        </div>
+    </section>
+{% endif %}

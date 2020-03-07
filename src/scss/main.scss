@@ -22,6 +22,7 @@ $accent-color: #f98e3b;
 @import "components/button";
 @import "components/card";
 @import "components/heading";
+@import "components/rte";
 
 @import "partials/header";
 @import "partials/services";
@@ -29,4 +30,5 @@ $accent-color: #f98e3b;
 @import "partials/counters";
 @import "partials/contact";
 @import "partials/grants";
+@import "partials/callToAction";
 @import "partials/footer";

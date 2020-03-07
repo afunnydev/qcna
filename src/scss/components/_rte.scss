@@ -1,5 +1,8 @@
-/* Grants */
-.grants-rte h2 {
+.default-rte {
+    font-size: 21px;
+}
+
+.default-rte h2 {
     font-size: 36px;
     font-weight: 700;
     padding-bottom: 20px;
@@ -17,20 +20,21 @@
     }
 }
 
-.grants-rte p,
-.grants-rte ul {
+.default-rte p,
+.default-rte ul {
     font-size: 21px;
 }
 
-.grants-rte ul {
+.default-rte ul {
     list-style: none;
 }
 
-.grants-rte ul li {
+.default-rte ul li {
     margin-bottom: 10px;
 }
 
-.grants-rte ul li::before {
+.default-rte ul li::before,
+.list-custom li::before {
     content: "\2022";
     color: $accent-color;
     font-weight: bold;
@@ -39,16 +43,6 @@
     margin-left: -1em;
 }
 
-#grants-application-form {
-    background-color: #353fc3;
-}
-
-#grants-application-form h2 {
-    font-size: 50px;
-    font-weight: 700;
-    margin: 0 0 50px 0;
-
-    @media screen and (max-width: 768px) {
-        font-size: 36px;
-    }
+.default-rte em {
+    color: $accent-color;
 }

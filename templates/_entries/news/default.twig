@@ -1,6 +1,6 @@
 {#
  |------------------------------------------------------------------------------
- | Pages default entry template
+ | News Listing
  |------------------------------------------------------------------------------
 #}
 
@@ -9,11 +9,7 @@
 {% block main %}
     <div class="uk-container">
         <div class="uk-margin-large-top uk-margin-large-bottom">
-            <div class="default-rte">
-                {{ entry.body }}
-            </div>
+            {{ entry.body }}
         </div>
     </div>
-
-    {% include '_partials/callToAction' %}
 {% endblock %}

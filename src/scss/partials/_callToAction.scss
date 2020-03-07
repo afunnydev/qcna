@@ -1,0 +1,16 @@
+.section-cta {
+    background-color: #353fc3;
+}
+
+.section-cta h2 {
+    font-size: 50px;
+    font-weight: 700;
+
+    @media screen and (max-width: 768px) {
+        font-size: 36px;
+    }
+}
+
+.section-cta p {
+    color: #fff;
+}

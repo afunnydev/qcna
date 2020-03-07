@@ -1,0 +1,44 @@
+{#
+ |------------------------------------------------------------------------------
+ | Newspaper Listing
+ |------------------------------------------------------------------------------
+#}
+
+{% extends '_entries/default' %}
+
+{% block main %}
+    <div class="uk-container">
+        <div class="uk-margin-large-top uk-margin-large-bottom">
+            <section class="default-rte uk-margin-large-bottom">
+                {# Who we are, vision, mission #}
+                {{ entry.body }}
+            </section>
+
+            <div class="uk-child-width-1-4@m uk-child-width-1-2@s uk-grid-match" uk-grid>
+            {% for newspaper in craft.entries.section('newspapers').all() %}
+                <div>
+                    <div class="uk-card uk-card-default uk-card-hover uk-card-small uk-background-muted">
+                        {% set logo = newspaper.newspaperListingLogo.one() ?? null %}
+                        {% if logo %}
+                        <div class="uk-card-media-top">
+                            <img src="{{ logo.url }}" alt="{{ newspaper.title }}">
+                        </div>
+                        {% endif %}
+                        <div class="uk-card-body">
+                            <h5 class="uk-card-title">{{ newspaper.title }}</h5>
+                            {% if newspaper.newspaperRegion|length %}
+                                <p class="uk-text-meta"><span uk-icon="icon: location"></span> {{ newspaper.newspaperRegion }}</p>
+                            {% endif %}
+                        </div>
+                        <div class="uk-card-footer">
+                            <a href="{{ newspaper.url }}" class="uk-button uk-button-text">{{ 'Learn more'|t }}</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    {% include '_partials/callToAction' %}
+{% endblock %}

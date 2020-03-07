@@ -1,0 +1,106 @@
+{#
+ |------------------------------------------------------------------------------
+ | Newspapers
+ |------------------------------------------------------------------------------
+#}
+
+{% extends '_entries/default' %}
+
+{% block main %}
+    <div class="uk-container">
+        <div class="uk-margin-large-top uk-margin-large-bottom">
+            <div uk-grid>
+                <div class="uk-width-1-4@m">
+                {% set logo = entry.newspaperLogo.one() ?? entry.newspaperListingLogo.one ?? null %}
+                    {% if logo %}
+                        <img data-src="{{ logo.url }}"
+                            width="{{ logo.width }}"
+                            height="{{ logo.height }}"
+                            alt="{{ entry.title }}"
+                            class="uk-box-shadow-small uk-margin-bottom" uk-img>
+                    {% endif %}
+                    <div class="uk-padding uk-background-muted uk-margin-bottom">
+                        <h4 class="uk-text-uppercase">{{ 'Informations'|t }}</h4>
+                        <table class="uk-table uk-table-small uk-table-justify uk-margin-remove-bottom">
+                            {% if entry.newspaperContactInformations.address|length %}
+                            <tr>
+                                <td style="width: 20px;">
+                                    <span uk-icon="icon: location"></span>
+                                </td>
+                                <td>
+                                    <address>{{ entry.newspaperContactInformations.address|raw }}</address>
+                                </td>
+                            </tr>
+                            {% endif %}
+                            {% if entry.newspaperContactInformations.phone|length %}
+                            <tr>
+                                <td style="width: 20px;">
+                                    <span uk-icon="icon: receiver"></span>
+                                </td>
+                                <td>
+                                    <span>{{ entry.newspaperContactInformations.phone }}</span>
+                                </td>
+                            </tr>
+                            {% endif %}
+                            {% if entry.newspaperContactInformations.fax|length %}
+                            <tr>
+                                <td style="width: 20px;">
+                                    <span uk-icon="icon: print"></span>
+                                </td>
+                                <td><span>{{ entry.newspaperContactInformations.fax }}</span></td>
+                            </tr>
+                            {% endif %}
+                            {% if entry.newspaperContactInformations.email|length %}
+                            <tr>
+                                <td style="width: 20px;">
+                                    <span uk-icon="icon: mail"></span>
+                                </td>
+                                <td>
+                                    <a href="mailto:{{ entry.newspaperContactInformations.email }}"> {{ 'Email Us'|t }}</a>
+                                </td>
+                            </tr>
+                            {% endif %}
+                            {% if entry.newspaperContactInformations.website|length %}
+                            <tr>
+                                <td style="width: 20px;">
+                                    <span uk-icon="icon: world"></span>
+                                </td>
+                                <td>
+                                    <a href="mailto:{{ entry.newspaperContactInformations.website }}"> {{ 'Visit Website'|t }}</a>
+                                </td>
+                            </tr>
+                            {% endif %}
+                            {% if entry.newspaperSubscribers|length %}
+                            <tr>
+                                <td style="width: 20px;">
+                                    <span uk-icon="icon: users"></span>
+                                </td>
+                                <td>
+                                    <span>{{ entry.newspaperSubscribers }} {{ 'Subscribers'|t }}</span>
+                                </td>
+                            </tr>
+                            {% endif %}
+                        </table>
+                    </div>
+                    
+                </div>
+                <div class="uk-width-3-4@m">
+                    {% set newspapersListing = craft.entries.section('newspapersListing').one() %}
+                    <ul class="uk-breadcrumb">
+                        <li><a href="{{ siteUrl }}">{{ 'Home'|t }}</a></li>
+                        <li><a href="{{ newspapersListing.url }}">{{ newspapersListing.title }}</a></li>
+                        <li><span>{{ entry.title }}</span></li>
+                    </ul>
+                    <div class="default-rte">
+                        {{ entry.body }}
+                        <h2>{{ 'Distribution Region'|t }}</h2>
+                        <div class="region-map">
+                            {{ entry.newspaperRegionMap|raw }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

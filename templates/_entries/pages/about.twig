@@ -1,0 +1,47 @@
+{#
+ |------------------------------------------------------------------------------
+ | About
+ |------------------------------------------------------------------------------
+#}
+
+{% extends '_entries/default' %}
+
+{% block main %}
+    <div class="uk-container">
+        <div class="uk-margin-large-top uk-margin-large-bottom">
+            <section class="default-rte">
+                {# Who we are, vision, mission #}
+                {{ entry.body }}
+
+                {# Facts #}
+                {% if entry.aboutFactsTitle|length %}
+                    <h2>{{ entry.aboutFactsTitle }}</h2>
+                {% endif %}
+                <ul class="list list-custom">
+                    {% for item in entry.aboutFacts %}
+                        <li>{{ item.fact }}</li>
+                    {% endfor %}
+                </ul>
+
+                {# Team #}
+                {{ entry.aboutTeam }}
+
+                {# Board of Directors #}
+                {% if entry.aboutBoardTitle|length %}
+                    <h2>{{ entry.aboutBoardTitle }}</h2>
+                {% endif %}
+                <div class="uk-child-width-1-4@m uk-grid-match" uk-grid>
+                    {% for member in entry.aboutBoard %}
+                        <div>
+                            <div class="uk-tile uk-tile-muted">
+                                <strong>{{ member.name }}</strong><br>
+                                <small>{{ member.title }}</small>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
+
+        </div>
+    </div>
+{% endblock %}
