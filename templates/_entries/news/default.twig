@@ -7,9 +7,84 @@
 {% extends '_entries/default' %}
 
 {% block main %}
-    <div class="uk-container">
+    <div class="uk-container uk-container-small">
         <div class="uk-margin-large-top uk-margin-large-bottom">
-            {{ entry.body }}
+            {% set newsListing = craft.entries.section('newsListing').one() %}
+            {% set category = craft.categories.slug(entry.newsCategory).one() %}
+            <ul class="uk-breadcrumb">
+                <li><a href="{{ siteUrl }}">{{ 'Home'|t }}</a></li>
+                <li><a href="{{ newsListing.url }}">{{ newsListing.title }}</a></li>
+                <li><a href="{{ category.url }}">{{ category.title }}</a></li>
+                <li><span>{{ entry.title }}</span></li>
+            </ul>
+            <ul class="list-unstyled list-inline uk-text-meta uk-background-muted news-meta">
+                <li>
+                    {% if CURRENT_LANG == 'fr' %}
+                        <span uk-icon="icon: calendar"></span> <time datetime="{{ entry.postDate|date('d F Y') }}">{{ entry.postDate|date('d F Y') }}</time>
+                    {% else %}
+                        <span uk-icon="icon: calendar"></span> <time datetime="{{ entry.postDate|date('F d, Y') }}">{{ entry.postDate|date('F d, Y') }}</time>
+                    {% endif %}
+                </li>
+                <li>
+                    <span uk-icon="tag"></span> {{ entry.newsCategory.one().title }}
+                </li>
+                <li>
+                    <span uk-icon="user"></span> {{ entry.author }}
+                </li>
+            </ul>
+            <div class="default-rte">
+                {{ entry.body }}
+            </div>
+
+            <h3>{{ 'Share this news'|t }}</h3>
+            <div id="share-buttons" class="uk-background-muted uk-padding-small">
+                <!-- Email -->
+                <a href="mailto:?Subject={{ entry.title }}">
+                    <img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
+                </a>
+                <!-- Facebook -->
+                <a href="http://www.facebook.com/sharer.php?u={{ entry.url }}" target="_blank">
+                    <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+                </a>
+                <!-- Google+ -->
+                <a href="https://plus.google.com/share?url={{ entry.url }}" target="_blank">
+                    <img src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" />
+                </a>
+                <!-- LinkedIn -->
+                <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ entry.url }}" target="_blank">
+                    <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+                </a>
+                <!-- Pinterest -->
+                <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());">
+                    <img src="https://simplesharebuttons.com/images/somacro/pinterest.png" alt="Pinterest" />
+                </a>
+                <!-- Print -->
+                <a href="javascript:;" onclick="window.print()">
+                    <img src="https://simplesharebuttons.com/images/somacro/print.png" alt="Print" />
+                </a>
+                <!-- Reddit -->
+                <a href="http://reddit.com/submit?url={{ entry.url }}&amp;title={{ entry.title }}" target="_blank">
+                    <img src="https://simplesharebuttons.com/images/somacro/reddit.png" alt="Reddit" />
+                </a>
+                <!-- Twitter -->
+                <a href="https://twitter.com/share?url={{ entry.url }}" target="_blank">
+                    <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+                </a>
+            </div>
+
+            {% set params = { section: 'news', orderBy: 'postDate desc', limit: null } %}
+            {% set prev = entry.getPrev(params) %}
+            {% set next = entry.getNext(params) %}
+            {% if prev or next %}
+                <ul class="uk-pagination">
+                    {% if prev %}
+                        <li><a href="{{ prev.url }}"><span uk-pagination-previous></span> {{ 'Previous'|t }}</a></li>
+                    {% endif %}
+                    {% if next %}
+                        <li class="uk-margin-auto-left"><a href="{{ next.url }}">{{ 'Next'|t }} <span uk-pagination-next></span></a></li>
+                    {% endif %}
+                </ul>
+            {% endif %}
         </div>
     </div>
 {% endblock %}

@@ -1,0 +1,262 @@
+{#
+ |------------------------------------------------------------------------------
+ | Become a member entry template
+ |------------------------------------------------------------------------------
+#}
+
+{% extends '_entries/default' %}
+
+{% block main %}
+    <div class="uk-container">
+        <div class="uk-margin-large-top uk-margin-large-bottom">
+            <div class="default-rte">
+                <h2>{{ 'Classified Ads' }}</h2>
+
+                {# General Informations #}
+                {% if entry.adGeneralInformations|length %}
+                    <div class="uk-background-muted uk-padding">
+                        <h3>{{ 'Summary'|t }}</h3>
+                        <ul>
+                            {% for item in entry.adGeneralInformations %}
+                                <li>{{ item.listItem }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+
+                {# Introduction #}
+                {% if entry.classifiedAdsIntroduction|length %}
+                    {{entry.classifiedAdsIntroduction|raw }}
+                {% endif %}
+
+                {# Frequently Used Headings #}
+                {% if entry.frequentlyUsedHeadings|length %}
+                    <h3><strong>{{ 'Index of Frequently Used Headings'|t }}</strong></h3>
+                    <div class="uk-overflow-auto">
+                        <table class="uk-table uk-table-striped uk-table-hover uk-table-middle">
+                            <tbody>
+                                {% for item in entry.frequentlyUsedHeadings %}
+                                    <tr>
+                                        <td>{{ item.column1 }}</td>
+                                        <td>{{ item.column2 }}</td>
+                                        <td>{{ item.column3 }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                {% endif %}
+
+                {# Right to Refuse Notice #}
+                {% if entry.rightToRefuseNotice|length %}
+                    <div class="uk-alert-warning" uk-alert>
+                        <p>{{ entry.rightToRefuseNotice }}</p>
+                    </div>
+                {% endif %}
+
+                {# Price #}
+                {% if entry.priceBundles|length %}
+                    <h3><strong>{{ 'Price'|t }}</strong></h3>
+                    <p>{{ 'We offer three bundles:'|t }}</p>
+                    <div class="uk-child-width-1-3@m uk-grid-match" uk-grid>
+                        {% for bundle in entry.priceBundles %}
+                            <div>
+                                <div class="uk-card uk-card-default uk-card-hover uk-background-muted">
+                                    <div class="uk-card-header">
+                                        <h3 class="uk-card-title"><span uk-icon="location"></span> {{ bundle.title }}</h3>
+                                    </div>
+                                    <div class="uk-card-body">{{ bundle.description|raw }}</div>
+                                    <div class="uk-card-footer">{{ bundle.price }}</div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="uk-margin-large-top">
+                        {% if entry.priceInformation|length %}
+                            {{ entry.priceInformation|raw }}
+                        {% endif %}
+                    </div>
+                {% endif %}
+
+                {# Issue Day Table #}
+                {% if entry.newspapersIssueDayTable|length %}
+                    <div class="uk-overflow-auto">
+                        <table class="uk-table uk-table-striped uk-table-hover uk-table-middle">
+                            <thead>
+                                <tr>
+                                    <th>{{ 'Newspaper'|t }}</th>
+                                    <th>{{ 'Place of Publication'|t }}</th>
+                                    <th>{{ 'Issue Day'|t }}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in entry.newspapersIssueDayTable %}
+                                    <tr>
+                                        <td>{{ item.newspaper }}</td>
+                                        <td>{{ item.placeOfPublication }}</td>
+                                        <td>{{ item.issueDay }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                {% endif %}
+
+                {# Other Provinces Table #}
+                {% if entry.otherProvincesTable|length %}
+                    <h3><strong>{{ 'Other Provinces'|t }}</strong></h3>
+                    <div class="uk-overflow-auto">
+                        <table class="uk-table uk-table-striped uk-table-hover uk-table-middle">
+                            <thead>
+                                <tr>
+                                    <th>{{ 'Province'|t }}</th>
+                                    <th>{{ 'Number of Papers'|t }}</th>
+                                    <th>{{ 'Circulation'|t }}</th>
+                                    <th>{{ 'Cost Per Week'|t }}</th>
+                                    <th>{{ 'Extra Words'|t }}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in entry.otherProvincesTable %}
+                                    <tr>
+                                        <td>{{ item.province }}</td>
+                                        <td>{{ item.numberOfPapers }}</td>
+                                        <td>{{ item.circulation }}</td>
+                                        <td>{{ item.costPerWeek }}</td>
+                                        <td>{{ item.extraWords }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                {% endif %}
+
+                {# Promotion #}
+                {% if entry.promotion|length %}
+                    <div class="uk-background-primary uk-light uk-padding uk-border-rounded uk-margin-large-top uk-margin-large-bottom">
+                        {% if entry.promotion.promotionName|length %}
+                            <h2>{{ entry.promotion.promotionName }}</h2>
+                        {% endif %}
+                        {% if entry.promotion.promotionDescription|length %}
+                            <p style="color: #fff;">{{ entry.promotion.promotionDescription }}</p>
+                        {% endif %}
+                        {% if entry.promotion.promotionLink|length %}
+                            {{ entry.promotion.promotionLink.getLink({
+                                class: 'uk-button uk-button-default uk-button-large button-rounded'
+                            }) }}
+                        {% endif %}
+                    </div>
+                {% endif %}
+
+                {# Price List #}
+                {% if entry.classifiedAdsPriceList|length %}
+                    <h3><strong>{{ 'Price List for Classified ads to French Quebec'|t }}</strong></h3>
+                    <div class="uk-overflow-auto">
+                        <table class="uk-table uk-table-striped uk-table-hover uk-table-middle">
+                            <thead>
+                                <tr>
+                                    <th>{{ 'Region'|t }}</th>
+                                    <th>{{ 'Number of Papers'|t }}</th>
+                                    <th>{{ 'Circulation'|t }}</th>
+                                    <th>{{ '1 Week 25 words'|t }}</th>
+                                    <th>{{ '2 Week 25 words'|t }}</th>
+                                    <th>{{ '3 Week 25 words'|t }}</th>
+                                    <th>{{ '4 Week 25 words'|t }}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in entry.classifiedAdsPriceList %}
+                                    <tr>
+                                        <td>{{ item.region }}</td>
+                                        <td>{{ item.numberOfPapers }}</td>
+                                        <td>{{ item.circulation }}</td>
+                                        <td>{{ item.oneWeek }}</td>
+                                        <td>{{ item.twoWeeks }}</td>
+                                        <td>{{ item.threeWeeks }}</td>
+                                        <td>{{ item.fourWeeks }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                {% endif %}
+
+                {# Deadline Notice #}
+                {% if entry.deadlineNotice|length %}
+                    <div class="uk-alert-warning" uk-alert>
+                        <p>{{ entry.deadlineNotice }}</p>
+                    </div>
+                {% endif %}
+
+                {# Additional Information #}
+                {% if entry.classifiedAdsAdditionalInformation|length %}
+                    {{ entry.classifiedAdsAdditionalInformation|raw }}
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+
+    <div class="uk-section uk-section-muted">
+        <div class="uk-container">
+            <div class="default-rte">
+                <h2>{{ 'Display Ads'|t }}</h2>
+
+                {# Introduction #}
+                {% if entry.displayAdsIntroduction|length %}
+                    {{ entry.displayAdsIntroduction|raw }}
+                {% endif %}
+
+                {# Price List #}
+                {% if entry.displayAdsRateCard|length %}
+                    <h3><strong>{{ 'Rate Card'|t }}</strong></h3>
+                    <div class="uk-overflow-auto">
+                        <table class="uk-table uk-table-divider uk-table-hover uk-table-middle">
+                            <thead>
+                                <tr>
+                                    <th>{{ 'Newspaper'|t }}</th>
+                                    <th>{{ 'Issued'|t }}</th>
+                                    <th>{{ 'Deadline'|t }}</th>
+                                    <th>{{ 'Type'|t }}</th>
+                                    <th>{{ 'Width in Picas'|t }}</th>
+                                    <th>{{ '# of Cols'|t }}</th>
+                                    <th>{{ '# of Lines'|t }}</th>
+                                    <th>{{ 'Line Rate'|t }}</th>
+                                    <th>{{ 'Blk 1'|t }}</th>
+                                    <th>{{ 'Blk 2'|t }}</th>
+                                    <th>{{ 'Full Colour'|t }}</th>
+                                    <th>{{ 'Circulation'|t }}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in entry.displayAdsRateCard %}
+                                    <tr>
+                                        <td>{{ item.newspaper }}</td>
+                                        <td>{{ item.issued }}</td>
+                                        <td>{{ item.deadline }}</td>
+                                        <td>{{ item.type }}</td>
+                                        <td>{{ item.widthInPicas }}</td>
+                                        <td>{{ item.ofCols }}</td>
+                                        <td>{{ item.ofLines }}</td>
+                                        <td>{{ item.lineRate }}</td>
+                                        <td>{{ item.blk1 }}</td>
+                                        <td>{{ item.blk2 }}</td>
+                                        <td>{{ item.fullColour }}</td>
+                                        <td>{{ item.circulation }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                {% endif %}
+
+                {# Additional Information #}
+                {% if entry.displayAdsAdditionalInformation|length %}
+                    {{ entry.displayAdsAdditionalInformation|raw }}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    {% include '_partials/callToAction' %}
+{% endblock %}

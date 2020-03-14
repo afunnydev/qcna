@@ -158,14 +158,15 @@
                 </div>
             </div>
         {% else %}
+            {% set model = entry ?? category ?? null %}
             <div class="header-inner uk-text-center uk-padding-large">
                 <div class="uk-width-1-1">
-                    <h1>{{ entry.hero.heroTitle ?? 'Undefined content'|t }}</h1>
-                    {% if entry.hero.heroContent|length %}
-                        <p>{{ entry.hero.heroContent }}</p>
+                    <h1>{{ model.hero.heroTitle ?? model.title ?? 'Undefined content'|t }}</h1>
+                    {% if model.hero.heroContent|length %}
+                        <p>{{ model.hero.heroContent }}</p>
                     {% endif %}
-                    {% if entry.hero|length %}
-                        {{ entry.hero.heroButton.getLink({
+                    {% if model.hero.heroButton|length %}
+                        {{ model.hero.heroButton.getLink({
                             class: 'uk-button uk-button-default uk-button-large button-rounded',
                         }) }}
                     {% endif %}

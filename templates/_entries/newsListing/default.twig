@@ -9,7 +9,49 @@
 {% block main %}
     <div class="uk-container">
         <div class="uk-margin-large-top uk-margin-large-bottom">
-            
+            <div class="default-rte">
+                {{ entry.body }}
+            </div>
         </div>
+
+        {% set category = craft.categories.slug('lji') %}
+        {% set ljiNews = craft.entries.section('news').relatedTo(category).limit(8).all() %}
+        {% if ljiNews|length %}
+            <section class="uk-margin-large-bottom">
+                <h2 class="branded-title">{{ entry.newsLjiTitle ?? 'LJI News'|t }}</h2>
+                <div class="uk-child-width-1-4@m uk-child-width-1-2@s uk-grid-match" uk-grid>
+                    {% for article in ljiNews %}
+                        {% include "_partials/newsCard" %}
+                    {% endfor %}
+                </div>
+                <p class="uk-margin-large-top uk-text-center">
+                    <a href="{{ craft.categories.slug('lji').one().url }}" class="uk-button uk-button-default button-rounded button-colored">{{ 'More news'|t }}</a>
+                </p>
+            </section>
+        {% endif %}
+
+        {% set category = craft.categories.slug('qcna') %}
+        {% set qcnaNews = craft.entries.section('news').relatedTo(category).limit(8).all() %}
+        {% if qcnaNews|length %}
+            <section class="uk-margin-large-bottom">
+                <h2 class="branded-title">{{ entry.newsQcnaTitle ?? 'QCNA News'|t }}</h2>
+                <div class="uk-child-width-1-4@m uk-child-width-1-2@s uk-grid-match" uk-grid>
+                    {% for article in qcnaNews %}
+                        {% include "_partials/newsCard" %}
+                    {% endfor %}
+                </div>
+                <p class="uk-margin-large-top uk-text-center">
+                    <a href="{{ craft.categories.slug('qcna').one().url }}" class="uk-button uk-button-default button-rounded button-colored">{{ 'More news'|t }}</a>
+                </p>
+            </section>
+        {% endif %}
+
+        <section class="uk-margin-large-bottom">
+            <h2 class="branded-title">{{ entry.newsCanadaLocalTitle ?? 'Canada Local News'|t  }}</h2>
+            <p class="uk-margin-large-top uk-text-center">
+                <a href="https://qcna.canadalocal.media/" class="uk-button uk-button-default button-rounded button-colored" target="_blank">{{ 'More news'|t }}</a>
+            </p>
+        </section>
+
     </div>
 {% endblock %}

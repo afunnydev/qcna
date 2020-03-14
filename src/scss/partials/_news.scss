@@ -1,0 +1,23 @@
+
+.news-meta {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.news-meta li {
+    margin-right: 10px;
+}
+
+#share-buttons a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+#share-buttons img {
+    width: 35px;
+    padding: 5px;
+    border: 0;
+    box-shadow: 0;
+    display: inline;
+}

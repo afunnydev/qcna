@@ -1,0 +1,42 @@
+{#
+ |------------------------------------------------------------------------------
+ | News Card
+ |------------------------------------------------------------------------------
+#}
+
+<div>
+    <div class="uk-card uk-card-default uk-card-hover uk-card-small uk-background-muted">
+        {% set featuredImage = article.newsFeaturedImage.one() ?? null %}
+        {% if featuredImage %}
+            {% set crop = {
+                mode: 'crop',
+                width: 600,
+                height: 400,
+                quality: 75,
+                position: 'center-center'
+            } %}
+            <div class="uk-card-media-top">
+                <img src="{{ featuredImage.getUrl(crop) }}"
+                    width="{{ featuredImage.getWidth(crop) }}"
+                    height="{{ featuredImage.getHeight(crop) }}"
+                    alt="{{ article.title }}">
+            </div>
+        {% endif %}
+        <div class="uk-card-body">
+            <p class="uk-text-meta uk-margin-remove">
+                {% if currentSite.language|slice(0,2) == 'fr' %}
+                    <span uk-icon="icon: calendar"></span> <time datetime="{{ article.postDate|date('d F Y') }}">{{ article.postDate|date('d F Y') }}</time>
+                {% else %}
+                    <span uk-icon="icon: calendar"></span> <time datetime="{{ article.postDate|date('F d, Y') }}">{{ article.postDate|date('F d, Y') }}</time>
+                {% endif %}
+            </p>
+            <h5 class="uk-card-title">
+                <a class="uk-link-heading" href="{{ article.url }}">{{ article.title }}</a>
+            </h5>
+            <p>{{ article.newsSummary }}</p>
+        </div>
+        <div class="uk-card-footer">
+            <a href="{{ article.url }}" class="uk-button uk-button-text">{{ 'Read more'|t }}</a>
+        </div>
+    </div>
+</div>

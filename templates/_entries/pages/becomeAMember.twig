@@ -1,0 +1,22 @@
+{#
+ |------------------------------------------------------------------------------
+ | Become a member entry template
+ |------------------------------------------------------------------------------
+#}
+
+{% extends '_entries/default' %}
+
+{% block main %}
+    <div class="uk-container">
+        <div class="uk-margin-large-top uk-margin-large-bottom">
+            <div class="default-rte">
+                {{ entry.body }}
+
+                {# Become a member form #}
+                
+            </div>
+        </div>
+    </div>
+
+    {% include '_partials/callToAction' %}
+{% endblock %}

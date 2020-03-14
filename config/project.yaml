@@ -1,4 +1,47 @@
-dateModified: 1583549380
+categoryGroups:
+  57498ad3-dc5a-4eb2-941b-2b7ae8b65393:
+    fieldLayouts:
+      b34efc9c-0ad3-47d9-94a0-0f878a6148b0:
+        tabs:
+          -
+            fields:
+              d09f8328-b9a7-4ab1-bc64-2b0bcf59a6cd:
+                required: false
+                sortOrder: 1
+            name: Hero
+            sortOrder: 1
+          -
+            fields:
+              149b6835-f1fb-4ae5-b272-4b4551d44ffa:
+                required: false
+                sortOrder: 1
+              25d86523-f81d-4490-871f-6e7e31fe79e3:
+                required: false
+                sortOrder: 2
+            name: Body
+            sortOrder: 2
+          -
+            fields:
+              a8ecf32b-98c2-4871-a920-c86c0b327bcd:
+                required: false
+                sortOrder: 1
+            name: SEO
+            sortOrder: 3
+    handle: categories
+    name: Categories
+    siteSettings:
+      5b81df98-3353-4519-b38a-9c7c6e3fc1e4:
+        hasUrls: true
+        template: _categories/default
+        uriFormat: 'nouvelles/{slug}'
+      d7acb83a-8fb9-4143-b21e-34c7af63bf45:
+        hasUrls: true
+        template: _categories/default
+        uriFormat: 'news/{slug}'
+    structure:
+      maxLevels: null
+      uid: 6800ba30-8d2b-473f-836a-a54b0de7b497
+dateModified: 1584211632
 email:
   fromEmail: $EMAIL_USER
   fromName: QCNA
@@ -11,6 +54,8 @@ email:
 fieldGroups:
   68c58b3e-d315-40d8-8eb8-3f89eb9e9ad6:
     name: 'Company Settings'
+  6c497c72-d868-467b-85aa-7e71d032d6ef:
+    name: 'Advertise with us'
   a43a6c2c-8f6a-4f30-a89d-4fa27415b276:
     name: Newspaper
   a4ce55ef-4198-4d3e-b967-b42975a28c54:
@@ -21,6 +66,8 @@ fieldGroups:
     name: Grants
   e3ee8a91-7a39-4d2e-ae9f-1ce46841fae7:
     name: About
+  e6553d1f-17d6-4a13-919a-d3e435f00223:
+    name: News
   f14bc424-75cb-420b-b102-71f411a661aa:
     name: Common
 fields:
@@ -151,6 +198,159 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Matrix
+  13c9ec52-137a-4ff3-8113-61e358819fe7:
+    contentColumnType: text
+    fieldGroup: 6c497c72-d868-467b-85aa-7e71d032d6ef
+    handle: classifiedAdsPriceList
+    instructions: 'Add entries to the classified ads pricing table.'
+    name: 'Classified Ads Price List'
+    searchable: true
+    settings:
+      addRowLabel: 'Add a row'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Region
+                -
+                  - handle
+                  - region
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col2
+            -
+              __assoc__:
+                -
+                  - heading
+                  - 'Number of Papers'
+                -
+                  - handle
+                  - numberOfPapers
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col7
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Circulation
+                -
+                  - handle
+                  - circulation
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col3
+            -
+              __assoc__:
+                -
+                  - heading
+                  - '1 Week 25 Words'
+                -
+                  - handle
+                  - oneWeek
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col4
+            -
+              __assoc__:
+                -
+                  - heading
+                  - '2 Weeks 25 Words'
+                -
+                  - handle
+                  - twoWeeks
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col5
+            -
+              __assoc__:
+                -
+                  - heading
+                  - '3 Weeks 25 Words'
+                -
+                  - handle
+                  - threeWeeks
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col6
+            -
+              __assoc__:
+                -
+                  - heading
+                  - '4 Weeks 25 Words'
+                -
+                  - handle
+                  - fourWeeks
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+      defaults:
+        -
+          __assoc__:
+            -
+              - col1
+              - ''
+            -
+              - col2
+              - ''
+            -
+              - col7
+              - ''
+            -
+              - col3
+              - ''
+            -
+              - col4
+              - ''
+            -
+              - col5
+              - ''
+            -
+              - col6
+              - ''
+      maxRows: ''
+      minRows: ''
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\fields\Table
   149b6835-f1fb-4ae5-b272-4b4551d44ffa:
     contentColumnType: mediumtext
     fieldGroup: f14bc424-75cb-420b-b102-71f411a661aa
@@ -174,6 +374,29 @@ fields:
     translationKeyFormat: null
     translationMethod: language
     type: craft\redactor\Field
+  1f8b8f62-bd60-4a61-af4a-077b4b871ef8:
+    contentColumnType: mediumtext
+    fieldGroup: 6c497c72-d868-467b-85aa-7e71d032d6ef
+    handle: displayAdsIntroduction
+    instructions: 'Add content to the Display Ads introduction section.'
+    name: 'Display Ads Introduction'
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: mediumtext
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Standard.json
+      removeEmptyTags: '1'
+      removeInlineStyles: ''
+      removeNbsp: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\redactor\Field
   25d86523-f81d-4490-871f-6e7e31fe79e3:
     contentColumnType: string
     fieldGroup: f14bc424-75cb-420b-b102-71f411a661aa
@@ -192,6 +415,24 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: verbb\supertable\fields\SuperTableField
+  2c0183fb-d171-4d25-99d9-973ca8dce93e:
+    contentColumnType: text
+    fieldGroup: e6553d1f-17d6-4a13-919a-d3e435f00223
+    handle: newsQcnaTitle
+    instructions: 'Add a title to the QCNA news section.'
+    name: 'QCNA News Section Title'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\fields\PlainText
   2d7eb5f1-45b5-41ad-9685-4634ca29a433:
     contentColumnType: string
     fieldGroup: a43a6c2c-8f6a-4f30-a89d-4fa27415b276
@@ -221,6 +462,29 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
+  3b080826-0bdd-4ece-8b04-c273e6ee7877:
+    contentColumnType: text
+    fieldGroup: 6c497c72-d868-467b-85aa-7e71d032d6ef
+    handle: displayAdsAdditionalInformation
+    instructions: 'Add content to the Display Ads additional information section.'
+    name: 'Display Ads Additional Information'
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Standard.json
+      removeEmptyTags: '1'
+      removeInlineStyles: ''
+      removeNbsp: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\redactor\Field
   3c770e42-9a60-4ba5-bd1d-306d863cd5b2:
     contentColumnType: mediumtext
     fieldGroup: e3ee8a91-7a39-4d2e-ae9f-1ce46841fae7
@@ -259,6 +523,46 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Matrix
+  3d849e2a-9a61-4dd2-8080-084e79cbfda4:
+    contentColumnType: text
+    fieldGroup: 6c497c72-d868-467b-85aa-7e71d032d6ef
+    handle: deadlineNotice
+    instructions: 'Add content to the deadline notice.'
+    name: 'Deadline Notice'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\fields\PlainText
+  3eef949f-f723-4619-abd0-16b2c45b9077:
+    contentColumnType: string
+    fieldGroup: e6553d1f-17d6-4a13-919a-d3e435f00223
+    handle: newsCategory
+    instructions: 'Select the news category.'
+    name: Category
+    searchable: true
+    settings:
+      allowLimit: false
+      allowMultipleSources: false
+      branchLimit: '1'
+      limit: null
+      localizeRelations: ''
+      selectionLabel: 'Add a category'
+      source: 'group:57498ad3-dc5a-4eb2-941b-2b7ae8b65393'
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: ''
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Categories
   3f7057bd-d3d9-419b-b611-2eafb674f12d:
     contentColumnType: text
     fieldGroup: a4ce55ef-4198-4d3e-b967-b42975a28c54
@@ -353,6 +657,29 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
+  4df77da1-b90a-432b-8118-3480421b8bab:
+    contentColumnType: mediumtext
+    fieldGroup: 6c497c72-d868-467b-85aa-7e71d032d6ef
+    handle: classifiedAdsIntroduction
+    instructions: 'Add content to the classified ads introduction section.'
+    name: 'Classified Ads Introduction'
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: mediumtext
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Standard.json
+      removeEmptyTags: '1'
+      removeInlineStyles: ''
+      removeNbsp: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\redactor\Field
   50ccb0fd-b20b-49cf-a1ad-f49b7e9c533d:
     contentColumnType: string
     fieldGroup: a9590745-8a24-4ec5-9c14-7f72d5734273
@@ -411,6 +738,160 @@ fields:
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
+  5a7fd45c-540e-47da-b57c-80bc1248bbe3:
+    contentColumnType: text
+    fieldGroup: 6c497c72-d868-467b-85aa-7e71d032d6ef
+    handle: newspapersIssueDayTable
+    instructions: 'Add entries to the newspapers issue day table.'
+    name: 'Newspapers Issue Day Table'
+    searchable: true
+    settings:
+      addRowLabel: 'Add a row'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Newspaper
+                -
+                  - handle
+                  - newspaper
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col2
+            -
+              __assoc__:
+                -
+                  - heading
+                  - 'Place of Publication'
+                -
+                  - handle
+                  - placeOfPublication
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col3
+            -
+              __assoc__:
+                -
+                  - heading
+                  - 'Issue Day'
+                -
+                  - handle
+                  - issueDay
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+      defaults:
+        -
+          __assoc__:
+            -
+              - col1
+              - ''
+            -
+              - col2
+              - ''
+            -
+              - col3
+              - ''
+      maxRows: ''
+      minRows: ''
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\fields\Table
+  60713798-c848-403c-9410-38dddd3ed97e:
+    contentColumnType: text
+    fieldGroup: 6c497c72-d868-467b-85aa-7e71d032d6ef
+    handle: frequentlyUsedHeadings
+    instructions: 'Index table of frequently used headings'
+    name: 'Frequently Used Headings'
+    searchable: true
+    settings:
+      addRowLabel: 'Add a row'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - 'Column 1'
+                -
+                  - handle
+                  - column1
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col2
+            -
+              __assoc__:
+                -
+                  - heading
+                  - 'Column 2'
+                -
+                  - handle
+                  - column2
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col3
+            -
+              __assoc__:
+                -
+                  - heading
+                  - 'Column 3'
+                -
+                  - handle
+                  - column3
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+      defaults:
+        -
+          __assoc__:
+            -
+              - col1
+              - ''
+            -
+              - col2
+              - ''
+            -
+              - col3
+              - ''
+      maxRows: ''
+      minRows: ''
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\fields\Table
   6105775e-28f1-471f-b5f4-e8e615728d7a:
     contentColumnType: string
     fieldGroup: a9590745-8a24-4ec5-9c14-7f72d5734273
@@ -512,6 +993,29 @@ fields:
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\Table
+  7882b4ca-4af3-4d7d-837b-36e081016fa1:
+    contentColumnType: mediumtext
+    fieldGroup: 6c497c72-d868-467b-85aa-7e71d032d6ef
+    handle: priceInformation
+    instructions: 'Add additional information to the classified ads price section.'
+    name: 'Price Information'
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: mediumtext
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Standard.json
+      removeEmptyTags: '1'
+      removeInlineStyles: ''
+      removeNbsp: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\redactor\Field
   791ad1aa-08a9-4599-a7ae-0abbc106e3c9:
     contentColumnType: text
     fieldGroup: f14bc424-75cb-420b-b102-71f411a661aa
@@ -628,6 +1132,29 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: verbb\supertable\fields\SuperTableField
+  8bdbdbd3-cae2-4360-b049-fb1fe01bf253:
+    contentColumnType: text
+    fieldGroup: 6c497c72-d868-467b-85aa-7e71d032d6ef
+    handle: classifiedAdsAdditionalInformation
+    instructions: 'Add additional information to the classified ads section.'
+    name: 'Classified Ads Additional Information'
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Standard.json
+      removeEmptyTags: '1'
+      removeInlineStyles: ''
+      removeNbsp: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\redactor\Field
   968a81d3-27c0-4e36-866d-7dbb91ae4bf1:
     contentColumnType: text
     fieldGroup: a4ce55ef-4198-4d3e-b967-b42975a28c54
@@ -666,6 +1193,24 @@ fields:
     translationKeyFormat: null
     translationMethod: language
     type: craft\redactor\Field
+  a40560ab-5017-4950-abd0-368255b64916:
+    contentColumnType: text
+    fieldGroup: e6553d1f-17d6-4a13-919a-d3e435f00223
+    handle: newsSummary
+    instructions: 'Add the news summary.'
+    name: Summary
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: '1'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\fields\PlainText
   a5eda873-b39e-4bf0-8973-b16621a971fd:
     contentColumnType: text
     fieldGroup: e3ee8a91-7a39-4d2e-ae9f-1ce46841fae7
@@ -684,6 +1229,45 @@ fields:
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
+  a6bdffdf-5510-4072-bd01-aee421323d86:
+    contentColumnType: text
+    fieldGroup: 6c497c72-d868-467b-85aa-7e71d032d6ef
+    handle: adGeneralInformations
+    instructions: 'Add general informations about the classified ads.'
+    name: 'General Informations'
+    searchable: true
+    settings:
+      addRowLabel: 'Add a row'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - 'List Item'
+                -
+                  - handle
+                  - listItem
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+      defaults:
+        -
+          __assoc__:
+            -
+              - col1
+              - ''
+      maxRows: ''
+      minRows: ''
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\fields\Table
   a8ecf32b-98c2-4871-a920-c86c0b327bcd:
     contentColumnType: text
     fieldGroup: f14bc424-75cb-420b-b102-71f411a661aa
@@ -730,6 +1314,121 @@ fields:
     translationKeyFormat: null
     translationMethod: language
     type: ether\seo\fields\SeoField
+  a98f8031-69da-46cd-89ab-86022b603088:
+    contentColumnType: text
+    fieldGroup: 6c497c72-d868-467b-85aa-7e71d032d6ef
+    handle: otherProvincesTable
+    instructions: 'Add entries to the other provinces table.'
+    name: 'Other Provinces Table'
+    searchable: true
+    settings:
+      addRowLabel: 'Add a row'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Province
+                -
+                  - handle
+                  - province
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col2
+            -
+              __assoc__:
+                -
+                  - heading
+                  - 'Number of Papers'
+                -
+                  - handle
+                  - numberOfPapers
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col3
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Circulation
+                -
+                  - handle
+                  - circulation
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col4
+            -
+              __assoc__:
+                -
+                  - heading
+                  - 'Cost Per Week'
+                -
+                  - handle
+                  - costPerWeek
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col5
+            -
+              __assoc__:
+                -
+                  - heading
+                  - 'Extra Words'
+                -
+                  - handle
+                  - extraWords
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+      defaults:
+        -
+          __assoc__:
+            -
+              - col1
+              - ''
+            -
+              - col2
+              - ''
+            -
+              - col3
+              - ''
+            -
+              - col4
+              - ''
+            -
+              - col5
+              - ''
+      maxRows: ''
+      minRows: ''
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\fields\Table
   aa9ad401-33ac-41e7-a00a-ece76a1f3a1e:
     contentColumnType: text
     fieldGroup: 68c58b3e-d315-40d8-8eb8-3f89eb9e9ad6
@@ -741,6 +1440,24 @@ fields:
       charLimit: ''
       code: ''
       columnType: text
+      initialRows: '4'
+      multiline: '1'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\fields\PlainText
+  ae667a46-b529-4f97-b93a-3007581c7c40:
+    contentColumnType: text
+    fieldGroup: 6c497c72-d868-467b-85aa-7e71d032d6ef
+    handle: rightToRefuseNotice
+    instructions: 'Add content to the Right to Refuse notice.'
+    name: 'Right to Refuse Notice'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
       initialRows: '4'
       multiline: '1'
       placeholder: ''
@@ -765,6 +1482,83 @@ fields:
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
+  aee65e23-077e-4d3b-9b5a-5be1715c43f4:
+    contentColumnType: text
+    fieldGroup: 6c497c72-d868-467b-85aa-7e71d032d6ef
+    handle: priceBundles
+    instructions: 'Add the price bundles for classified ads.'
+    name: 'Price Bundles'
+    searchable: true
+    settings:
+      addRowLabel: 'Add a bundle'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Title
+                -
+                  - handle
+                  - title
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col2
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Description
+                -
+                  - handle
+                  - description
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col3
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Price
+                -
+                  - handle
+                  - price
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+      defaults:
+        -
+          __assoc__:
+            -
+              - col1
+              - ''
+            -
+              - col2
+              - ''
+            -
+              - col3
+              - ''
+      maxRows: ''
+      minRows: ''
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\fields\Table
   b2284db3-74fd-475d-aa24-35b11e80c189:
     contentColumnType: string
     fieldGroup: a9590745-8a24-4ec5-9c14-7f72d5734273
@@ -827,6 +1621,71 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: verbb\supertable\fields\SuperTableField
+  b35dee1a-fb6e-4b8e-9000-04af1fc94aed:
+    contentColumnType: string
+    fieldGroup: e6553d1f-17d6-4a13-919a-d3e435f00223
+    handle: newsFeaturedImage
+    instructions: 'Add a featured image to the news.'
+    name: 'Featured Image'
+    searchable: true
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:8015cbf1-7dd5-47c8-b212-ed0f7e4730f0'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: ''
+      restrictFiles: '1'
+      selectionLabel: 'Add an image'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:8015cbf1-7dd5-47c8-b212-ed0f7e4730f0'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: ''
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  b80fbbb0-caa2-49d7-b9a7-eefda1aec19b:
+    contentColumnType: string
+    fieldGroup: 6c497c72-d868-467b-85aa-7e71d032d6ef
+    handle: promotion
+    instructions: 'Add content to the promotion section. Leave all fields blank to hide the section.'
+    name: Promotion
+    searchable: true
+    settings:
+      contentTable: '{{%stc_promotion}}'
+      fieldLayout: row
+      maxRows: ''
+      minRows: ''
+      propagationMethod: all
+      selectionLabel: ''
+      staticField: '1'
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+  b8604730-4572-4c01-9f93-792c5f7a3f35:
+    contentColumnType: text
+    fieldGroup: e6553d1f-17d6-4a13-919a-d3e435f00223
+    handle: newsLjiTitle
+    instructions: 'Add a title to the LJI news section.'
+    name: 'LJI News Section Title'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\fields\PlainText
   bf99fec6-0c6f-4c57-8877-2555c3f5ed2e:
     contentColumnType: string
     fieldGroup: a43a6c2c-8f6a-4f30-a89d-4fa27415b276
@@ -903,6 +1762,254 @@ fields:
     translationKeyFormat: null
     translationMethod: language
     type: craft\redactor\Field
+  cd33fe76-d08b-4279-8f5d-d23b492f7286:
+    contentColumnType: text
+    fieldGroup: 6c497c72-d868-467b-85aa-7e71d032d6ef
+    handle: displayAdsRateCard
+    instructions: 'Add entries to the Display Ads rate card.'
+    name: 'Display Ads Rate Card'
+    searchable: true
+    settings:
+      addRowLabel: 'Add a row'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Newspaper
+                -
+                  - handle
+                  - newspaper
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col2
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Issued
+                -
+                  - handle
+                  - issued
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col3
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Deadline
+                -
+                  - handle
+                  - deadline
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col4
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Type
+                -
+                  - handle
+                  - type
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col5
+            -
+              __assoc__:
+                -
+                  - heading
+                  - 'Width In Picas'
+                -
+                  - handle
+                  - widthInPicas
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col6
+            -
+              __assoc__:
+                -
+                  - heading
+                  - '# of Cols'
+                -
+                  - handle
+                  - ofCols
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col7
+            -
+              __assoc__:
+                -
+                  - heading
+                  - '# of Lines'
+                -
+                  - handle
+                  - ofLines
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col8
+            -
+              __assoc__:
+                -
+                  - heading
+                  - 'Line Rate ($)'
+                -
+                  - handle
+                  - lineRate
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col9
+            -
+              __assoc__:
+                -
+                  - heading
+                  - 'Blk &1'
+                -
+                  - handle
+                  - blk1
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col10
+            -
+              __assoc__:
+                -
+                  - heading
+                  - 'Blk &2'
+                -
+                  - handle
+                  - blk2
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col11
+            -
+              __assoc__:
+                -
+                  - heading
+                  - 'Full Colour'
+                -
+                  - handle
+                  - fullColour
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col12
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Circulation
+                -
+                  - handle
+                  - circulation
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+      defaults:
+        -
+          __assoc__:
+            -
+              - col1
+              - ''
+            -
+              - col2
+              - ''
+            -
+              - col3
+              - ''
+            -
+              - col4
+              - ''
+            -
+              - col5
+              - ''
+            -
+              - col6
+              - ''
+            -
+              - col7
+              - ''
+            -
+              - col8
+              - ''
+            -
+              - col9
+              - ''
+            -
+              - col10
+              - ''
+            -
+              - col11
+              - ''
+            -
+              - col12
+              - ''
+      maxRows: ''
+      minRows: ''
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\fields\Table
   d088ec67-4a52-4d6d-bc95-7c5c45a328f4:
     contentColumnType: string
     fieldGroup: a4ce55ef-4198-4d3e-b967-b42975a28c54
@@ -1126,6 +2233,24 @@ fields:
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\Table
+  dfa4a5c9-4ca4-4f4f-b874-73c5650e06c3:
+    contentColumnType: text
+    fieldGroup: e6553d1f-17d6-4a13-919a-d3e435f00223
+    handle: newsCanadaLocalTitle
+    instructions: 'Add a title to the Canada Local news section.'
+    name: 'Canada Local News Section Title'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\fields\PlainText
   e28522fa-ab8a-4ecf-9db2-d22fe3e64109:
     contentColumnType: string
     fieldGroup: d4db5330-2888-41c6-bed1-5c393e75005e
@@ -1683,6 +2808,15 @@ sections:
                   149b6835-f1fb-4ae5-b272-4b4551d44ffa:
                     required: false
                     sortOrder: 1
+                  3eef949f-f723-4619-abd0-16b2c45b9077:
+                    required: false
+                    sortOrder: 2
+                  a40560ab-5017-4950-abd0-368255b64916:
+                    required: false
+                    sortOrder: 4
+                  b35dee1a-fb6e-4b8e-9000-04af1fc94aed:
+                    required: false
+                    sortOrder: 3
                 name: Body
                 sortOrder: 2
               -
@@ -1810,7 +2944,16 @@ sections:
                     sortOrder: 1
                   25d86523-f81d-4490-871f-6e7e31fe79e3:
                     required: false
+                    sortOrder: 5
+                  2c0183fb-d171-4d25-99d9-973ca8dce93e:
+                    required: false
+                    sortOrder: 3
+                  b8604730-4572-4c01-9f93-792c5f7a3f35:
+                    required: false
                     sortOrder: 2
+                  dfa4a5c9-4ca4-4f4f-b874-73c5650e06c3:
+                    required: false
+                    sortOrder: 4
                 name: Body
                 sortOrder: 2
               -
@@ -2122,6 +3265,90 @@ sections:
         hasTitleField: true
         name: Grants
         sortOrder: 2
+        titleFormat: ''
+        titleLabel: Title
+      c69f3ffc-9195-4c96-8536-4cab5a59055a:
+        fieldLayouts:
+          bb0e7ac6-1d83-4fb7-923b-b884562941b6:
+            tabs:
+              -
+                fields:
+                  d09f8328-b9a7-4ab1-bc64-2b0bcf59a6cd:
+                    required: false
+                    sortOrder: 1
+                name: Hero
+                sortOrder: 1
+              -
+                fields:
+                  13c9ec52-137a-4ff3-8113-61e358819fe7:
+                    required: false
+                    sortOrder: 10
+                  3d849e2a-9a61-4dd2-8080-084e79cbfda4:
+                    required: false
+                    sortOrder: 11
+                  4df77da1-b90a-432b-8118-3480421b8bab:
+                    required: false
+                    sortOrder: 2
+                  5a7fd45c-540e-47da-b57c-80bc1248bbe3:
+                    required: false
+                    sortOrder: 7
+                  60713798-c848-403c-9410-38dddd3ed97e:
+                    required: false
+                    sortOrder: 3
+                  7882b4ca-4af3-4d7d-837b-36e081016fa1:
+                    required: false
+                    sortOrder: 6
+                  8bdbdbd3-cae2-4360-b049-fb1fe01bf253:
+                    required: false
+                    sortOrder: 12
+                  a6bdffdf-5510-4072-bd01-aee421323d86:
+                    required: false
+                    sortOrder: 1
+                  a98f8031-69da-46cd-89ab-86022b603088:
+                    required: false
+                    sortOrder: 8
+                  ae667a46-b529-4f97-b93a-3007581c7c40:
+                    required: false
+                    sortOrder: 4
+                  aee65e23-077e-4d3b-9b5a-5be1715c43f4:
+                    required: false
+                    sortOrder: 5
+                  b80fbbb0-caa2-49d7-b9a7-eefda1aec19b:
+                    required: false
+                    sortOrder: 9
+                name: 'Classified Ads'
+                sortOrder: 2
+              -
+                fields:
+                  1f8b8f62-bd60-4a61-af4a-077b4b871ef8:
+                    required: false
+                    sortOrder: 1
+                  3b080826-0bdd-4ece-8b04-c273e6ee7877:
+                    required: false
+                    sortOrder: 3
+                  cd33fe76-d08b-4279-8f5d-d23b492f7286:
+                    required: false
+                    sortOrder: 2
+                name: 'Display Ads'
+                sortOrder: 3
+              -
+                fields:
+                  25d86523-f81d-4490-871f-6e7e31fe79e3:
+                    required: false
+                    sortOrder: 1
+                name: 'Call to Action'
+                sortOrder: 4
+              -
+                fields:
+                  a8ecf32b-98c2-4871-a920-c86c0b327bcd:
+                    required: false
+                    sortOrder: 1
+                name: SEO
+                sortOrder: 5
+        handle: advertiseWithUs
+        hasTitleField: true
+        name: 'Advertise with us'
+        sortOrder: 4
         titleFormat: ''
         titleLabel: Title
       ebb03872-bd37-4972-b1ba-79827765ba28:
@@ -3656,6 +4883,169 @@ superTableBlockTypes:
           charLimit: ''
           code: ''
           columnType: text
+          initialRows: '4'
+          multiline: ''
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: language
+        type: craft\fields\PlainText
+  dec41831-cedc-4204-a091-510ba69dc247:
+    field: b80fbbb0-caa2-49d7-b9a7-eefda1aec19b
+    fieldLayouts:
+      d6934008-6dea-4c88-9a6b-a5a1f1a4d83c:
+        tabs:
+          -
+            fields:
+              405b209a-661c-42e6-a5ed-6930bc5f197f:
+                required: false
+                sortOrder: 2
+              6483dd51-04c6-42ce-9dc4-423c6745da12:
+                required: false
+                sortOrder: 3
+              a592f0b4-32a7-451c-a087-4866c21ffb5c:
+                required: false
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      405b209a-661c-42e6-a5ed-6930bc5f197f:
+        contentColumnType: text
+        fieldGroup: null
+        handle: promotionDescription
+        instructions: 'Add the promotion description.'
+        name: 'Promotion Description'
+        searchable: true
+        settings:
+          byteLimit: null
+          charLimit: null
+          code: ''
+          columnType: null
+          initialRows: '4'
+          multiline: ''
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: language
+        type: craft\fields\PlainText
+      6483dd51-04c6-42ce-9dc4-423c6745da12:
+        contentColumnType: text
+        fieldGroup: null
+        handle: promotionLink
+        instructions: 'Leave blank to display no link.'
+        name: 'Promotion Link'
+        searchable: true
+        settings:
+          allowCustomText: '1'
+          allowTarget: ''
+          allowedLinkNames: '*'
+          autoNoReferrer: ''
+          defaultLinkName: entry
+          defaultText: ''
+          enableAriaLabel: ''
+          enableTitle: ''
+          typeSettings:
+            __assoc__:
+              -
+                - asset
+                -
+                  __assoc__:
+                    -
+                      - sources
+                      - '*'
+                    -
+                      - allowCustomQuery
+                      - ''
+              -
+                - category
+                -
+                  __assoc__:
+                    -
+                      - sources
+                      - '*'
+                    -
+                      - allowCustomQuery
+                      - ''
+              -
+                - entry
+                -
+                  __assoc__:
+                    -
+                      - sources
+                      - '*'
+                    -
+                      - allowCustomQuery
+                      - ''
+              -
+                - site
+                -
+                  __assoc__:
+                    -
+                      - sites
+                      - '*'
+              -
+                - user
+                -
+                  __assoc__:
+                    -
+                      - sources
+                      - '*'
+                    -
+                      - allowCustomQuery
+                      - ''
+              -
+                - custom
+                -
+                  __assoc__:
+                    -
+                      - disableValidation
+                      - ''
+                    -
+                      - allowAliases
+                      - ''
+              -
+                - email
+                -
+                  __assoc__:
+                    -
+                      - disableValidation
+                      - ''
+                    -
+                      - allowAliases
+                      - ''
+              -
+                - tel
+                -
+                  __assoc__:
+                    -
+                      - disableValidation
+                      - ''
+                    -
+                      - allowAliases
+                      - ''
+              -
+                - url
+                -
+                  __assoc__:
+                    -
+                      - disableValidation
+                      - ''
+                    -
+                      - allowAliases
+                      - ''
+        translationKeyFormat: null
+        translationMethod: language
+        type: typedlinkfield\fields\LinkField
+      a592f0b4-32a7-451c-a087-4866c21ffb5c:
+        contentColumnType: text
+        fieldGroup: null
+        handle: promotionName
+        instructions: 'Add the promotion name.'
+        name: 'Promotion Name'
+        searchable: true
+        settings:
+          byteLimit: null
+          charLimit: null
+          code: ''
+          columnType: null
           initialRows: '4'
           multiline: ''
           placeholder: ''
