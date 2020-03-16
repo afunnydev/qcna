@@ -1,55 +1,228 @@
-categoryGroups:
-  57498ad3-dc5a-4eb2-941b-2b7ae8b65393:
-    fieldLayouts:
-      b34efc9c-0ad3-47d9-94a0-0f878a6148b0:
-        tabs:
-          -
-            fields:
-              d09f8328-b9a7-4ab1-bc64-2b0bcf59a6cd:
-                required: false
-                sortOrder: 1
-            name: Hero
-            sortOrder: 1
-          -
-            fields:
-              149b6835-f1fb-4ae5-b272-4b4551d44ffa:
-                required: false
-                sortOrder: 1
-              25d86523-f81d-4490-871f-6e7e31fe79e3:
-                required: false
-                sortOrder: 2
-            name: Body
-            sortOrder: 2
-          -
-            fields:
-              a8ecf32b-98c2-4871-a920-c86c0b327bcd:
-                required: false
-                sortOrder: 1
-            name: SEO
-            sortOrder: 3
-    handle: categories
-    name: Categories
-    siteSettings:
-      5b81df98-3353-4519-b38a-9c7c6e3fc1e4:
-        hasUrls: true
-        template: _categories/default
-        uriFormat: 'nouvelles/{slug}'
-      d7acb83a-8fb9-4143-b21e-34c7af63bf45:
-        hasUrls: true
-        template: _categories/default
-        uriFormat: 'news/{slug}'
-    structure:
-      maxLevels: null
-      uid: 6800ba30-8d2b-473f-836a-a54b0de7b497
-dateModified: 1584456679
+cp-nav:
+  layouts:
+    2157715d-0d04-4ab3-8958-72a1103e3d1b:
+      isDefault: '1'
+      name: Default
+      permissions: null
+  navigations:
+    052e0bc4-942d-4d5b-af42-1d6e87938a5a:
+      currLabel: 'Express Forms'
+      customIcon: null
+      enabled: '0'
+      handle: express-forms
+      icon: 'C:\xampp\htdocs\qcna-master\vendor\solspace\craft-express-forms\src\icon-mask.svg'
+      layoutId: '1'
+      newWindow: '0'
+      order: '5'
+      prevLabel: 'Express Forms'
+      prevUrl: express-forms
+      type: '0'
+      url: express-forms
+    27c518aa-26a6-4573-9816-182c30e7e1f4:
+      currLabel: 'Global Widget'
+      customIcon: null
+      enabled: '1'
+      handle: communicator/global-widget
+      icon: '@wbrowar/communicator/assetbundles/communicator/dist/icon/icon-mask.svg'
+      layoutId: '1'
+      newWindow: '0'
+      order: '14'
+      prevLabel: 'Global Widget'
+      prevUrl: communicator/global-widget
+      type: '0'
+      url: communicator/global-widget
+    34501616-4dca-469e-b279-3b309b4c3ff4:
+      currLabel: Users
+      customIcon: null
+      enabled: '1'
+      handle: users
+      icon: users
+      layoutId: '1'
+      newWindow: '0'
+      order: '4'
+      prevLabel: Users
+      prevUrl: users
+      type: '0'
+      url: users
+    445a3bcb-2cdf-4c4a-a19d-3797900f3712:
+      currLabel: Guide
+      customIcon: null
+      enabled: '0'
+      handle: guide
+      icon: 'C:\xampp\htdocs\qcna-master\vendor\wbrowar\guide\src\icon-mask.svg'
+      layoutId: '1'
+      newWindow: '0'
+      order: '8'
+      prevLabel: Guide
+      prevUrl: guide
+      type: ''
+      url: guide
+    5b3dab64-6e86-4c40-b0d8-a7d3e93baa78:
+      currLabel: 'Field Manager'
+      customIcon: null
+      enabled: '0'
+      handle: field-manager
+      icon: 'C:\xampp\htdocs\qcna-master\vendor\verbb\field-manager\src\icon-mask.svg'
+      layoutId: '1'
+      newWindow: '0'
+      order: '7'
+      prevLabel: 'Field Manager'
+      prevUrl: field-manager
+      type: '0'
+      url: field-manager
+    704500d4-5f47-4f6f-8f7d-c8ba3daa7012:
+      currLabel: Changelog
+      customIcon: null
+      enabled: '1'
+      handle: communicator/changelog
+      icon: '@wbrowar/communicator/assetbundles/communicator/dist/icon/icon-mask.svg'
+      layoutId: '1'
+      newWindow: '0'
+      order: '13'
+      prevLabel: Changelog
+      prevUrl: communicator/changelog
+      type: '0'
+      url: communicator/changelog
+    8984278d-6d3b-4401-b5aa-b567265acd54:
+      currLabel: GraphQL
+      customIcon: null
+      enabled: '1'
+      handle: graphql
+      icon: '@app/icons/graphql.svg'
+      layoutId: '1'
+      newWindow: '0'
+      order: '9'
+      prevLabel: GraphQL
+      prevUrl: graphql
+      type: '0'
+      url: graphql
+    8fec43de-4913-4a0d-bac9-d1f77e99da59:
+      currLabel: SEO
+      customIcon: null
+      enabled: '0'
+      handle: seo
+      icon: 'C:\xampp\htdocs\qcna-master\vendor\ether\seo\src\icon-mask.svg'
+      layoutId: '1'
+      newWindow: '0'
+      order: '8'
+      prevLabel: SEO
+      prevUrl: seo
+      type: '0'
+      url: seo
+    9983daed-cf07-4875-bb24-d7dda031aeef:
+      currLabel: 'Plugin Store'
+      customIcon: null
+      enabled: '1'
+      handle: plugin-store
+      icon: plugin
+      layoutId: '1'
+      newWindow: '0'
+      order: '12'
+      prevLabel: 'Plugin Store'
+      prevUrl: plugin-store
+      type: '0'
+      url: plugin-store
+    a38b9b32-725e-4e96-91e1-919056c2d4c3:
+      currLabel: 'Feed Me'
+      customIcon: null
+      enabled: '0'
+      handle: feed-me
+      icon: 'C:\xampp\htdocs\qcna-master\vendor\craftcms\feed-me\src\icon-mask.svg'
+      layoutId: '1'
+      newWindow: '0'
+      order: '6'
+      prevLabel: 'Feed Me'
+      prevUrl: feed-me
+      type: '0'
+      url: feed-me
+    b6ac52d0-2011-4308-8d25-59e2f644c93a:
+      currLabel: Assets
+      customIcon: null
+      enabled: '1'
+      handle: assets
+      icon: assets
+      layoutId: '1'
+      newWindow: '0'
+      order: '3'
+      prevLabel: Assets
+      prevUrl: assets
+      type: '0'
+      url: assets
+    da1b1e6b-c5f4-4760-99f9-104fecf76a06:
+      currLabel: Settings
+      customIcon: null
+      enabled: '1'
+      handle: settings
+      icon: settings
+      layoutId: '1'
+      newWindow: '0'
+      order: '11'
+      prevLabel: Settings
+      prevUrl: settings
+      type: '0'
+      url: settings
+    e47473f9-8d1c-4cf1-9459-432df50cab24:
+      currLabel: Entries
+      customIcon: null
+      enabled: '1'
+      handle: entries
+      icon: section
+      layoutId: '1'
+      newWindow: '0'
+      order: '1'
+      prevLabel: Entries
+      prevUrl: entries
+      type: '0'
+      url: entries
+    eb366b2c-028b-4dcf-a68c-8d7897d3850a:
+      currLabel: Dashboard
+      customIcon: null
+      enabled: '1'
+      handle: dashboard
+      icon: gauge
+      layoutId: '1'
+      newWindow: '0'
+      order: '0'
+      prevLabel: Dashboard
+      prevUrl: dashboard
+      type: '0'
+      url: dashboard
+    efeb63a9-2691-4800-ae8b-31d102dd54de:
+      currLabel: Utilities
+      customIcon: null
+      enabled: '1'
+      handle: utilities
+      icon: tool
+      layoutId: '1'
+      newWindow: '0'
+      order: '10'
+      prevLabel: Utilities
+      prevUrl: utilities
+      type: '0'
+      url: utilities
+    f6c3758f-80ad-4490-b777-75cd1aa4c753:
+      currLabel: Globals
+      customIcon: null
+      enabled: '1'
+      handle: globals
+      icon: globe
+      layoutId: '1'
+      newWindow: '0'
+      order: '2'
+      prevLabel: Globals
+      prevUrl: globals
+      type: '0'
+      url: globals
+dateModified: 1584316438
 email:
-  fromEmail: $EMAIL_USER
+  fromEmail: $MAIL_USER@htmail.com
   fromName: QCNA
+  replyToEmail: null
   template: ''
   transportSettings:
-    password: $EMAIL_PASS
+    password: $MAIL_PASSWORD
     timeout: '10'
-    username: $EMAIL_USER
+    username: $MAIL_USER
   transportType: craft\mail\transportadapters\Gmail
 fieldGroups:
   68c58b3e-d315-40d8-8eb8-3f89eb9e9ad6:
@@ -705,417 +878,6 @@ fields:
                   - width
                   - ''
           -
-            - b00d1b73-294a-406c-85ec-911378f21756
-            -
-              __assoc__:
-                -
-                  - width
-                  - ''
-      contentTable: '{{%stc_newspapers}}'
-      fieldLayout: matrix
-      maxRows: ''
-      minRows: ''
-      propagationMethod: all
-      selectionLabel: 'Add a newspaper'
-      staticField: ''
-    translationKeyFormat: null
-    translationMethod: site
-    type: verbb\supertable\fields\SuperTableField
-  55c5b4b0-4460-4104-870e-c7432517f111:
-    contentColumnType: text
-    fieldGroup: 68c58b3e-d315-40d8-8eb8-3f89eb9e9ad6
-    handle: companyPhoneNumber
-    instructions: 'Add the company phone number.'
-    name: 'Company Phone Number'
-    searchable: true
-    settings:
-      charLimit: ''
-      code: ''
-      columnType: text
-      initialRows: '4'
-      multiline: ''
-      placeholder: ''
-    translationKeyFormat: null
-    translationMethod: language
-    type: craft\fields\PlainText
-  5a7fd45c-540e-47da-b57c-80bc1248bbe3:
-    contentColumnType: text
-    fieldGroup: 6c497c72-d868-467b-85aa-7e71d032d6ef
-    handle: newspapersIssueDayTable
-    instructions: 'Add entries to the newspapers issue day table.'
-    name: 'Newspapers Issue Day Table'
-    searchable: true
-    settings:
-      addRowLabel: 'Add a row'
-      columnType: text
-      columns:
-        __assoc__:
-          -
-            - col1
-            -
-              __assoc__:
-                -
-                  - heading
-                  - Newspaper
-                -
-                  - handle
-                  - newspaper
-                -
-                  - width
-                  - ''
-                -
-                  - type
-                  - singleline
-          -
-            - col2
-            -
-              __assoc__:
-                -
-                  - heading
-                  - 'Place of Publication'
-                -
-                  - handle
-                  - placeOfPublication
-                -
-                  - width
-                  - ''
-                -
-                  - type
-                  - singleline
-          -
-            - col3
-            -
-              __assoc__:
-                -
-                  - heading
-                  - 'Issue Day'
-                -
-                  - handle
-                  - issueDay
-                -
-                  - width
-                  - ''
-                -
-                  - type
-                  - singleline
-      defaults:
-        -
-          __assoc__:
-            -
-              - col1
-              - ''
-            -
-              - col2
-              - ''
-            -
-              - col3
-              - ''
-      maxRows: ''
-      minRows: ''
-    translationKeyFormat: null
-    translationMethod: language
-    type: craft\fields\Table
-  60713798-c848-403c-9410-38dddd3ed97e:
-    contentColumnType: text
-    fieldGroup: 6c497c72-d868-467b-85aa-7e71d032d6ef
-    handle: frequentlyUsedHeadings
-    instructions: 'Index table of frequently used headings'
-    name: 'Frequently Used Headings'
-    searchable: true
-    settings:
-      addRowLabel: 'Add a row'
-      columnType: text
-      columns:
-        __assoc__:
-          -
-            - col1
-            -
-              __assoc__:
-                -
-                  - heading
-                  - 'Column 1'
-                -
-                  - handle
-                  - column1
-                -
-                  - width
-                  - ''
-                -
-                  - type
-                  - singleline
-          -
-            - col2
-            -
-              __assoc__:
-                -
-                  - heading
-                  - 'Column 2'
-                -
-                  - handle
-                  - column2
-                -
-                  - width
-                  - ''
-                -
-                  - type
-                  - singleline
-          -
-            - col3
-            -
-              __assoc__:
-                -
-                  - heading
-                  - 'Column 3'
-                -
-                  - handle
-                  - column3
-                -
-                  - width
-                  - ''
-                -
-                  - type
-                  - singleline
-      defaults:
-        -
-          __assoc__:
-            -
-              - col1
-              - ''
-            -
-              - col2
-              - ''
-            -
-              - col3
-              - ''
-      maxRows: ''
-      minRows: ''
-    translationKeyFormat: null
-    translationMethod: language
-    type: craft\fields\Table
-  6105775e-28f1-471f-b5f4-e8e615728d7a:
-    contentColumnType: string
-    fieldGroup: a9590745-8a24-4ec5-9c14-7f72d5734273
-    handle: aboutUs
-    instructions: 'Configure the "About Us" section content.'
-    name: 'About Us'
-    searchable: true
-    settings:
-      columns:
-        __assoc__:
-          -
-            - 1c97cb3c-cf6c-4986-9f9e-7d3dd82598cd
-            -
-              __assoc__:
-                -
-                  - width
-                  - ''
-          -
-            - 5343b0c7-791c-48de-8bec-2399fe17f111
-            -
-              __assoc__:
-                -
-                  - width
-                  - ''
-          -
-            - 65fcbe29-048b-421c-b0ae-78b30c86f2ef
-            -
-              __assoc__:
-                -
-                  - width
-                  - ''
-          -
-            - 75985f77-740b-4d1d-9c5b-3e777f730746
-            -
-              __assoc__:
-                -
-                  - width
-                  - ''
-          -
-            - 916a17aa-dfee-4363-bc23-d040f3fa208f
-            -
-              __assoc__:
-                -
-                  - width
-                  - ''
-          -
-            - ac2b519e-e237-447f-8e9f-8e2c2166f9a3
-            -
-              __assoc__:
-                -
-                  - width
-                  - ''
-      contentTable: '{{%stc_aboutus}}'
-      fieldLayout: matrix
-      maxRows: ''
-      minRows: ''
-      propagationMethod: all
-      selectionLabel: ''
-      staticField: '1'
-    translationKeyFormat: null
-    translationMethod: site
-    type: verbb\supertable\fields\SuperTableField
-  672b2efc-cd07-492e-9d11-5df2a57eb579:
-    contentColumnType: text
-    fieldGroup: e3ee8a91-7a39-4d2e-ae9f-1ce46841fae7
-    handle: aboutFacts
-    instructions: 'Add Facts to the About Us page.'
-    name: Facts
-    searchable: true
-    settings:
-      addRowLabel: 'Add a fact'
-      columnType: text
-      columns:
-        __assoc__:
-          -
-            - col1
-            -
-              __assoc__:
-                -
-                  - heading
-                  - Fact
-                -
-                  - handle
-                  - fact
-                -
-                  - width
-                  - ''
-                -
-                  - type
-                  - multiline
-      defaults:
-        -
-          __assoc__:
-            -
-              - col1
-              - ''
-      maxRows: ''
-      minRows: ''
-    translationKeyFormat: null
-    translationMethod: language
-    type: craft\fields\Table
-  7882b4ca-4af3-4d7d-837b-36e081016fa1:
-    contentColumnType: mediumtext
-    fieldGroup: 6c497c72-d868-467b-85aa-7e71d032d6ef
-    handle: priceInformation
-    instructions: 'Add additional information to the classified ads price section.'
-    name: 'Price Information'
-    searchable: true
-    settings:
-      availableTransforms: '*'
-      availableVolumes: '*'
-      cleanupHtml: true
-      columnType: mediumtext
-      purifierConfig: ''
-      purifyHtml: '1'
-      redactorConfig: Standard.json
-      removeEmptyTags: '1'
-      removeInlineStyles: ''
-      removeNbsp: '1'
-      showUnpermittedFiles: false
-      showUnpermittedVolumes: false
-    translationKeyFormat: null
-    translationMethod: language
-    type: craft\redactor\Field
-  791ad1aa-08a9-4599-a7ae-0abbc106e3c9:
-    contentColumnType: text
-    fieldGroup: f14bc424-75cb-420b-b102-71f411a661aa
-    handle: description
-    instructions: 'Add the entry description.'
-    name: Description
-    searchable: true
-    settings:
-      charLimit: ''
-      code: ''
-      columnType: text
-      initialRows: '4'
-      multiline: '1'
-      placeholder: ''
-    translationKeyFormat: null
-    translationMethod: language
-    type: craft\fields\PlainText
-  7a70b499-44c9-4f80-aed1-70fb7ab4dcd2:
-    contentColumnType: string
-    fieldGroup: a9590745-8a24-4ec5-9c14-7f72d5734273
-    handle: facts
-    instructions: 'Add counters (facts) to the homepage.'
-    name: Facts
-    searchable: true
-    settings:
-      columns:
-        __assoc__:
-          -
-            - 0aaebd7d-53ef-4ebe-beea-50111e1a898a
-            -
-              __assoc__:
-                -
-                  - width
-                  - ''
-          -
-            - 5469ee13-5714-49af-a22b-d7dd6bd2f245
-            -
-              __assoc__:
-                -
-                  - width
-                  - ''
-          -
-            - aaeb9812-5614-4ce1-8326-7a9b648a0948
-            -
-              __assoc__:
-                -
-                  - width
-                  - ''
-      contentTable: '{{%stc_facts}}'
-      fieldLayout: matrix
-      maxRows: '4'
-      minRows: ''
-      propagationMethod: all
-      selectionLabel: 'Add a fact'
-      staticField: ''
-    translationKeyFormat: null
-    translationMethod: site
-    type: verbb\supertable\fields\SuperTableField
-  8624d695-e9ba-447b-af68-bcbe01854c4a:
-    contentColumnType: text
-    fieldGroup: d4db5330-2888-41c6-bed1-5c393e75005e
-    handle: videoEmbedCode
-    instructions: 'Add the video embed code.'
-    name: 'Video Embed Code'
-    searchable: true
-    settings:
-      charLimit: ''
-      code: ''
-      columnType: text
-      initialRows: '4'
-      multiline: '1'
-      placeholder: ''
-    translationKeyFormat: null
-    translationMethod: language
-    type: craft\fields\PlainText
-  8813b1ac-da58-4e4f-83c7-e2d1d9ea5d88:
-    contentColumnType: string
-    fieldGroup: a9590745-8a24-4ec5-9c14-7f72d5734273
-    handle: slider
-    instructions: 'Add content to the homepage slider.'
-    name: Slider
-    searchable: true
-    settings:
-      columns:
-        __assoc__:
-          -
-            - 2c17e851-5519-470e-a7e2-fd1e723474cc
-            -
-              __assoc__:
-                -
-                  - width
-                  - ''
-          -
-            - 5022ab8b-5482-4056-94fb-ad14387d0e56
-            -
-              __assoc__:
-                -
-                  - width
-                  - ''
-          -
             - 6fcdbf12-7c02-419e-835f-7e9fa9fde91e
             -
               __assoc__:
@@ -1132,29 +894,6 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: verbb\supertable\fields\SuperTableField
-  8bdbdbd3-cae2-4360-b049-fb1fe01bf253:
-    contentColumnType: text
-    fieldGroup: 6c497c72-d868-467b-85aa-7e71d032d6ef
-    handle: classifiedAdsAdditionalInformation
-    instructions: 'Add additional information to the classified ads section.'
-    name: 'Classified Ads Additional Information'
-    searchable: true
-    settings:
-      availableTransforms: '*'
-      availableVolumes: '*'
-      cleanupHtml: true
-      columnType: text
-      purifierConfig: ''
-      purifyHtml: '1'
-      redactorConfig: Standard.json
-      removeEmptyTags: '1'
-      removeInlineStyles: ''
-      removeNbsp: '1'
-      showUnpermittedFiles: false
-      showUnpermittedVolumes: false
-    translationKeyFormat: null
-    translationMethod: language
-    type: craft\redactor\Field
   968a81d3-27c0-4e36-866d-7dbb91ae4bf1:
     contentColumnType: text
     fieldGroup: a4ce55ef-4198-4d3e-b967-b42975a28c54
@@ -1193,81 +932,6 @@ fields:
     translationKeyFormat: null
     translationMethod: language
     type: craft\redactor\Field
-  a40560ab-5017-4950-abd0-368255b64916:
-    contentColumnType: text
-    fieldGroup: e6553d1f-17d6-4a13-919a-d3e435f00223
-    handle: newsSummary
-    instructions: 'Add the news summary.'
-    name: Summary
-    searchable: true
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: ''
-      columnType: null
-      initialRows: '4'
-      multiline: '1'
-      placeholder: ''
-    translationKeyFormat: null
-    translationMethod: language
-    type: craft\fields\PlainText
-  a5eda873-b39e-4bf0-8973-b16621a971fd:
-    contentColumnType: text
-    fieldGroup: e3ee8a91-7a39-4d2e-ae9f-1ce46841fae7
-    handle: aboutFactsTitle
-    instructions: 'Add the facts section title.'
-    name: 'Facts Title'
-    searchable: true
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: ''
-      columnType: null
-      initialRows: '4'
-      multiline: ''
-      placeholder: ''
-    translationKeyFormat: null
-    translationMethod: language
-    type: craft\fields\PlainText
-  a6bdffdf-5510-4072-bd01-aee421323d86:
-    contentColumnType: text
-    fieldGroup: 6c497c72-d868-467b-85aa-7e71d032d6ef
-    handle: adGeneralInformations
-    instructions: 'Add general informations about the classified ads.'
-    name: 'General Informations'
-    searchable: true
-    settings:
-      addRowLabel: 'Add a row'
-      columnType: text
-      columns:
-        __assoc__:
-          -
-            - col1
-            -
-              __assoc__:
-                -
-                  - heading
-                  - 'List Item'
-                -
-                  - handle
-                  - listItem
-                -
-                  - width
-                  - ''
-                -
-                  - type
-                  - singleline
-      defaults:
-        -
-          __assoc__:
-            -
-              - col1
-              - ''
-      maxRows: ''
-      minRows: ''
-    translationKeyFormat: null
-    translationMethod: language
-    type: craft\fields\Table
   a8ecf32b-98c2-4871-a920-c86c0b327bcd:
     contentColumnType: text
     fieldGroup: f14bc424-75cb-420b-b102-71f411a661aa
@@ -1314,121 +978,6 @@ fields:
     translationKeyFormat: null
     translationMethod: language
     type: ether\seo\fields\SeoField
-  a98f8031-69da-46cd-89ab-86022b603088:
-    contentColumnType: text
-    fieldGroup: 6c497c72-d868-467b-85aa-7e71d032d6ef
-    handle: otherProvincesTable
-    instructions: 'Add entries to the other provinces table.'
-    name: 'Other Provinces Table'
-    searchable: true
-    settings:
-      addRowLabel: 'Add a row'
-      columnType: text
-      columns:
-        __assoc__:
-          -
-            - col1
-            -
-              __assoc__:
-                -
-                  - heading
-                  - Province
-                -
-                  - handle
-                  - province
-                -
-                  - width
-                  - ''
-                -
-                  - type
-                  - singleline
-          -
-            - col2
-            -
-              __assoc__:
-                -
-                  - heading
-                  - 'Number of Papers'
-                -
-                  - handle
-                  - numberOfPapers
-                -
-                  - width
-                  - ''
-                -
-                  - type
-                  - singleline
-          -
-            - col3
-            -
-              __assoc__:
-                -
-                  - heading
-                  - Circulation
-                -
-                  - handle
-                  - circulation
-                -
-                  - width
-                  - ''
-                -
-                  - type
-                  - singleline
-          -
-            - col4
-            -
-              __assoc__:
-                -
-                  - heading
-                  - 'Cost Per Week'
-                -
-                  - handle
-                  - costPerWeek
-                -
-                  - width
-                  - ''
-                -
-                  - type
-                  - singleline
-          -
-            - col5
-            -
-              __assoc__:
-                -
-                  - heading
-                  - 'Extra Words'
-                -
-                  - handle
-                  - extraWords
-                -
-                  - width
-                  - ''
-                -
-                  - type
-                  - singleline
-      defaults:
-        -
-          __assoc__:
-            -
-              - col1
-              - ''
-            -
-              - col2
-              - ''
-            -
-              - col3
-              - ''
-            -
-              - col4
-              - ''
-            -
-              - col5
-              - ''
-      maxRows: ''
-      minRows: ''
-    translationKeyFormat: null
-    translationMethod: language
-    type: craft\fields\Table
   aa9ad401-33ac-41e7-a00a-ece76a1f3a1e:
     contentColumnType: text
     fieldGroup: 68c58b3e-d315-40d8-8eb8-3f89eb9e9ad6
@@ -1446,119 +995,6 @@ fields:
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
-  ae667a46-b529-4f97-b93a-3007581c7c40:
-    contentColumnType: text
-    fieldGroup: 6c497c72-d868-467b-85aa-7e71d032d6ef
-    handle: rightToRefuseNotice
-    instructions: 'Add content to the Right to Refuse notice.'
-    name: 'Right to Refuse Notice'
-    searchable: true
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: ''
-      columnType: null
-      initialRows: '4'
-      multiline: '1'
-      placeholder: ''
-    translationKeyFormat: null
-    translationMethod: language
-    type: craft\fields\PlainText
-  ae86b046-8458-4cb0-bc40-6f01f3ea9f9c:
-    contentColumnType: text
-    fieldGroup: a43a6c2c-8f6a-4f30-a89d-4fa27415b276
-    handle: newspaperRegionMap
-    instructions: 'Add the newspaper region of distribution map embed.'
-    name: 'Region Map'
-    searchable: true
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: '1'
-      columnType: null
-      initialRows: '4'
-      multiline: '1'
-      placeholder: ''
-    translationKeyFormat: null
-    translationMethod: language
-    type: craft\fields\PlainText
-  aee65e23-077e-4d3b-9b5a-5be1715c43f4:
-    contentColumnType: text
-    fieldGroup: 6c497c72-d868-467b-85aa-7e71d032d6ef
-    handle: priceBundles
-    instructions: 'Add the price bundles for classified ads.'
-    name: 'Price Bundles'
-    searchable: true
-    settings:
-      addRowLabel: 'Add a bundle'
-      columnType: text
-      columns:
-        __assoc__:
-          -
-            - col1
-            -
-              __assoc__:
-                -
-                  - heading
-                  - Title
-                -
-                  - handle
-                  - title
-                -
-                  - width
-                  - ''
-                -
-                  - type
-                  - singleline
-          -
-            - col2
-            -
-              __assoc__:
-                -
-                  - heading
-                  - Description
-                -
-                  - handle
-                  - description
-                -
-                  - width
-                  - ''
-                -
-                  - type
-                  - singleline
-          -
-            - col3
-            -
-              __assoc__:
-                -
-                  - heading
-                  - Price
-                -
-                  - handle
-                  - price
-                -
-                  - width
-                  - ''
-                -
-                  - type
-                  - singleline
-      defaults:
-        -
-          __assoc__:
-            -
-              - col1
-              - ''
-            -
-              - col2
-              - ''
-            -
-              - col3
-              - ''
-      maxRows: ''
-      minRows: ''
-    translationKeyFormat: null
-    translationMethod: language
-    type: craft\fields\Table
   b2284db3-74fd-475d-aa24-35b11e80c189:
     contentColumnType: string
     fieldGroup: a9590745-8a24-4ec5-9c14-7f72d5734273
@@ -1621,126 +1057,6 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: verbb\supertable\fields\SuperTableField
-  b35dee1a-fb6e-4b8e-9000-04af1fc94aed:
-    contentColumnType: string
-    fieldGroup: e6553d1f-17d6-4a13-919a-d3e435f00223
-    handle: newsFeaturedImage
-    instructions: 'Add a featured image to the news.'
-    name: 'Featured Image'
-    searchable: true
-    settings:
-      allowedKinds:
-        - image
-      defaultUploadLocationSource: 'volume:8015cbf1-7dd5-47c8-b212-ed0f7e4730f0'
-      defaultUploadLocationSubpath: ''
-      limit: '1'
-      localizeRelations: ''
-      restrictFiles: '1'
-      selectionLabel: 'Add an image'
-      showUnpermittedFiles: false
-      showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:8015cbf1-7dd5-47c8-b212-ed0f7e4730f0'
-      singleUploadLocationSubpath: ''
-      source: null
-      sources: '*'
-      targetSiteId: null
-      useSingleFolder: false
-      validateRelatedElements: ''
-      viewMode: large
-    translationKeyFormat: null
-    translationMethod: site
-    type: craft\fields\Assets
-  b80fbbb0-caa2-49d7-b9a7-eefda1aec19b:
-    contentColumnType: string
-    fieldGroup: 6c497c72-d868-467b-85aa-7e71d032d6ef
-    handle: promotion
-    instructions: 'Add content to the promotion section. Leave all fields blank to hide the section.'
-    name: Promotion
-    searchable: true
-    settings:
-      contentTable: '{{%stc_promotion}}'
-      fieldLayout: row
-      maxRows: ''
-      minRows: ''
-      propagationMethod: all
-      selectionLabel: ''
-      staticField: '1'
-    translationKeyFormat: null
-    translationMethod: site
-    type: verbb\supertable\fields\SuperTableField
-  b8604730-4572-4c01-9f93-792c5f7a3f35:
-    contentColumnType: text
-    fieldGroup: e6553d1f-17d6-4a13-919a-d3e435f00223
-    handle: newsLjiTitle
-    instructions: 'Add a title to the LJI news section.'
-    name: 'LJI News Section Title'
-    searchable: true
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: ''
-      columnType: null
-      initialRows: '4'
-      multiline: ''
-      placeholder: ''
-    translationKeyFormat: null
-    translationMethod: language
-    type: craft\fields\PlainText
-  bf99fec6-0c6f-4c57-8877-2555c3f5ed2e:
-    contentColumnType: string
-    fieldGroup: a43a6c2c-8f6a-4f30-a89d-4fa27415b276
-    handle: newspaperContactInformations
-    instructions: 'Add the newspaper contact informations.'
-    name: 'Contact Informations'
-    searchable: true
-    settings:
-      columns:
-        __assoc__:
-          -
-            - a0c9dcaa-8645-49f6-921f-eef4e0244241
-            -
-              __assoc__:
-                -
-                  - width
-                  - ''
-          -
-            - f2199bfa-384f-4e5b-b02d-ec6df194a537
-            -
-              __assoc__:
-                -
-                  - width
-                  - ''
-          -
-            - b8c35474-07ac-4a3c-aeec-2621f65e63a1
-            -
-              __assoc__:
-                -
-                  - width
-                  - ''
-          -
-            - 69551b06-c067-4a6b-9324-810e7454ccef
-            -
-              __assoc__:
-                -
-                  - width
-                  - ''
-          -
-            - 17773a46-65fb-43bb-b368-71cef51e9c3a
-            -
-              __assoc__:
-                -
-                  - width
-                  - ''
-      contentTable: '{{%stc_newspapercontactinformations}}'
-      fieldLayout: row
-      maxRows: ''
-      minRows: ''
-      propagationMethod: all
-      selectionLabel: ''
-      staticField: '1'
-    translationKeyFormat: null
-    translationMethod: site
-    type: verbb\supertable\fields\SuperTableField
   c9727bff-8b73-4f30-a37c-7378936e40b9:
     contentColumnType: text
     fieldGroup: d4db5330-2888-41c6-bed1-5c393e75005e
@@ -1762,254 +1078,6 @@ fields:
     translationKeyFormat: null
     translationMethod: language
     type: craft\redactor\Field
-  cd33fe76-d08b-4279-8f5d-d23b492f7286:
-    contentColumnType: text
-    fieldGroup: 6c497c72-d868-467b-85aa-7e71d032d6ef
-    handle: displayAdsRateCard
-    instructions: 'Add entries to the Display Ads rate card.'
-    name: 'Display Ads Rate Card'
-    searchable: true
-    settings:
-      addRowLabel: 'Add a row'
-      columnType: text
-      columns:
-        __assoc__:
-          -
-            - col1
-            -
-              __assoc__:
-                -
-                  - heading
-                  - Newspaper
-                -
-                  - handle
-                  - newspaper
-                -
-                  - width
-                  - ''
-                -
-                  - type
-                  - singleline
-          -
-            - col2
-            -
-              __assoc__:
-                -
-                  - heading
-                  - Issued
-                -
-                  - handle
-                  - issued
-                -
-                  - width
-                  - ''
-                -
-                  - type
-                  - singleline
-          -
-            - col3
-            -
-              __assoc__:
-                -
-                  - heading
-                  - Deadline
-                -
-                  - handle
-                  - deadline
-                -
-                  - width
-                  - ''
-                -
-                  - type
-                  - singleline
-          -
-            - col4
-            -
-              __assoc__:
-                -
-                  - heading
-                  - Type
-                -
-                  - handle
-                  - type
-                -
-                  - width
-                  - ''
-                -
-                  - type
-                  - singleline
-          -
-            - col5
-            -
-              __assoc__:
-                -
-                  - heading
-                  - 'Width In Picas'
-                -
-                  - handle
-                  - widthInPicas
-                -
-                  - width
-                  - ''
-                -
-                  - type
-                  - singleline
-          -
-            - col6
-            -
-              __assoc__:
-                -
-                  - heading
-                  - '# of Cols'
-                -
-                  - handle
-                  - ofCols
-                -
-                  - width
-                  - ''
-                -
-                  - type
-                  - singleline
-          -
-            - col7
-            -
-              __assoc__:
-                -
-                  - heading
-                  - '# of Lines'
-                -
-                  - handle
-                  - ofLines
-                -
-                  - width
-                  - ''
-                -
-                  - type
-                  - singleline
-          -
-            - col8
-            -
-              __assoc__:
-                -
-                  - heading
-                  - 'Line Rate ($)'
-                -
-                  - handle
-                  - lineRate
-                -
-                  - width
-                  - ''
-                -
-                  - type
-                  - singleline
-          -
-            - col9
-            -
-              __assoc__:
-                -
-                  - heading
-                  - 'Blk &1'
-                -
-                  - handle
-                  - blk1
-                -
-                  - width
-                  - ''
-                -
-                  - type
-                  - singleline
-          -
-            - col10
-            -
-              __assoc__:
-                -
-                  - heading
-                  - 'Blk &2'
-                -
-                  - handle
-                  - blk2
-                -
-                  - width
-                  - ''
-                -
-                  - type
-                  - singleline
-          -
-            - col11
-            -
-              __assoc__:
-                -
-                  - heading
-                  - 'Full Colour'
-                -
-                  - handle
-                  - fullColour
-                -
-                  - width
-                  - ''
-                -
-                  - type
-                  - singleline
-          -
-            - col12
-            -
-              __assoc__:
-                -
-                  - heading
-                  - Circulation
-                -
-                  - handle
-                  - circulation
-                -
-                  - width
-                  - ''
-                -
-                  - type
-                  - singleline
-      defaults:
-        -
-          __assoc__:
-            -
-              - col1
-              - ''
-            -
-              - col2
-              - ''
-            -
-              - col3
-              - ''
-            -
-              - col4
-              - ''
-            -
-              - col5
-              - ''
-            -
-              - col6
-              - ''
-            -
-              - col7
-              - ''
-            -
-              - col8
-              - ''
-            -
-              - col9
-              - ''
-            -
-              - col10
-              - ''
-            -
-              - col11
-              - ''
-            -
-              - col12
-              - ''
-      maxRows: ''
-      minRows: ''
-    translationKeyFormat: null
-    translationMethod: language
-    type: craft\fields\Table
   d088ec67-4a52-4d6d-bc95-7c5c45a328f4:
     contentColumnType: string
     fieldGroup: a4ce55ef-4198-4d3e-b967-b42975a28c54
@@ -2066,24 +1134,6 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: verbb\supertable\fields\SuperTableField
-  d0bded55-9c37-4580-8a4d-9ff80bc19ba6:
-    contentColumnType: text
-    fieldGroup: e3ee8a91-7a39-4d2e-ae9f-1ce46841fae7
-    handle: aboutBoardTitle
-    instructions: 'Add a title to the Board of Directors section.'
-    name: 'Board of Directors Title'
-    searchable: true
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: ''
-      columnType: null
-      initialRows: '4'
-      multiline: ''
-      placeholder: ''
-    translationKeyFormat: null
-    translationMethod: language
-    type: craft\fields\PlainText
   db160581-5ada-4d16-8e04-019cece29d58:
     contentColumnType: text
     fieldGroup: 68c58b3e-d315-40d8-8eb8-3f89eb9e9ad6
@@ -2233,24 +1283,6 @@ fields:
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\Table
-  dfa4a5c9-4ca4-4f4f-b874-73c5650e06c3:
-    contentColumnType: text
-    fieldGroup: e6553d1f-17d6-4a13-919a-d3e435f00223
-    handle: newsCanadaLocalTitle
-    instructions: 'Add a title to the Canada Local news section.'
-    name: 'Canada Local News Section Title'
-    searchable: true
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: ''
-      columnType: null
-      initialRows: '4'
-      multiline: ''
-      placeholder: ''
-    translationKeyFormat: null
-    translationMethod: language
-    type: craft\fields\PlainText
   e28522fa-ab8a-4ecf-9db2-d22fe3e64109:
     contentColumnType: string
     fieldGroup: d4db5330-2888-41c6-bed1-5c393e75005e
@@ -2346,11 +1378,6 @@ globalSets:
             sortOrder: 2
     handle: companySettings
     name: 'Company Settings'
-graphql:
-  schemas:
-    1cca2767-5fe1-49ba-997b-fe6ddf19aa60:
-      isPublic: true
-      name: 'Public Schema'
 matrixBlockTypes:
   03018284-f624-49bb-bfb7-b2d650bca804:
     field: 3d4f53fd-1640-482d-bdc8-551360f745e1
@@ -2740,6 +1767,22 @@ plugins:
       enableEmailSupport: '1'
       enableEmailSupportForm: '1'
       enableGlobalWidget: '1'
+  contact-form:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      allowAttachments: ''
+      prependSender: ''
+      prependSubject: 'New message from QCNA EN'
+      successFlashMessage: 'Your message has been sent.'
+      toEmail: ''
+  cp-nav:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.4
+    settings:
+      originalNavHash: W3sibGFiZWwiOiJEYXNoYm9hcmQiLCJ1cmwiOiJkYXNoYm9hcmQiLCJmb250SWNvbiI6ImdhdWdlIn0seyJsYWJlbCI6IkVudHJpZXMiLCJ1cmwiOiJlbnRyaWVzIiwiZm9udEljb24iOiJzZWN0aW9uIn0seyJsYWJlbCI6Ikdsb2JhbHMiLCJ1cmwiOiJnbG9iYWxzIiwiZm9udEljb24iOiJnbG9iZSJ9LHsibGFiZWwiOiJBc3NldHMiLCJ1cmwiOiJhc3NldHMiLCJmb250SWNvbiI6ImFzc2V0cyJ9LHsibGFiZWwiOiJVc2VycyIsInVybCI6InVzZXJzIiwiZm9udEljb24iOiJ1c2VycyJ9LHsibGFiZWwiOiJFeHByZXNzIEZvcm1zIiwidXJsIjoiZXhwcmVzcy1mb3JtcyIsImljb24iOiJDOlxceGFtcHBcXGh0ZG9jc1xccWNuYS1tYXN0ZXJcXHZlbmRvclxcc29sc3BhY2VcXGNyYWZ0LWV4cHJlc3MtZm9ybXNcXHNyY1xcaWNvbi1tYXNrLnN2ZyIsInN1Ym5hdiI6eyJmb3JtcyI6eyJsYWJlbCI6IkZvcm1zIiwidXJsIjoiZXhwcmVzcy1mb3Jtcy9mb3JtcyJ9LCJzdWJtaXNzaW9ucyI6eyJsYWJlbCI6IlN1Ym1pc3Npb25zIiwidXJsIjoiZXhwcmVzcy1mb3Jtcy9zdWJtaXNzaW9ucyJ9LCJzZXR0aW5ncyI6eyJsYWJlbCI6IlNldHRpbmdzIiwidXJsIjoiZXhwcmVzcy1mb3Jtcy9zZXR0aW5ncyJ9LCJyZXNvdXJjZXMiOnsibGFiZWwiOiJSZXNvdXJjZXMiLCJ1cmwiOiJleHByZXNzLWZvcm1zL3Jlc291cmNlcyJ9fX0seyJsYWJlbCI6IkZlZWQgTWUiLCJ1cmwiOiJmZWVkLW1lIiwiaWNvbiI6IkM6XFx4YW1wcFxcaHRkb2NzXFxxY25hLW1hc3RlclxcdmVuZG9yXFxjcmFmdGNtc1xcZmVlZC1tZVxcc3JjXFxpY29uLW1hc2suc3ZnIn0seyJsYWJlbCI6IkZpZWxkIE1hbmFnZXIiLCJ1cmwiOiJmaWVsZC1tYW5hZ2VyIiwiaWNvbiI6IkM6XFx4YW1wcFxcaHRkb2NzXFxxY25hLW1hc3RlclxcdmVuZG9yXFx2ZXJiYlxcZmllbGQtbWFuYWdlclxcc3JjXFxpY29uLW1hc2suc3ZnIn0seyJsYWJlbCI6Ikd1aWRlIiwidXJsIjoiZ3VpZGUiLCJpY29uIjoiQzpcXHhhbXBwXFxodGRvY3NcXHFjbmEtbWFzdGVyXFx2ZW5kb3JcXHdicm93YXJcXGd1aWRlXFxzcmNcXGljb24tbWFzay5zdmciLCJzdWJuYXYiOnsiaG9tZSI6eyJsYWJlbCI6Ikd1aWRlIiwidXJsIjoiZ3VpZGUifSwib3JnYW5pemVyIjp7ImxhYmVsIjoiT3JnYW5pemVyIiwidXJsIjoiZ3VpZGUvb3JnYW5pemVyIn0sInNldHRpbmdzIjp7ImxhYmVsIjoiU2V0dGluZ3MiLCJ1cmwiOiJndWlkZS9zZXR0aW5ncy9nZW5lcmFsIn19fSx7ImxhYmVsIjoiU0VPIiwidXJsIjoic2VvIiwiaWNvbiI6IkM6XFx4YW1wcFxcaHRkb2NzXFxxY25hLW1hc3RlclxcdmVuZG9yXFxldGhlclxcc2VvXFxzcmNcXGljb24tbWFzay5zdmciLCJzdWJuYXYiOnsiZGFzaGJvYXJkIjp7ImxhYmVsIjoiRGFzaGJvYXJkIiwidXJsIjoic2VvIn0sInNpdGVtYXAiOnsibGFiZWwiOiJTaXRlbWFwIiwidXJsIjoic2VvL3NpdGVtYXAifSwicmVkaXJlY3RzIjp7ImxhYmVsIjoiUmVkaXJlY3RzIiwidXJsIjoic2VvL3JlZGlyZWN0cyJ9LCJzZXR0aW5ncyI6eyJsYWJlbCI6IlNldHRpbmdzIiwidXJsIjoic2VvL3NldHRpbmdzIn19fSx7ImxhYmVsIjoiR3JhcGhRTCIsInVybCI6ImdyYXBocWwiLCJpY29uIjoiQGFwcC9pY29ucy9ncmFwaHFsLnN2ZyIsInN1Ym5hdiI6eyJleHBsb3JlIjp7ImxhYmVsIjoiRXhwbG9yZSIsInVybCI6ImdyYXBocWwifSwic2NoZW1hcyI6eyJsYWJlbCI6IlNjaGVtYXMiLCJ1cmwiOiJncmFwaHFsL3NjaGVtYXMifSwidG9rZW5zIjp7ImxhYmVsIjoiVG9rZW5zIiwidXJsIjoiZ3JhcGhxbC90b2tlbnMifX19LHsidXJsIjoidXRpbGl0aWVzIiwibGFiZWwiOiJVdGlsaXRpZXMiLCJmb250SWNvbiI6InRvb2wiLCJiYWRnZUNvdW50IjoxfSx7InVybCI6InNldHRpbmdzIiwibGFiZWwiOiJTZXR0aW5ncyIsImZvbnRJY29uIjoic2V0dGluZ3MifSx7InVybCI6InBsdWdpbi1zdG9yZSIsImxhYmVsIjoiUGx1Z2luIFN0b3JlIiwiZm9udEljb24iOiJwbHVnaW4ifSx7InVybCI6ImNvbW11bmljYXRvci9jaGFuZ2Vsb2ciLCJsYWJlbCI6IkNoYW5nZWxvZyIsImljb24iOiJAd2Jyb3dhci9jb21tdW5pY2F0b3IvYXNzZXRidW5kbGVzL2NvbW11bmljYXRvci9kaXN0L2ljb24vaWNvbi1tYXNrLnN2ZyJ9LHsidXJsIjoiY29tbXVuaWNhdG9yL2dsb2JhbC13aWRnZXQiLCJsYWJlbCI6Ikdsb2JhbCBXaWRnZXQiLCJpY29uIjoiQHdicm93YXIvY29tbXVuaWNhdG9yL2Fzc2V0YnVuZGxlcy9jb21tdW5pY2F0b3IvZGlzdC9pY29uL2ljb24tbWFzay5zdmcifV0=
   express-forms:
     edition: lite
     enabled: true
@@ -2765,6 +1808,15 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  guide:
+    edition: lite
+    enabled: true
+    schemaVersion: 2.0.0
+    settings:
+      assetVolume: 8015cbf1-7dd5-47c8-b212-ed0f7e4730f0
+      clientName: ''
+      myCompanyName: ''
+      templatePath: _guide
   mix:
     edition: standard
     enabled: true
@@ -2789,51 +1841,18 @@ plugins:
     enabled: true
     schemaVersion: 1.0.0
 sections:
-  108495a8-0a10-4955-ac62-bdc8e88dd370:
+  0aa1ac29-355f-411f-82d2-96cb7fc97943:
     enableVersioning: true
     entryTypes:
-      e97dfa50-fac0-46ee-b14f-c702b4cf9ac7:
-        fieldLayouts:
-          7e8d313c-204a-4e2f-ad81-9661386e095e:
-            tabs:
-              -
-                fields:
-                  d09f8328-b9a7-4ab1-bc64-2b0bcf59a6cd:
-                    required: false
-                    sortOrder: 1
-                name: Hero
-                sortOrder: 1
-              -
-                fields:
-                  149b6835-f1fb-4ae5-b272-4b4551d44ffa:
-                    required: false
-                    sortOrder: 1
-                  3eef949f-f723-4619-abd0-16b2c45b9077:
-                    required: false
-                    sortOrder: 2
-                  a40560ab-5017-4950-abd0-368255b64916:
-                    required: false
-                    sortOrder: 4
-                  b35dee1a-fb6e-4b8e-9000-04af1fc94aed:
-                    required: false
-                    sortOrder: 3
-                name: Body
-                sortOrder: 2
-              -
-                fields:
-                  a8ecf32b-98c2-4871-a920-c86c0b327bcd:
-                    required: false
-                    sortOrder: 1
-                name: SEO
-                sortOrder: 3
-        handle: default
-        hasTitleField: true
-        name: Default
+      cc5c8c50-f205-4a77-a643-45cbd270870d:
+        handle: thanks
+        hasTitleField: false
+        name: thanks
         sortOrder: 1
-        titleFormat: ''
-        titleLabel: Title
-    handle: news
-    name: News
+        titleFormat: '{section.name|raw}'
+        titleLabel: null
+    handle: thanks
+    name: thanks
     previewTargets:
       -
         __assoc__:
@@ -2851,18 +1870,18 @@ sections:
       5b81df98-3353-4519-b38a-9c7c6e3fc1e4:
         enabledByDefault: true
         hasUrls: true
-        template: index
-        uriFormat: 'nouvelles/{slug}'
+        template: adminform\thanks
+        uriFormat: thanks
       d7acb83a-8fb9-4143-b21e-34c7af63bf45:
         enabledByDefault: true
         hasUrls: true
-        template: index
-        uriFormat: 'news/{slug}'
-    type: channel
-  173f9e4d-8619-4a02-ad98-4ef572df18ea:
+        template: adminform\thanks
+        uriFormat: thanks
+    type: single
+  108495a8-0a10-4955-ac62-bdc8e88dd370:
     enableVersioning: true
     entryTypes:
-      4caa7eab-a976-4631-b025-c025dfd877d8:
+      e97dfa50-fac0-46ee-b14f-c702b4cf9ac7:
         fieldLayouts:
           add17e78-dd63-40e2-b6cf-9bf7f93cefa0:
             tabs:
@@ -2878,9 +1897,6 @@ sections:
                   149b6835-f1fb-4ae5-b272-4b4551d44ffa:
                     required: false
                     sortOrder: 1
-                  25d86523-f81d-4490-871f-6e7e31fe79e3:
-                    required: false
-                    sortOrder: 2
                 name: Body
                 sortOrder: 2
               -
@@ -2890,183 +1906,14 @@ sections:
                     sortOrder: 1
                 name: SEO
                 sortOrder: 3
-        handle: newspapersListing
+        handle: default
         hasTitleField: true
-        name: 'Newspapers Listing'
+        name: Default
         sortOrder: 1
-        titleFormat: '{section.name|raw}'
+        titleFormat: ''
         titleLabel: Title
-    handle: newspapersListing
-    name: 'Newspapers Listing'
-    previewTargets:
-      -
-        __assoc__:
-          -
-            - label
-            - 'Primary entry page'
-          -
-            - urlFormat
-            - '{url}'
-          -
-            - refresh
-            - '1'
-    propagationMethod: all
-    siteSettings:
-      5b81df98-3353-4519-b38a-9c7c6e3fc1e4:
-        enabledByDefault: true
-        hasUrls: true
-        template: index
-        uriFormat: journaux
-      d7acb83a-8fb9-4143-b21e-34c7af63bf45:
-        enabledByDefault: true
-        hasUrls: true
-        template: index
-        uriFormat: newspapers
-    type: single
-  3d26eeca-eda1-4e61-b4d4-915196bdd4fc:
-    enableVersioning: true
-    entryTypes:
-      36843fe1-06fc-4e48-8435-3b7fe04252e7:
-        fieldLayouts:
-          420d408e-a938-436c-ba32-4b6f18d0335d:
-            tabs:
-              -
-                fields:
-                  d09f8328-b9a7-4ab1-bc64-2b0bcf59a6cd:
-                    required: false
-                    sortOrder: 1
-                name: Hero
-                sortOrder: 1
-              -
-                fields:
-                  149b6835-f1fb-4ae5-b272-4b4551d44ffa:
-                    required: false
-                    sortOrder: 1
-                  25d86523-f81d-4490-871f-6e7e31fe79e3:
-                    required: false
-                    sortOrder: 5
-                  2c0183fb-d171-4d25-99d9-973ca8dce93e:
-                    required: false
-                    sortOrder: 3
-                  b8604730-4572-4c01-9f93-792c5f7a3f35:
-                    required: false
-                    sortOrder: 2
-                  dfa4a5c9-4ca4-4f4f-b874-73c5650e06c3:
-                    required: false
-                    sortOrder: 4
-                name: Body
-                sortOrder: 2
-              -
-                fields:
-                  a8ecf32b-98c2-4871-a920-c86c0b327bcd:
-                    required: false
-                    sortOrder: 1
-                name: SEO
-                sortOrder: 3
-        handle: newsListing
-        hasTitleField: true
-        name: 'News Listing'
-        sortOrder: 1
-        titleFormat: '{section.name|raw}'
-        titleLabel: Title
-    handle: newsListing
-    name: 'News Listing'
-    previewTargets:
-      -
-        __assoc__:
-          -
-            - label
-            - 'Primary entry page'
-          -
-            - urlFormat
-            - '{url}'
-          -
-            - refresh
-            - '1'
-    propagationMethod: all
-    siteSettings:
-      5b81df98-3353-4519-b38a-9c7c6e3fc1e4:
-        enabledByDefault: true
-        hasUrls: true
-        template: index
-        uriFormat: nouvelles
-      d7acb83a-8fb9-4143-b21e-34c7af63bf45:
-        enabledByDefault: true
-        hasUrls: true
-        template: index
-        uriFormat: news
-    type: single
-  84c2d338-6eee-430f-bde4-e75cf6d7a2ce:
-    enableVersioning: true
-    entryTypes:
-      7722306d-81c4-474b-ac4f-9e3bbd069fd9:
-        fieldLayouts:
-          b1560f77-882f-4ad5-b6e7-93224eba0d96:
-            tabs:
-              -
-                fields:
-                  8813b1ac-da58-4e4f-83c7-e2d1d9ea5d88:
-                    required: false
-                    sortOrder: 1
-                name: Hero
-                sortOrder: 1
-              -
-                fields:
-                  404f64c3-15a7-4208-a3bb-cf67832b33ce:
-                    required: false
-                    sortOrder: 1
-                name: Services
-                sortOrder: 2
-              -
-                fields:
-                  6105775e-28f1-471f-b5f4-e8e615728d7a:
-                    required: false
-                    sortOrder: 1
-                name: 'About Us'
-                sortOrder: 3
-              -
-                fields:
-                  50ccb0fd-b20b-49cf-a1ad-f49b7e9c533d:
-                    required: false
-                    sortOrder: 1
-                name: Newspapers
-                sortOrder: 4
-              -
-                fields:
-                  25d86523-f81d-4490-871f-6e7e31fe79e3:
-                    required: false
-                    sortOrder: 1
-                name: 'Call to Action'
-                sortOrder: 5
-              -
-                fields:
-                  7a70b499-44c9-4f80-aed1-70fb7ab4dcd2:
-                    required: false
-                    sortOrder: 1
-                name: Facts
-                sortOrder: 6
-              -
-                fields:
-                  b2284db3-74fd-475d-aa24-35b11e80c189:
-                    required: false
-                    sortOrder: 1
-                name: Team
-                sortOrder: 7
-              -
-                fields:
-                  a8ecf32b-98c2-4871-a920-c86c0b327bcd:
-                    required: false
-                    sortOrder: 1
-                name: SEO
-                sortOrder: 8
-        handle: home
-        hasTitleField: true
-        name: Home
-        sortOrder: 1
-        titleFormat: '{section.name|t|raw}'
-        titleLabel: Title
-    handle: home
-    name: Home
+    handle: articles
+    name: Articles
     previewTargets:
       -
         label: 'Primary entry page'
@@ -3077,27 +1924,20 @@ sections:
         enabledByDefault: true
         hasUrls: true
         template: index
-        uriFormat: __home__
+        uriFormat: 'articles/{slug}'
       d7acb83a-8fb9-4143-b21e-34c7af63bf45:
         enabledByDefault: true
         hasUrls: true
         template: index
-        uriFormat: __home__
-    type: single
-  87b0d1a1-2a73-4578-9944-db7591f7790e:
+        uriFormat: 'articles/{slug}'
+    type: channel
+  84c2d338-6eee-430f-bde4-e75cf6d7a2ce:
     enableVersioning: true
     entryTypes:
-      5145d970-419e-465e-be61-b6ea313b7345:
+      7722306d-81c4-474b-ac4f-9e3bbd069fd9:
         fieldLayouts:
           e343209e-f053-4b02-b6f4-2c95fc4d4b85:
             tabs:
-              -
-                fields:
-                  d09f8328-b9a7-4ab1-bc64-2b0bcf59a6cd:
-                    required: false
-                    sortOrder: 1
-                name: Hero
-                sortOrder: 1
               -
                 fields:
                   0884f515-425c-413d-90c5-0d5cf68d59bc:
@@ -3109,20 +1949,8 @@ sections:
                   149b6835-f1fb-4ae5-b272-4b4551d44ffa:
                     required: false
                     sortOrder: 1
-                  2d7eb5f1-45b5-41ad-9685-4634ca29a433:
-                    required: false
-                    sortOrder: 3
-                  4ddc453e-1414-4bd1-b8de-bd8af9dee9eb:
-                    required: false
-                    sortOrder: 4
-                  ae86b046-8458-4cb0-bc40-6f01f3ea9f9c:
-                    required: false
-                    sortOrder: 6
-                  bf99fec6-0c6f-4c57-8877-2555c3f5ed2e:
-                    required: false
-                    sortOrder: 2
-                name: Body
-                sortOrder: 2
+                name: Hero
+                sortOrder: 1
               -
                 fields:
                   a8ecf32b-98c2-4871-a920-c86c0b327bcd:
@@ -3178,46 +2006,72 @@ sections:
                   d09f8328-b9a7-4ab1-bc64-2b0bcf59a6cd:
                     required: false
                     sortOrder: 1
-                name: Hero
-                sortOrder: 1
+                sortOrder: 2
               -
                 fields:
-                  020b2930-ba6d-4cb0-b7e5-33a4ddef1a15:
-                    required: false
-                    sortOrder: 6
-                  149b6835-f1fb-4ae5-b272-4b4551d44ffa:
+                  d09f8328-b9a7-4ab1-bc64-2b0bcf59a6cd:
                     required: false
                     sortOrder: 1
-                  3c770e42-9a60-4ba5-bd1d-306d863cd5b2:
+                name: 'About Us'
+                sortOrder: 3
+              -
+                fields:
+                  c9727bff-8b73-4f30-a37c-7378936e40b9:
                     required: false
-                    sortOrder: 4
-                  672b2efc-cd07-492e-9d11-5df2a57eb579:
+                    sortOrder: 1
+                name: Newspapers
+                sortOrder: 4
+              -
+                fields:
+                  8624d695-e9ba-447b-af68-bcbe01854c4a:
                     required: false
-                    sortOrder: 3
-                  a5eda873-b39e-4bf0-8973-b16621a971fd:
+                    sortOrder: 1
+                sortOrder: 5
+              -
+                fields:
+                  e28522fa-ab8a-4ecf-9db2-d22fe3e64109:
                     required: false
-                    sortOrder: 2
-                  d0bded55-9c37-4580-8a4d-9ff80bc19ba6:
-                    required: false
-                    sortOrder: 5
-                name: Body
-                sortOrder: 2
+                    sortOrder: 1
+                name: Team
+                sortOrder: 6
               -
                 fields:
                   a8ecf32b-98c2-4871-a920-c86c0b327bcd:
                     required: false
                     sortOrder: 1
                 name: SEO
-                sortOrder: 3
-        handle: about
+                sortOrder: 7
+        handle: home
         hasTitleField: true
-        name: About
-        sortOrder: 3
-        titleFormat: ''
+        name: Home
+        sortOrder: 1
+        titleFormat: '{section.name|t|raw}'
         titleLabel: Title
+    handle: home
+    name: Home
+    previewTargets:
+      -
+        label: 'Primary entry page'
+        urlFormat: '{url}'
+    propagationMethod: all
+    siteSettings:
+      5b81df98-3353-4519-b38a-9c7c6e3fc1e4:
+        enabledByDefault: true
+        hasUrls: true
+        template: index
+        uriFormat: __home__
+      d7acb83a-8fb9-4143-b21e-34c7af63bf45:
+        enabledByDefault: true
+        hasUrls: true
+        template: index
+        uriFormat: __home__
+    type: single
+  91e43c58-9518-41b3-8506-2991c2aee365:
+    enableVersioning: true
+    entryTypes:
       78fcc0df-ddd4-444c-bd75-773f01d77d96:
         fieldLayouts:
-          7afdb84e-8e6a-44c8-9997-fd9327fb8d41:
+          bb0e7ac6-1d83-4fb7-923b-b884562941b6:
             tabs:
               -
                 fields:
@@ -3228,7 +2082,7 @@ sections:
                 sortOrder: 1
               -
                 fields:
-                  9bf7a9ef-8e46-42a3-8845-9d24f4eca5eb:
+                  13c9ec52-137a-4ff3-8113-61e358819fe7:
                     required: false
                     sortOrder: 1
                 name: Instructions
@@ -3249,14 +2103,14 @@ sections:
                 sortOrder: 4
               -
                 fields:
-                  8624d695-e9ba-447b-af68-bcbe01854c4a:
+                  1f8b8f62-bd60-4a61-af4a-077b4b871ef8:
                     required: false
                     sortOrder: 1
                 name: 'Process Video'
                 sortOrder: 5
               -
                 fields:
-                  e28522fa-ab8a-4ecf-9db2-d22fe3e64109:
+                  25d86523-f81d-4490-871f-6e7e31fe79e3:
                     required: false
                     sortOrder: 1
                 name: Application
@@ -3272,90 +2126,6 @@ sections:
         hasTitleField: true
         name: Grants
         sortOrder: 2
-        titleFormat: ''
-        titleLabel: Title
-      c69f3ffc-9195-4c96-8536-4cab5a59055a:
-        fieldLayouts:
-          bb0e7ac6-1d83-4fb7-923b-b884562941b6:
-            tabs:
-              -
-                fields:
-                  d09f8328-b9a7-4ab1-bc64-2b0bcf59a6cd:
-                    required: false
-                    sortOrder: 1
-                name: Hero
-                sortOrder: 1
-              -
-                fields:
-                  13c9ec52-137a-4ff3-8113-61e358819fe7:
-                    required: false
-                    sortOrder: 10
-                  3d849e2a-9a61-4dd2-8080-084e79cbfda4:
-                    required: false
-                    sortOrder: 11
-                  4df77da1-b90a-432b-8118-3480421b8bab:
-                    required: false
-                    sortOrder: 2
-                  5a7fd45c-540e-47da-b57c-80bc1248bbe3:
-                    required: false
-                    sortOrder: 7
-                  60713798-c848-403c-9410-38dddd3ed97e:
-                    required: false
-                    sortOrder: 3
-                  7882b4ca-4af3-4d7d-837b-36e081016fa1:
-                    required: false
-                    sortOrder: 6
-                  8bdbdbd3-cae2-4360-b049-fb1fe01bf253:
-                    required: false
-                    sortOrder: 12
-                  a6bdffdf-5510-4072-bd01-aee421323d86:
-                    required: false
-                    sortOrder: 1
-                  a98f8031-69da-46cd-89ab-86022b603088:
-                    required: false
-                    sortOrder: 8
-                  ae667a46-b529-4f97-b93a-3007581c7c40:
-                    required: false
-                    sortOrder: 4
-                  aee65e23-077e-4d3b-9b5a-5be1715c43f4:
-                    required: false
-                    sortOrder: 5
-                  b80fbbb0-caa2-49d7-b9a7-eefda1aec19b:
-                    required: false
-                    sortOrder: 9
-                name: 'Classified Ads'
-                sortOrder: 2
-              -
-                fields:
-                  1f8b8f62-bd60-4a61-af4a-077b4b871ef8:
-                    required: false
-                    sortOrder: 1
-                  3b080826-0bdd-4ece-8b04-c273e6ee7877:
-                    required: false
-                    sortOrder: 3
-                  cd33fe76-d08b-4279-8f5d-d23b492f7286:
-                    required: false
-                    sortOrder: 2
-                name: 'Display Ads'
-                sortOrder: 3
-              -
-                fields:
-                  25d86523-f81d-4490-871f-6e7e31fe79e3:
-                    required: false
-                    sortOrder: 1
-                name: 'Call to Action'
-                sortOrder: 4
-              -
-                fields:
-                  a8ecf32b-98c2-4871-a920-c86c0b327bcd:
-                    required: false
-                    sortOrder: 1
-                name: SEO
-                sortOrder: 5
-        handle: advertiseWithUs
-        hasTitleField: true
-        name: 'Advertise with us'
-        sortOrder: 4
         titleFormat: ''
         titleLabel: Title
       ebb03872-bd37-4972-b1ba-79827765ba28:
@@ -3374,9 +2144,6 @@ sections:
                   149b6835-f1fb-4ae5-b272-4b4551d44ffa:
                     required: false
                     sortOrder: 1
-                  25d86523-f81d-4490-871f-6e7e31fe79e3:
-                    required: false
-                    sortOrder: 2
                 name: Body
                 sortOrder: 2
               -
@@ -3519,6 +2286,53 @@ sections:
         hasUrls: true
         template: index
         uriFormat: search
+    type: single
+  ce01bf2f-24ab-47be-9b4b-a05a89f9ac57:
+    enableVersioning: true
+    entryTypes:
+      3b8e7743-04d2-4c23-b908-4428e7d026ad:
+        fieldLayouts:
+          acef79bf-1f53-4229-b636-37f22697fa8c:
+            tabs:
+              -
+                fields:
+                  e28522fa-ab8a-4ecf-9db2-d22fe3e64109:
+                    required: true
+                    sortOrder: 1
+                name: 'Admin Form'
+                sortOrder: 1
+        handle: adminForm
+        hasTitleField: true
+        name: 'Admin Form'
+        sortOrder: 1
+        titleFormat: '{section.name|raw}'
+        titleLabel: 'Administration Form'
+    handle: adminForm
+    name: 'Admin Form'
+    previewTargets:
+      -
+        __assoc__:
+          -
+            - label
+            - 'Primary entry page'
+          -
+            - urlFormat
+            - '{url}'
+          -
+            - refresh
+            - '1'
+    propagationMethod: all
+    siteSettings:
+      5b81df98-3353-4519-b38a-9c7c6e3fc1e4:
+        enabledByDefault: true
+        hasUrls: true
+        template: ''
+        uriFormat: admin-form
+      d7acb83a-8fb9-4143-b21e-34c7af63bf45:
+        enabledByDefault: true
+        hasUrls: true
+        template: adminForm
+        uriFormat: admin-form
     type: single
 siteGroups:
   8acb1704-27cb-427a-aaf3-cdb9d2f132a7:
@@ -3874,151 +2688,6 @@ superTableBlockTypes:
         instructions: 'Configure the section button.'
         name: Button
         searchable: '1'
-        settings:
-          allowCustomText: '1'
-          allowTarget: '1'
-          allowedLinkNames: '*'
-          autoNoReferrer: ''
-          defaultLinkName: url
-          defaultText: ''
-          enableAriaLabel: ''
-          enableTitle: ''
-          typeSettings:
-            __assoc__:
-              -
-                - asset
-                -
-                  __assoc__:
-                    -
-                      - sources
-                      - '*'
-                    -
-                      - allowCustomQuery
-                      - ''
-              -
-                - category
-                -
-                  __assoc__:
-                    -
-                      - sources
-                      - '*'
-                    -
-                      - allowCustomQuery
-                      - ''
-              -
-                - entry
-                -
-                  __assoc__:
-                    -
-                      - sources
-                      - '*'
-                    -
-                      - allowCustomQuery
-                      - ''
-              -
-                - site
-                -
-                  __assoc__:
-                    -
-                      - sites
-                      - '*'
-              -
-                - user
-                -
-                  __assoc__:
-                    -
-                      - sources
-                      - '*'
-                    -
-                      - allowCustomQuery
-                      - ''
-              -
-                - custom
-                -
-                  __assoc__:
-                    -
-                      - disableValidation
-                      - ''
-                    -
-                      - allowAliases
-                      - ''
-              -
-                - email
-                -
-                  __assoc__:
-                    -
-                      - disableValidation
-                      - ''
-                    -
-                      - allowAliases
-                      - ''
-              -
-                - tel
-                -
-                  __assoc__:
-                    -
-                      - disableValidation
-                      - ''
-                    -
-                      - allowAliases
-                      - ''
-              -
-                - url
-                -
-                  __assoc__:
-                    -
-                      - disableValidation
-                      - ''
-                    -
-                      - allowAliases
-                      - ''
-        translationKeyFormat: null
-        translationMethod: language
-        type: typedlinkfield\fields\LinkField
-  5dcc3efc-f58b-4fb0-85dd-27f47c18a1a1:
-    field: 25d86523-f81d-4490-871f-6e7e31fe79e3
-    fieldLayouts:
-      363bac96-99e0-45cd-83f8-e0112a3ab9c7:
-        tabs:
-          -
-            fields:
-              37f8c526-a962-4aaf-884d-a43ce5c7e566:
-                required: false
-                sortOrder: 2
-              a0d6393e-572e-4ba0-a3db-8e59b53e8d24:
-                required: false
-                sortOrder: 3
-              de070043-fbf4-4c2b-9458-2b2138f3580b:
-                required: false
-                sortOrder: 1
-            name: Content
-            sortOrder: 1
-    fields:
-      37f8c526-a962-4aaf-884d-a43ce5c7e566:
-        contentColumnType: text
-        fieldGroup: null
-        handle: ctaContent
-        instructions: ''
-        name: Content
-        searchable: true
-        settings:
-          byteLimit: null
-          charLimit: null
-          code: ''
-          columnType: null
-          initialRows: '4'
-          multiline: ''
-          placeholder: ''
-        translationKeyFormat: null
-        translationMethod: language
-        type: craft\fields\PlainText
-      a0d6393e-572e-4ba0-a3db-8e59b53e8d24:
-        contentColumnType: text
-        fieldGroup: null
-        handle: ctaButton
-        instructions: ''
-        name: Button
-        searchable: true
         settings:
           allowCustomText: '1'
           allowTarget: '1'
