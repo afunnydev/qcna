@@ -22,52 +22,21 @@
 
 <div id="menu-offcanvas" uk-offcanvas="mode: push">
     <div class="uk-offcanvas-bar">
-        <ul class="uk-nav uk-nav-primary uk-nav-default">
+        <ul class="uk-nav uk-nav-default">
+            <li>{% include '_partials/switcher' %}</li>
+            <li class="uk-nav-divider"></li>
+            <li class="uk-nav-header">{{ 'Navigation'|t }}</li>
             {% for link in navigation.primaryNavigation.all() %}
-                <li>{{ link.linkItem.getLink() }}</li>
+                <li>
+                    <a href="{{ link.linkItem.getUrl() }}"><span class="uk-margin-small-right uk-icon" uk-icon="icon: triangle-right"></span> {{ link.linkItem.getText() }}</a>
+                </li>
             {% endfor %}
-            <li>
-                {#
-                {% if currentUser %}
-                    <a href="/admin">{{ "My Dashboard"|t }}</a>
-                {% else %}
-                    <a href="/admin">{{ "Journalism Login"|t }}</a>
-                {% endif %}
-                #}
-            </li>
-            <li>
-                <a href="#">{{ "Members Area"|t }}</a>
-            </li>
+            <li><a href="#"><span class="uk-margin-small-right uk-icon" uk-icon="icon: triangle-right"></span> {{ 'Become A Member'|t }}</a></li>
+            <li><a href="{{ craft.entries.section('contact').one().url }}"><span class="uk-margin-small-right uk-icon" uk-icon="icon: triangle-right"></span> {{ 'Contact Us'|t }}</a></li>
+            <li class="uk-nav-header">{{ 'LJI Program'|t }}</li>
+            <li><a href="{{ url('grants') }}"><span class="uk-margin-small-right uk-icon" uk-icon="icon: triangle-right"></span> {{ 'Grant Instructions'|t }}</a></li>
+            <li><a href="/admin/entries/news"><span class="uk-margin-small-right uk-icon" uk-icon="icon: triangle-right"></span> {{ 'Journalist Login'|t }}</a></li>
         </ul>
-    </div>
-</div>
-
-<div id="menu-modal" class="uk-modal-full" uk-modal>
-    <div class="uk-modal-dialog">
-        <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
-        <div class="uk-container">
-            <div class="uk-padding-large uk-flex uk-flex-column uk-flex-center uk-flex-middle" uk-height-viewport>
-                <h2>{{ 'Menu'|t }}</h2>
-                <ul class="uk-list uk-text-center">
-                    {% for link in navigation.primaryNavigation.all() %}
-                        <li>{{ link.linkItem.getLink() }}</li>
-                    {% endfor %}
-                    <li>
-                        <a href="{{ url('grants') }}">LJI Grant Application</a>
-                        {#
-                        {% if currentUser %}
-                            <a href="/admin">{{ "My Dashboard"|t }}</a>
-                        {% else %}
-                            <a href="/admin">{{ "Journalism Login"|t }}</a>
-                        {% endif %}
-                        #}
-                    </li>
-                    <li>
-                        <a href="#">{{ "Members Area"|t }}</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
     </div>
 </div>
 
@@ -83,6 +52,7 @@
         {% endcache %}
     </ul>
     <ul class="list-inline uk-margin-auto-left">
+        <li class="uk-margin-left">{% include '_partials/switcher' %}</li>
         <li class="uk-margin-left">
             <a href="{{ url('grants') }}" class="uk-button uk-button-primary uk-button-small">LJI Grant Application</a>
             {#
