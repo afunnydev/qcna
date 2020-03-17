@@ -27,7 +27,7 @@
             {% set news = craft.entries.section('news').relatedTo(category).limit(8).all() %}
             {% if news|length %}
                 <section class="uk-margin-large-bottom">
-                    <div class="uk-child-width-1-4@m uk-child-width-1-2@s uk-grid-match" uk-grid>
+                    <div class="uk-child-width-1-4@l uk-child-width-1-2@m uk-child-width-1-2@s uk-grid-match" uk-grid>
                         {% for article in news %}
                             {% include "_partials/newsCard" %}
                         {% endfor %}

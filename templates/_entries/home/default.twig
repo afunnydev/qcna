@@ -173,10 +173,91 @@
     </section>
 
     {# Recent News #}
+    {#
     <section id="news" class="section">
         <div class="uk-container">
             <h2 class="section-title">{{ "Recent News"|t }}</h2>
-            <div id="homepage-news-container" class="uk-child-width-1-4@m uk-child-width-1-2@s" uk-height-match="target: > div > .uk-card > .uk-card-bodyNewspaper 28" uk-grid></div>
+            <div id="homepage-news-container" class="ajax-news-container uk-child-width-1-4@l uk-child-width-1-2@m uk-child-width-1-2@s" uk-grid></div>
+        </div>
+    </section>
+    #}
+
+    <section id="news" class="section">
+        <div class="uk-container">
+            <h2 class="section-title">{{ "Recent News"|t }}</h2>
+            <div class="uk-child-width-1-4@l uk-child-width-1-2@m uk-child-width-1-2@s" uk-height-match="target: > div > .uk-card > .uk-card-body" uk-grid>
+                {% set newsCrop = {
+                    mode: 'crop',
+                    width: 600,
+                    height: 400,
+                    quality: 75,
+                    format: 'jpg',
+                    position: 'center-center'
+                } %}
+                {% set ljiCategory = craft.categories.slug('lji') %}
+                {% set ljiNews = craft.entries.section('news').relatedTo(ljiCategory).limit(2).all() %}
+                {% for item in ljiNews %}
+                    <div>
+                        <article class="uk-card uk-card-default uk-card-hover uk-card-small uk-background-muted">
+                            <div class="uk-card-badge uk-label">{{ 'LJI Program'|t }}</div>
+                            {% set featuredImage = item.newsFeaturedImage.one() ?? null %}
+                            {% if featuredImage %}
+                                <div class="uk-card-media-top">
+                                    <a href="{{ item.url }}" target="_blank">
+                                        <img src="{{ featuredImage.getUrl(newsCrop) }}" alt="{{ item.title }}">
+                                    </a>
+                                </div>
+                            {% endif %}
+                            <div class="uk-card-body">
+                                <p class="uk-text-meta uk-margin-remove">
+                                    {% if currentSite.language|slice(0,2) == 'fr' %}
+                                        <span uk-icon="icon: calendar"></span> <time datetime="{{ item.postDate|date('d F Y') }}">{{ item.postDate|date('d F Y') }}</time>
+                                    {% else %}
+                                        <span uk-icon="icon: calendar"></span> <time datetime="{{ item.postDate|date('F d, Y') }}">{{ item.postDate|date('F d, Y') }}</time>
+                                    {% endif %}
+                                </p>
+                                <h5 class="uk-card-title">
+                                    <a class="uk-link-heading" href="{{ item.url }}" target="_blank">{{ item.title }}</a>
+                                </h5>
+                                <p>{{ item.newsSummary }}</p>
+                            </div>
+                            <div class="uk-card-footer">
+                                <a href="{{ item.url }}" class="uk-button uk-button-text" target="_blank">{{ 'Read more'|t }}</a>
+                            </div>
+                        </article>
+                    </div>
+                {% endfor %}
+                {% set canadaLocalNewsLength = 4 - ljiNews|length %}
+                {% set canadaLocalNews = craft.entries.section('canadaLocal').limit(canadaLocalNewsLength).all() %}
+                {% for item in canadaLocalNews %}
+                    <div>
+                        <article class="uk-card uk-card-default uk-card-hover uk-card-small uk-background-muted">
+                            <div class="uk-card-badge uk-label">{{ 'Canada Local'|t }}</div>
+                            <div class="uk-card-media-top">
+                                <a href="{{ item.sourceUrl }}" target="_blank">
+                                    <img src="{{ item.imageUrl }}" alt="{{ item.title }}" class="canada-local-image">
+                                </a>
+                            </div>
+                            <div class="uk-card-body">
+                                <p class="uk-text-meta uk-margin-remove">
+                                    {% if currentSite.language|slice(0,2) == 'fr' %}
+                                        <span uk-icon="icon: calendar"></span> <time datetime="{{ item.postDate|date('d F Y') }}">{{ item.postDate|date('d F Y') }}</time>
+                                    {% else %}
+                                        <span uk-icon="icon: calendar"></span> <time datetime="{{ item.postDate|date('F d, Y') }}">{{ item.postDate|date('F d, Y') }}</time>
+                                    {% endif %}
+                                </p>
+                                <h5 class="uk-card-title">
+                                    <a class="uk-link-heading" href="{{ item.sourceUrl }}" target="_blank">{{ item.title }}</a>
+                                </h5>
+                                <p>{{ item.newsSummary }}</p>
+                            </div>
+                            <div class="uk-card-footer">
+                                <a href="{{ item.sourceUrl }}" class="uk-button uk-button-text" target="_blank">{{ 'Read more'|t }}</a>
+                            </div>
+                        </article>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
     </section>
 

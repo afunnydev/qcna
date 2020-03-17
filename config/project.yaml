@@ -41,7 +41,7 @@ categoryGroups:
     structure:
       maxLevels: null
       uid: 6800ba30-8d2b-473f-836a-a54b0de7b497
-dateModified: 1584456679
+dateModified: 1584467808
 email:
   fromEmail: $EMAIL_USER
   fromName: QCNA
@@ -397,6 +397,19 @@ fields:
     translationKeyFormat: null
     translationMethod: language
     type: craft\redactor\Field
+  206a23ad-a60c-4f93-902d-054142479f9e:
+    contentColumnType: string(255)
+    fieldGroup: e6553d1f-17d6-4a13-919a-d3e435f00223
+    handle: imageUrl
+    instructions: ''
+    name: 'Image Url'
+    searchable: true
+    settings:
+      maxLength: '255'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\fields\Url
   25d86523-f81d-4490-871f-6e7e31fe79e3:
     contentColumnType: string
     fieldGroup: f14bc424-75cb-420b-b102-71f411a661aa
@@ -1741,6 +1754,24 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: verbb\supertable\fields\SuperTableField
+  c1359a0d-c4ec-449f-a40e-39a1af57fe14:
+    contentColumnType: text
+    fieldGroup: e6553d1f-17d6-4a13-919a-d3e435f00223
+    handle: contentId
+    instructions: ''
+    name: 'Content ID'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\fields\PlainText
   c9727bff-8b73-4f30-a37c-7378936e40b9:
     contentColumnType: text
     fieldGroup: d4db5330-2888-41c6-bed1-5c393e75005e
@@ -1762,6 +1793,19 @@ fields:
     translationKeyFormat: null
     translationMethod: language
     type: craft\redactor\Field
+  ca22784f-aa91-4b17-b0cd-6743b127e2a6:
+    contentColumnType: string(255)
+    fieldGroup: e6553d1f-17d6-4a13-919a-d3e435f00223
+    handle: sourceUrl
+    instructions: ''
+    name: 'Source Url'
+    searchable: true
+    settings:
+      maxLength: '255'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\fields\Url
   cd33fe76-d08b-4279-8f5d-d23b492f7286:
     contentColumnType: text
     fieldGroup: 6c497c72-d868-467b-85aa-7e71d032d6ef
@@ -2765,6 +2809,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  imager:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
   mix:
     edition: standard
     enabled: true
@@ -2858,6 +2906,65 @@ sections:
         hasUrls: true
         template: index
         uriFormat: 'news/{slug}'
+    type: channel
+  1247ab8d-3194-4f51-86f1-6361d5315443:
+    enableVersioning: true
+    entryTypes:
+      7630f0f9-a364-4c15-ab26-7646a6395071:
+        fieldLayouts:
+          a7f22162-a258-4834-91d3-5f55be6a3d65:
+            tabs:
+              -
+                fields:
+                  206a23ad-a60c-4f93-902d-054142479f9e:
+                    required: false
+                    sortOrder: 3
+                  3eef949f-f723-4619-abd0-16b2c45b9077:
+                    required: false
+                    sortOrder: 2
+                  a40560ab-5017-4950-abd0-368255b64916:
+                    required: false
+                    sortOrder: 5
+                  c1359a0d-c4ec-449f-a40e-39a1af57fe14:
+                    required: false
+                    sortOrder: 1
+                  ca22784f-aa91-4b17-b0cd-6743b127e2a6:
+                    required: false
+                    sortOrder: 4
+                name: Content
+                sortOrder: 1
+        handle: canadaLocal
+        hasTitleField: true
+        name: 'Canada Local'
+        sortOrder: 1
+        titleFormat: ''
+        titleLabel: Title
+    handle: canadaLocal
+    name: 'Canada Local'
+    previewTargets:
+      -
+        __assoc__:
+          -
+            - label
+            - 'Primary entry page'
+          -
+            - urlFormat
+            - '{url}'
+          -
+            - refresh
+            - '1'
+    propagationMethod: all
+    siteSettings:
+      5b81df98-3353-4519-b38a-9c7c6e3fc1e4:
+        enabledByDefault: true
+        hasUrls: false
+        template: null
+        uriFormat: ''
+      d7acb83a-8fb9-4143-b21e-34c7af63bf45:
+        enabledByDefault: true
+        hasUrls: false
+        template: null
+        uriFormat: ''
     type: channel
   173f9e4d-8619-4a02-ad98-4ef572df18ea:
     enableVersioning: true

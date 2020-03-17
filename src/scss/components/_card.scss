@@ -20,7 +20,13 @@
     height: 180px;
     object-fit: fill;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1200px) {
+        width: 540px;
+        height: 360px;
+        object-fit: fill;
+    }
+
+    @media screen and (max-width: 960px) {
         width: 100%;
         height: auto;
     }
@@ -29,3 +35,32 @@
 .uk-card-muted {
     background: #f8f8f8;
 }
+
+
+@media screen and (min-width: 960px) {
+    .ajax-news-container .uk-card {
+        min-height: 540px;
+    }
+    .ajax-news-container .uk-card-body {
+        min-height: 210px;
+    }
+    .ajax-news-container .uk-card-footer {
+        width: calc(100% - 40px);
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+.canada-local-image {
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 1200px) {
+    .canada-local-image {
+        width: 270px;
+        height: 180px;
+    }
+}
+
