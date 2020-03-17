@@ -31,7 +31,7 @@
                     <a href="{{ link.linkItem.getUrl() }}"><span class="uk-margin-small-right uk-icon" uk-icon="icon: triangle-right"></span> {{ link.linkItem.getText() }}</a>
                 </li>
             {% endfor %}
-            <li><a href="#"><span class="uk-margin-small-right uk-icon" uk-icon="icon: triangle-right"></span> {{ 'Become A Member'|t }}</a></li>
+            <li><a href="{{ url('become-a-member') }}"><span class="uk-margin-small-right uk-icon" uk-icon="icon: triangle-right"></span> {{ 'Become A Member'|t }}</a></li>
             <li><a href="{{ craft.entries.section('contact').one().url }}"><span class="uk-margin-small-right uk-icon" uk-icon="icon: triangle-right"></span> {{ 'Contact Us'|t }}</a></li>
             <li class="uk-nav-header">{{ 'LJI Program'|t }}</li>
             <li><a href="{{ url('grants') }}"><span class="uk-margin-small-right uk-icon" uk-icon="icon: triangle-right"></span> {{ 'Grant Instructions'|t }}</a></li>
