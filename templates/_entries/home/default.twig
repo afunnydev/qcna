@@ -74,13 +74,23 @@
         <div class="uk-container uk-container-large">
             <h2 class="section-title">{{ "Our Newspapers"|t }}</h2>
             {% if newspapers %}
-            <div class="uk-child-width-1-4 uk-grid-collapse" uk-grid>
+            <div class="uk-child-width-1-4@m uk-child-width-1-2@s uk-grid-collapse" uk-grid>
+                {% set newspaperCrop = {
+                    mode: 'crop',
+                    width: 600,
+                    height: 600,
+                    quality: 100,
+                    position: 'center-center'
+                } %}
                 {% for newspaper in newspapers %}
                     <div>
                         {% set logo = newspaper.newspaperLogo.one() ?? null %}
                         <a href="{{ newspaper.newspaperLink.getUrl() }}" target="{{ newspaper.newspaperLink.getTarget() }}">
                             {% if logo %}
-                                <img src="{{ logo.url }}" alt="{{ newspaper.newspaperName }}">
+                                <img src="{{ logo.getUrl(newspaperCrop) }}"
+                                    width="{{ logo.getWidth(newspaperCrop) }}"
+                                    height="{{ logo.getHeight(newspaperCrop) }}"
+                                    alt="{{ newspaper.newspaperName }}">
                             {% else %}
                                 {{ newspaper.newspaperName }}
                             {% endif %}
