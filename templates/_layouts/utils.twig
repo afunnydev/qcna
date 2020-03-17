@@ -3,9 +3,10 @@
  | Utils
  |------------------------------------------------------------------------------
 #}
-
+{% spaceless %}
 {# Set global scope variable for current site language #}
 {% set CURRENT_LANG = currentSite.language|slice(0,2) %}
 
 {# Document block #}
 {% block document %}{% endblock %}
+{% endspaceless %}

@@ -71,9 +71,24 @@
     {# Our Newspaper #}
     {% set newspapers = entry.newspapers.all() ?? null %}
     <section id="newspaper" class="section uk-background-muted">
-        <div class="uk-container uk-container-small">
+        <div class="uk-container uk-container-large">
             <h2 class="section-title">{{ "Our Newspapers"|t }}</h2>
             {% if newspapers %}
+            <div class="uk-child-width-1-4 uk-grid-collapse" uk-grid>
+                {% for newspaper in newspapers %}
+                    <div>
+                        {% set logo = newspaper.newspaperLogo.one() ?? null %}
+                        <a href="{{ newspaper.newspaperLink.getUrl() }}" target="{{ newspaper.newspaperLink.getTarget() }}">
+                            {% if logo %}
+                                <img src="{{ logo.url }}" alt="{{ newspaper.newspaperName }}">
+                            {% else %}
+                                {{ newspaper.newspaperName }}
+                            {% endif %}
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+            {#
             <div uk-slider>
                 <div class="uk-position-relative">
                     <div class="uk-slider-container">
@@ -140,6 +155,7 @@
                     </div>
                 </div>
             </div>
+            #}
             {% else %}
                 <p>{{ 'Undefined content'|t }}</p>
             {% endif %}

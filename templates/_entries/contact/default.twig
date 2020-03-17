@@ -140,48 +140,26 @@
 
                         {# Handle all other simple text fields #}
                         {% else %}
-
-                            {# Check on a Field Handle for Exception to Markup #}
-                            {% if field.handle == "subject" %}
-                                <div class="uk-margin {{ field.hasErrors ? ' has-error' }}">
-                                    <label for="{{ field.handle }}"{{ field.isRequired ? ' class="required"' }}>
-                                        {{ field.label }}
-                                    </label>
-                                    <select name="subject" id="subject" class="uk-select uk-form-large">
-                                        <option value="">I need some help with...</option>
-                                        <option disabled>──────────</option>
-                                        <option{{ "My homework" in field.value ? " selected" }}>My homework</option>
-                                        <option{{ "Practicing my hammer dance" in field.value ? " selected" }}>Practicing my hammer dance</option>
-                                        <option{{ "Finding my belly button" in field.value ? " selected" }}>Finding my belly button</option>
-                                    </select>
-                                    {{ forms.renderErrors(field) }}
-                                </div>
-
-                            {% else %}
-
-                                <div class="uk-margin {{ field.hasErrors ? ' has-error' }}">
-                                    <label for="{{ field.handle }}"{{ field.isRequired ? ' class="required"' }}>
-                                        {{ field.label }}
-                                    </label>
-                                    <input type="{{ field.type }}" name="{{ field.handle }}" id="{{ field.handle }}" value="{{ field.value }}" class="uk-input uk-form-large" placeholder=" {{ field.label }}">
-                                    {{ forms.renderErrors(field) }}
-                                </div>
-
-                            {% endif %}
-
+                            <div class="uk-margin {{ field.hasErrors ? ' has-error' }}">
+                                <label for="{{ field.handle }}"{{ field.isRequired ? ' class="required"' }}>
+                                    {{ field.label }}
+                                </label>
+                                <input type="{{ field.type }}" name="{{ field.handle }}" id="{{ field.handle }}" value="{{ field.value }}" class="uk-input uk-form-large" placeholder=" {{ field.label }}">
+                                {{ forms.renderErrors(field) }}
+                            </div>
                         {% endif %}
 
                     {% endfor %}
 
                     <div class="uk-margin {% if form.recaptcha.hasErrors %} has-error{% endif %}">
                         <label class="required">
-                            Please confirm you're not a robot...
+                            {{ "Please confirm you're not a robot..."|t }}
                         </label>
                         {{ form.recaptcha.render }}
                         {{ forms.renderErrors(form.recaptcha) }}
                     </div>
 
-                    <button type="submit" class="uk-button uk-button-default button-rounded button-colored">Submit</button>
+                    <button type="submit" class="uk-button uk-button-default button-rounded button-colored">{{ 'Submit'|t }}</button>
 
                     {{ form.closeTag }}
                 </div>
