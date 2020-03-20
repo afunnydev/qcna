@@ -23,7 +23,9 @@
                         {% set logo = newspaper.newspaperListingLogo.one() ?? null %}
                         {% if logo %}
                         <div class="uk-card-media-top">
-                            <img src="{{ logo.url }}" alt="{{ newspaper.title }}">
+                            <a href="{{ newspaper.url }}">
+                                <img src="{{ logo.url }}" alt="{{ newspaper.title }}">
+                            </a>
                         </div>
                         {% endif %}
                         <div class="uk-card-body">

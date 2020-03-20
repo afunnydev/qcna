@@ -1,13 +1,15 @@
 {
   "require": {
     "aelvan/imager": "v2.4.0",
-    "craftcms/cms": "3.4.10",
+    "craftcms/cms": "3.4.10.1",
+    "craftcms/contact-form": "2.2.6",
     "craftcms/feed-me": "4.2.1.1",
-    "craftcms/redactor": "2.6.0.1",
+    "craftcms/redactor": "2.6.1",
     "ether/seo": "3.6.3",
     "misterbk/mix": "1.5.2",
     "sebastianlenz/linkfield": "1.0.20",
     "solspace/craft-express-forms": "1.0.5",
+    "verbb/cp-nav": "3.0.8.1",
     "verbb/field-manager": "2.1.1",
     "verbb/super-table": "2.4.6",
     "vlucas/phpdotenv": "^3.4.0",

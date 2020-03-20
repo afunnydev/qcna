@@ -16,10 +16,12 @@
                 position: 'center-center'
             } %}
             <div class="uk-card-media-top">
-                <img src="{{ featuredImage.getUrl(crop) }}"
-                    width="{{ featuredImage.getWidth(crop) }}"
-                    height="{{ featuredImage.getHeight(crop) }}"
-                    alt="{{ article.title }}">
+                <a href="{{ article.url }}">
+                    <img src="{{ featuredImage.getUrl(crop) }}"
+                        width="{{ featuredImage.getWidth(crop) }}"
+                        height="{{ featuredImage.getHeight(crop) }}"
+                        alt="{{ article.title }}">
+                </a>
             </div>
         {% endif %}
         <div class="uk-card-body">

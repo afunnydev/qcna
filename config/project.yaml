@@ -41,7 +41,209 @@ categoryGroups:
     structure:
       maxLevels: null
       uid: 6800ba30-8d2b-473f-836a-a54b0de7b497
-dateModified: 1584467808
+cp-nav:
+  layouts:
+    a23e72de-5694-4b6b-b673-2ce87ba11849:
+      isDefault: true
+      name: Default
+      permissions: 'null'
+  navigations:
+    3b8da806-9ffd-4d2b-a406-e3311c98fb25:
+      currLabel: Assets
+      customIcon: null
+      enabled: '1'
+      handle: assets
+      icon: assets
+      layoutId: '1'
+      newWindow: '0'
+      order: 6
+      prevLabel: Assets
+      prevUrl: assets
+      type: ''
+      url: assets
+    3cdcd16b-0778-459a-88f3-11cad175ba29:
+      currLabel: Utilities
+      customIcon: null
+      enabled: '1'
+      handle: utilities
+      icon: tool
+      layoutId: '1'
+      newWindow: '0'
+      order: 13
+      prevLabel: Utilities
+      prevUrl: utilities
+      type: ''
+      url: utilities
+    62463d26-cf99-4dd3-8c48-275c39a06da2:
+      currLabel: 'Express Forms'
+      customIcon: null
+      enabled: '1'
+      handle: express-forms
+      icon: /home/julien/Sites/qcna/vendor/solspace/craft-express-forms/src/icon-mask.svg
+      layoutId: '1'
+      newWindow: '0'
+      order: 8
+      prevLabel: 'Express Forms'
+      prevUrl: express-forms
+      type: ''
+      url: express-forms
+    68c9c34f-a8bb-4717-aafd-a31fba384eb3:
+      currLabel: 'Admin Form'
+      customIcon: null
+      enabled: '1'
+      handle: adminForm
+      icon: mail
+      layoutId: '1'
+      newWindow: false
+      order: '2'
+      prevLabel: 'Admin Form'
+      prevUrl: adminform
+      type: manual
+      url: /adminform
+    7112bfc2-6d90-41b2-af89-5d2c7561e51b:
+      currLabel: 'Field Manager'
+      customIcon: null
+      enabled: '1'
+      handle: field-manager
+      icon: /home/julien/Sites/qcna/vendor/verbb/field-manager/src/icon-mask.svg
+      layoutId: '1'
+      newWindow: '0'
+      order: 10
+      prevLabel: 'Field Manager'
+      prevUrl: field-manager
+      type: ''
+      url: field-manager
+    71a7430d-eb7e-4344-bf10-d7ad0b30448c:
+      currLabel: 'Plugin Store'
+      customIcon: null
+      enabled: '1'
+      handle: plugin-store
+      icon: plugin
+      layoutId: '1'
+      newWindow: '0'
+      order: 15
+      prevLabel: 'Plugin Store'
+      prevUrl: plugin-store
+      type: ''
+      url: plugin-store
+    87ca951b-6aed-47da-b234-ec73902ec3c8:
+      currLabel: Globals
+      customIcon: null
+      enabled: '1'
+      handle: globals
+      icon: globe
+      layoutId: '1'
+      newWindow: '0'
+      order: 4
+      prevLabel: Globals
+      prevUrl: globals
+      type: ''
+      url: globals
+    aadeacd6-5194-4378-b0a8-47670e8d01ee:
+      currLabel: Dashboard
+      customIcon: null
+      enabled: '1'
+      handle: dashboard
+      icon: gauge
+      layoutId: '1'
+      newWindow: '0'
+      order: 1
+      prevLabel: Dashboard
+      prevUrl: dashboard
+      type: ''
+      url: dashboard
+    ad5fbe8c-2e78-461b-bbcd-569e14872f59:
+      currLabel: Settings
+      customIcon: null
+      enabled: '1'
+      handle: settings
+      icon: settings
+      layoutId: '1'
+      newWindow: '0'
+      order: 14
+      prevLabel: Settings
+      prevUrl: settings
+      type: ''
+      url: settings
+    c80b433b-6410-4704-bc05-155ed1ebcb72:
+      currLabel: Categories
+      customIcon: null
+      enabled: '1'
+      handle: categories
+      icon: categories
+      layoutId: '1'
+      newWindow: '0'
+      order: 5
+      prevLabel: Categories
+      prevUrl: categories
+      type: ''
+      url: categories
+    c9460e41-b414-4c08-bba4-bdbe3e2afee0:
+      currLabel: Users
+      customIcon: null
+      enabled: '1'
+      handle: users
+      icon: users
+      layoutId: '1'
+      newWindow: '0'
+      order: 7
+      prevLabel: Users
+      prevUrl: users
+      type: ''
+      url: users
+    c997e704-2d8b-4041-8574-377420ccf5b9:
+      currLabel: 'Feed Me'
+      customIcon: null
+      enabled: '1'
+      handle: feed-me
+      icon: /home/julien/Sites/qcna/vendor/craftcms/feed-me/src/icon-mask.svg
+      layoutId: '1'
+      newWindow: '0'
+      order: 9
+      prevLabel: 'Feed Me'
+      prevUrl: feed-me
+      type: ''
+      url: feed-me
+    d0e643c4-21d1-4299-950b-30b575660059:
+      currLabel: Entries
+      customIcon: null
+      enabled: '1'
+      handle: entries
+      icon: section
+      layoutId: '1'
+      newWindow: '0'
+      order: 3
+      prevLabel: Entries
+      prevUrl: entries
+      type: ''
+      url: entries
+    d1b6fd74-84ba-4a29-a23f-1f52ab9dea37:
+      currLabel: SEO
+      customIcon: null
+      enabled: '1'
+      handle: seo
+      icon: /home/julien/Sites/qcna/vendor/ether/seo/src/icon-mask.svg
+      layoutId: '1'
+      newWindow: '0'
+      order: 11
+      prevLabel: SEO
+      prevUrl: seo
+      type: ''
+      url: seo
+    f2bdf9c8-6056-4dbb-bd7f-b2d7db45794d:
+      currLabel: GraphQL
+      customIcon: null
+      enabled: '1'
+      handle: graphql
+      icon: '@app/icons/graphql.svg'
+      layoutId: '1'
+      newWindow: '0'
+      order: 12
+      prevLabel: GraphQL
+      prevUrl: graphql
+      type: ''
+      url: graphql
+dateModified: 1584714555
 email:
   fromEmail: $EMAIL_USER
   fromName: QCNA
@@ -2784,6 +2986,26 @@ plugins:
       enableEmailSupport: '1'
       enableEmailSupportForm: '1'
       enableGlobalWidget: '1'
+  contact-form:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      allowAttachments: ''
+      prependSender: 'On behalf of'
+      prependSubject: 'New message from QCNA admin form'
+      successFlashMessage: 'Your message has been sent.'
+      toEmail: info@qcna.qc.ca
+  cp-nav:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.5
+    settings:
+      originalNavHash:
+        __assoc__:
+          -
+            - 903394f3-8996-4d11-aaaa-fed214ff71fe
+            - W3sibGFiZWwiOiJEYXNoYm9hcmQiLCJ1cmwiOiJkYXNoYm9hcmQiLCJmb250SWNvbiI6ImdhdWdlIn0seyJsYWJlbCI6IkVudHJpZXMiLCJ1cmwiOiJlbnRyaWVzIiwiZm9udEljb24iOiJzZWN0aW9uIn0seyJsYWJlbCI6Ikdsb2JhbHMiLCJ1cmwiOiJnbG9iYWxzIiwiZm9udEljb24iOiJnbG9iZSJ9LHsibGFiZWwiOiJDYXRlZ29yaWVzIiwidXJsIjoiY2F0ZWdvcmllcyIsImZvbnRJY29uIjoiY2F0ZWdvcmllcyJ9LHsibGFiZWwiOiJBc3NldHMiLCJ1cmwiOiJhc3NldHMiLCJmb250SWNvbiI6ImFzc2V0cyJ9LHsibGFiZWwiOiJVc2VycyIsInVybCI6InVzZXJzIiwiZm9udEljb24iOiJ1c2VycyJ9LHsibGFiZWwiOiJFeHByZXNzIEZvcm1zIiwidXJsIjoiZXhwcmVzcy1mb3JtcyIsImljb24iOiIvaG9tZS9qdWxpZW4vU2l0ZXMvcWNuYS92ZW5kb3Ivc29sc3BhY2UvY3JhZnQtZXhwcmVzcy1mb3Jtcy9zcmMvaWNvbi1tYXNrLnN2ZyIsInN1Ym5hdiI6eyJmb3JtcyI6eyJsYWJlbCI6IkZvcm1zIiwidXJsIjoiZXhwcmVzcy1mb3Jtcy9mb3JtcyJ9LCJzdWJtaXNzaW9ucyI6eyJsYWJlbCI6IlN1Ym1pc3Npb25zIiwidXJsIjoiZXhwcmVzcy1mb3Jtcy9zdWJtaXNzaW9ucyJ9LCJzZXR0aW5ncyI6eyJsYWJlbCI6IlNldHRpbmdzIiwidXJsIjoiZXhwcmVzcy1mb3Jtcy9zZXR0aW5ncyJ9LCJyZXNvdXJjZXMiOnsibGFiZWwiOiJSZXNvdXJjZXMiLCJ1cmwiOiJleHByZXNzLWZvcm1zL3Jlc291cmNlcyJ9fX0seyJsYWJlbCI6IkZlZWQgTWUiLCJ1cmwiOiJmZWVkLW1lIiwiaWNvbiI6Ii9ob21lL2p1bGllbi9TaXRlcy9xY25hL3ZlbmRvci9jcmFmdGNtcy9mZWVkLW1lL3NyYy9pY29uLW1hc2suc3ZnIn0seyJsYWJlbCI6IkZpZWxkIE1hbmFnZXIiLCJ1cmwiOiJmaWVsZC1tYW5hZ2VyIiwiaWNvbiI6Ii9ob21lL2p1bGllbi9TaXRlcy9xY25hL3ZlbmRvci92ZXJiYi9maWVsZC1tYW5hZ2VyL3NyYy9pY29uLW1hc2suc3ZnIn0seyJsYWJlbCI6IlNFTyIsInVybCI6InNlbyIsImljb24iOiIvaG9tZS9qdWxpZW4vU2l0ZXMvcWNuYS92ZW5kb3IvZXRoZXIvc2VvL3NyYy9pY29uLW1hc2suc3ZnIiwic3VibmF2Ijp7ImRhc2hib2FyZCI6eyJsYWJlbCI6IkRhc2hib2FyZCIsInVybCI6InNlbyJ9LCJzaXRlbWFwIjp7ImxhYmVsIjoiU2l0ZW1hcCIsInVybCI6InNlby9zaXRlbWFwIn0sInJlZGlyZWN0cyI6eyJsYWJlbCI6IlJlZGlyZWN0cyIsInVybCI6InNlby9yZWRpcmVjdHMifSwic2V0dGluZ3MiOnsibGFiZWwiOiJTZXR0aW5ncyIsInVybCI6InNlby9zZXR0aW5ncyJ9fX0seyJsYWJlbCI6IkdyYXBoUUwiLCJ1cmwiOiJncmFwaHFsIiwiaWNvbiI6IkBhcHAvaWNvbnMvZ3JhcGhxbC5zdmciLCJzdWJuYXYiOnsiZXhwbG9yZSI6eyJsYWJlbCI6IkV4cGxvcmUiLCJ1cmwiOiJncmFwaHFsIn0sInNjaGVtYXMiOnsibGFiZWwiOiJTY2hlbWFzIiwidXJsIjoiZ3JhcGhxbC9zY2hlbWFzIn0sInRva2VucyI6eyJsYWJlbCI6IlRva2VucyIsInVybCI6ImdyYXBocWwvdG9rZW5zIn19fSx7InVybCI6InV0aWxpdGllcyIsImxhYmVsIjoiVXRpbGl0aWVzIiwiZm9udEljb24iOiJ0b29sIiwiYmFkZ2VDb3VudCI6MH0seyJ1cmwiOiJzZXR0aW5ncyIsImxhYmVsIjoiU2V0dGluZ3MiLCJmb250SWNvbiI6InNldHRpbmdzIn0seyJ1cmwiOiJwbHVnaW4tc3RvcmUiLCJsYWJlbCI6IlBsdWdpbiBTdG9yZSIsImZvbnRJY29uIjoicGx1Z2luIn1d
   express-forms:
     edition: lite
     enabled: true
@@ -3102,6 +3324,43 @@ sections:
         hasUrls: true
         template: index
         uriFormat: news
+    type: single
+  56c432a6-1fd6-416c-a61a-0e6f00e64a83:
+    enableVersioning: true
+    entryTypes:
+      655e3b46-58c1-4548-b2f9-9ef512960087:
+        handle: adminForm
+        hasTitleField: false
+        name: 'Admin Form'
+        sortOrder: 1
+        titleFormat: '{section.name|raw}'
+        titleLabel: null
+    handle: adminForm
+    name: 'Admin Form'
+    previewTargets:
+      -
+        __assoc__:
+          -
+            - label
+            - 'Primary entry page'
+          -
+            - urlFormat
+            - '{url}'
+          -
+            - refresh
+            - '1'
+    propagationMethod: all
+    siteSettings:
+      5b81df98-3353-4519-b38a-9c7c6e3fc1e4:
+        enabledByDefault: true
+        hasUrls: true
+        template: adminform/index
+        uriFormat: adminform
+      d7acb83a-8fb9-4143-b21e-34c7af63bf45:
+        enabledByDefault: true
+        hasUrls: true
+        template: adminform/index
+        uriFormat: adminform
     type: single
   84c2d338-6eee-430f-bde4-e75cf6d7a2ce:
     enableVersioning: true
@@ -3521,6 +3780,43 @@ sections:
       maxLevels: null
       uid: 6bf634ae-4994-407f-b5a6-ad52eb6fb147
     type: structure
+  9cd2507c-9fab-4ff3-a1d8-f853d9d566a3:
+    enableVersioning: true
+    entryTypes:
+      f4bdaf47-ab27-470d-b2fd-4baa15a1afbd:
+        handle: thanks
+        hasTitleField: false
+        name: Thanks
+        sortOrder: 1
+        titleFormat: '{section.name|raw}'
+        titleLabel: null
+    handle: thanks
+    name: Thanks
+    previewTargets:
+      -
+        __assoc__:
+          -
+            - label
+            - 'Primary entry page'
+          -
+            - urlFormat
+            - '{url}'
+          -
+            - refresh
+            - '1'
+    propagationMethod: all
+    siteSettings:
+      5b81df98-3353-4519-b38a-9c7c6e3fc1e4:
+        enabledByDefault: true
+        hasUrls: true
+        template: adminform/thanks
+        uriFormat: thanks
+      d7acb83a-8fb9-4143-b21e-34c7af63bf45:
+        enabledByDefault: true
+        hasUrls: true
+        template: adminform/thanks
+        uriFormat: thanks
+    type: single
   ad05f271-375c-47f2-93cb-595cce907994:
     enableVersioning: true
     entryTypes:
