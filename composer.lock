@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c897bf18b612e81b09c3c5a52fda6251",
+    "content-hash": "7738943835b65d61fa168039689898ba",
     "packages": [
         {
             "name": "aelvan/imager",
@@ -501,11 +501,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.4.11",
+            "version": "3.4.12",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/a028f6003a3c3985cdedfb95407284ca3daf3faa",
-                "reference": "a028f6003a3c3985cdedfb95407284ca3daf3faa",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/2090328563329fba5423da6466b5c53f4af8421a",
+                "reference": "2090328563329fba5423da6466b5c53f4af8421a",
                 "shasum": ""
             },
             "require": {
@@ -586,7 +586,7 @@
                 "docs": "https://docs.craftcms.com/v3/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2020-03-26T23:22:31+00:00"
+            "time": "2020-03-31T18:43:58+00:00"
         },
         {
             "name": "craftcms/contact-form",
@@ -4032,11 +4032,11 @@
         },
         {
             "name": "sebastianlenz/linkfield",
-            "version": "1.0.20",
+            "version": "1.0.21",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastian-lenz/craft-linkfield/zipball/8e12cf38767a0c9214bc6fbe3bce77175db970e6",
-                "reference": "8e12cf38767a0c9214bc6fbe3bce77175db970e6",
+                "url": "https://api.github.com/repos/sebastian-lenz/craft-linkfield/zipball/64fbbe853e7077f52fb4a1147d6e38eebccde80b",
+                "reference": "64fbbe853e7077f52fb4a1147d6e38eebccde80b",
                 "shasum": ""
             },
             "require": {
@@ -4059,7 +4059,7 @@
                 "MIT"
             ],
             "description": "A Craft field type for selecting links",
-            "time": "2020-02-07T20:24:27+00:00"
+            "time": "2020-04-01T13:03:23+00:00"
         },
         {
             "name": "seld/cli-prompt",
@@ -5540,11 +5540,11 @@
         },
         {
             "name": "verbb/cp-nav",
-            "version": "3.0.8.1",
+            "version": "3.0.8.2",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/cp-nav/zipball/930289a361400eeb118c2b164c2539db85793fa3",
-                "reference": "930289a361400eeb118c2b164c2539db85793fa3",
+                "url": "https://api.github.com/repos/verbb/cp-nav/zipball/38b0b495b30d0dba73751ff4582f56c78e821e7c",
+                "reference": "38b0b495b30d0dba73751ff4582f56c78e821e7c",
                 "shasum": ""
             },
             "require": {
@@ -5589,7 +5589,7 @@
                 "docs": "https://github.com/verbb/cp-nav",
                 "rss": "https://github.com/verbb/cp-nav/commits/v2.atom"
             },
-            "time": "2020-03-16T07:37:11+00:00"
+            "time": "2020-03-31T21:36:14+00:00"
         },
         {
             "name": "verbb/field-manager",
