@@ -271,12 +271,12 @@
                 <div class="uk-child-width-1-{{ entry.facts|length }}@m" uk-grid>
                     {% for fact in entry.facts.all() %}
                         <div class="counter">
-                            <p class="counter-number">{{ fact.counterNumber }}</p>
-                            <p class="counter-text">{{ fact.counterText }}</p>
                             {% set counterIcon = fact.counterIcon.one() ?? null %}
                             {% if counterIcon %}
                                 <img class="counter-icon" src="{{ counterIcon.url }}" alt="">
                             {% endif %}
+                            <p class="counter-number">{{ fact.counterNumber }}</p>
+                            <p class="counter-text">{{ fact.counterText }}</p>
                         </div>
                     {% endfor %}
                 </div>
@@ -290,7 +290,7 @@
         {% if teamBackground %}
             <img src="{{ teamBackground.url }}" uk-cover>
         {% else %}
-            <img src="/dist/img/team-background.jpg" uk-cover>
+            <img src="/dist/img/team-background-2.jpg" uk-cover>
         {% endif %}
         <div class="uk-container uk-position-relative">
             <div class="uk-child-width-1-2@m uk-flex uk-flex-middle" uk-grid>
