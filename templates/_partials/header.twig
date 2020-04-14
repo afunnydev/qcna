@@ -28,13 +28,14 @@
             <li class="uk-nav-header">{{ 'Navigation'|t }}</li>
             {% for link in navigation.primaryNavigation.all() %}
                 <li>
-                    <a href="{{ link.linkItem.getUrl() }}"><span class="uk-margin-small-right uk-icon" uk-icon="icon: triangle-right"></span> {{ link.linkItem.getText() }}</a>
+                    {% set linkSlug = link.linkItem.getUrl() | split('/') | last %}
+                    <a href="{{ link.linkItem.getUrl() }}" {{ activeClass(linkSlug) }}><span class="uk-margin-small-right uk-icon" uk-icon="icon: triangle-right"></span> {{ link.linkItem.getText() }}</a>
                 </li>
             {% endfor %}
-            <li><a href="{{ url('become-a-member') }}"><span class="uk-margin-small-right uk-icon" uk-icon="icon: triangle-right"></span> {{ 'Become A Member'|t }}</a></li>
-            <li><a href="{{ craft.entries.section('contact').one().url }}"><span class="uk-margin-small-right uk-icon" uk-icon="icon: triangle-right"></span> {{ 'Contact Us'|t }}</a></li>
+            <li><a href="{{ url('become-a-member') }}" {{ activeClass('become-a-member') }}><span class="uk-margin-small-right uk-icon" uk-icon="icon: triangle-right"></span> {{ 'Become A Member'|t }}</a></li>
+            <li><a href="{{ craft.entries.section('contact').one().url }}" {{ activeClass('contact') }}><span class="uk-margin-small-right uk-icon" uk-icon="icon: triangle-right"></span> {{ 'Contact Us'|t }}</a></li>
             <li class="uk-nav-header">{{ 'LJI Program'|t }}</li>
-            <li><a href="{{ url('grants') }}"><span class="uk-margin-small-right uk-icon" uk-icon="icon: triangle-right"></span> {{ 'Grant Instructions'|t }}</a></li>
+            <li><a href="{{ url('grants') }}" {{ activeClass('grants') }}><span class="uk-margin-small-right uk-icon" uk-icon="icon: triangle-right"></span> {{ 'Grant Instructions'|t }}</a></li>
             <li><a href="/admin/entries/news"><span class="uk-margin-small-right uk-icon" uk-icon="icon: triangle-right"></span> {{ 'Journalist Login'|t }}</a></li>
         </ul>
     </div>
@@ -64,35 +65,38 @@
             #}
         </li>
         <li class="uk-margin-left">
-            <a href="#" class="uk-button uk-button-primary uk-button-small">{{ "Members Area"|t }}</a>
+            <a href="/admin/entries/news" class="uk-button uk-button-primary uk-button-small">{{ "Members Area"|t }}</a>
         </li>
     </ul>
 </div>
 
 <header id="page-header" class="uk-cover-container uk-light">
     <img src="/dist/img/hero-background.jpg" uk-cover>
-    <div class="uk-container uk-position-relative">
-        <nav class="uk-navbar-container uk-navbar-transparent uk-light" uk-navbar>
-            <div class="uk-navbar-left">
-                <a class="uk-navbar-item uk-logo uk-padding-remove-left" href="{{ siteUrl }}" aria-expanded="false">
-                    <img src="/dist/img/qcna-logo-navbar.png" alt="QCNA">
-                </a>
-            </div>
-            <div class="uk-navbar-right">
-                <ul class="uk-navbar-nav uk-visible@m">
-                    {% for link in navigation.primaryNavigation.all() %}
-                        <li>{{ link.linkItem.getLink() }}</li>
-                    {% endfor %}
-                </ul>
-                <div class="uk-navbar-item uk-hidden@m">
-                    <a class="uk-icon-button uk-icon" href="#menu-offcanvas" uk-icon="icon: menu; ratio: 1.5" title="{{ 'Menu'|t }}" uk-toggle></a>
-                 </div>
-                <div class="uk-navbar-item">
-                    <a class="uk-icon-button uk-icon" href="#search-modal" uk-icon="icon: search; ratio: 1.5" title="{{ 'Search this website'|t }}" uk-toggle></a>
+    <div class="navbar-wrapper" uk-sticky>
+        <div class="uk-container uk-position-relative">
+            <nav class="uk-navbar-container uk-navbar-transparent uk-light" uk-navbar>
+                <div class="uk-navbar-left">
+                    <a class="uk-navbar-item uk-logo uk-padding-remove-left" href="{{ siteUrl }}" aria-expanded="false">
+                        <img src="/dist/img/qcna-logo-navbar.png" alt="QCNA">
+                    </a>
                 </div>
-            </div>
-        </nav>
-
+                <div class="uk-navbar-right">
+                    <ul class="uk-navbar-nav uk-visible@m">
+                        {% for link in navigation.primaryNavigation.all() %}
+                            <li>{{ link.linkItem.getLink() }}</li>
+                        {% endfor %}
+                    </ul>
+                    <div class="uk-navbar-item uk-hidden@m">
+                        <a class="uk-icon-button uk-icon" href="#menu-offcanvas" uk-icon="icon: menu; ratio: 1.5" title="{{ 'Menu'|t }}" uk-toggle></a>
+                    </div>
+                    <div class="uk-navbar-item">
+                        <a class="uk-icon-button uk-icon" href="#search-modal" uk-icon="icon: search; ratio: 1.5" title="{{ 'Search this website'|t }}" uk-toggle></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="uk-container uk-position-relative">
         {% if isHomePage %}
             <div class="header-homepage uk-flex uk-flex-column uk-flex-center" uk-height-viewport="offset-top: true">
                 <div uk-slider="autoplay: true">

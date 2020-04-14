@@ -21,6 +21,7 @@ return [
     "Email Us" => "Courriel",
     "Visit Website" => "Visiter le site web",
     "Subscribers" => "Abonnés",
+    "Swipe left/right to view all the data" => "Balayez vers la gauche / droite pour afficher toutes les données",
 
     // Search
     "Search" => "Recherche",

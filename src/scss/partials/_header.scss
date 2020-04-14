@@ -42,7 +42,7 @@
     }
 }
 
-#page-header .uk-navbar {
+#page-header .navbar-wrapper {
     margin-top: 30px;
 }
 
@@ -101,4 +101,12 @@
 
 #menu-offcanvas #language-switcher {
     color: #fff;
+}
+
+#menu-offcanvas a.active {
+    color: $accent-color;
+}
+
+.navbar-wrapper.uk-sticky.uk-active {
+    background: $global-primary-background;
 }
