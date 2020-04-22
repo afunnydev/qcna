@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "48cdc741712ca5691edda5f9ba794668",
+    "content-hash": "3615e8b00e4ef37c680de8b596086417",
     "packages": [
         {
             "name": "aelvan/imager",
@@ -551,11 +551,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.4.15",
+            "version": "3.4.16",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/2fc56f0bcd70a1ae67e9338512e053b896f4a47e",
-                "reference": "2fc56f0bcd70a1ae67e9338512e053b896f4a47e",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/5353983f67ac02135cf2f63f2493b2c8098ac2e2",
+                "reference": "5353983f67ac02135cf2f63f2493b2c8098ac2e2",
                 "shasum": ""
             },
             "require": {
@@ -636,7 +636,7 @@
                 "docs": "https://docs.craftcms.com/v3/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2020-04-09T17:45:41+00:00"
+            "time": "2020-04-20T18:04:23+00:00"
         },
         {
             "name": "craftcms/contact-form",
@@ -797,15 +797,15 @@
         },
         {
             "name": "craftcms/plugin-installer",
-            "version": "1.5.4",
+            "version": "1.5.5",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/plugin-installer/zipball/4989a9d57babdf53da0bd70cf6a3145635d653e8",
-                "reference": "4989a9d57babdf53da0bd70cf6a3145635d653e8",
+                "url": "https://api.github.com/repos/craftcms/plugin-installer/zipball/42c23ded70ccadf7dea7eab28660d7808dd3022a",
+                "reference": "42c23ded70ccadf7dea7eab28660d7808dd3022a",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "^1.0"
+                "composer-plugin-api": "^1.0 || ^2.0"
             },
             "type": "composer-plugin",
             "extra": {
@@ -816,7 +816,6 @@
                     "craft\\composer\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -829,7 +828,7 @@
                 "installer",
                 "plugin"
             ],
-            "time": "2019-05-23T13:16:39+00:00"
+            "time": "2020-04-17T23:11:17+00:00"
         },
         {
             "name": "craftcms/redactor",
@@ -1186,11 +1185,11 @@
         },
         {
             "name": "ether/seo",
-            "version": "3.6.3",
+            "version": "3.6.4",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ethercreative/seo/zipball/9f491fd107192c78f6565298520635b3889c2a27",
-                "reference": "9f491fd107192c78f6565298520635b3889c2a27",
+                "url": "https://api.github.com/repos/ethercreative/seo/zipball/58de8d61979ce2e3030303f72fff92229118388f",
+                "reference": "58de8d61979ce2e3030303f72fff92229118388f",
                 "shasum": ""
             },
             "require": {
@@ -1217,7 +1216,7 @@
                 "issues": "https://github.com/ethercreative/seo",
                 "docs": "https://github.com/ethercreative/seo/blob/v3/README.md"
             },
-            "time": "2019-12-18T16:52:52+00:00"
+            "time": "2020-04-15T15:17:16+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -1822,26 +1821,21 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.5.2",
+            "version": "6.5.3",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/43ece0e75098b7ecd8d13918293029e555a50f82",
-                "reference": "43ece0e75098b7ecd8d13918293029e555a50f82",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/aab4ebd862aa7d04f01a4b51849d657db56d882e",
+                "reference": "aab4ebd862aa7d04f01a4b51849d657db56d882e",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "guzzlehttp/promises": "^1.0",
                 "guzzlehttp/psr7": "^1.6.1",
-                "php": ">=5.5"
-            },
-            "require-dev": {
-                "ext-curl": "*",
-                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.4 || ^7.0",
-                "psr/log": "^1.1"
+                "php": ">=5.5",
+                "symfony/polyfill-intl-idn": "^1.11"
             },
             "suggest": {
-                "ext-intl": "Required for Internationalized Domain Name (IDN) support",
                 "psr/log": "Required for using the Log middleware"
             },
             "type": "library",
@@ -1858,7 +1852,6 @@
                     "src/functions_include.php"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1880,7 +1873,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2019-12-23T11:57:10+00:00"
+            "time": "2020-04-18T10:38:46+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -2584,11 +2577,11 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.66",
+            "version": "1.0.67",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/021569195e15f8209b1c4bebb78bd66aa4f08c21",
-                "reference": "021569195e15f8209b1c4bebb78bd66aa4f08c21",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/5b1f36c75c4bdde981294c2a0ebdb437ee6f275e",
+                "reference": "5b1f36c75c4bdde981294c2a0ebdb437ee6f275e",
                 "shasum": ""
             },
             "require": {
@@ -2654,7 +2647,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2020-03-17T18:58:12+00:00"
+            "time": "2020-04-16T13:21:26+00:00"
         },
         {
             "name": "league/oauth2-client",
@@ -5839,11 +5832,11 @@
         },
         {
             "name": "verbb/base",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/verbb-base/zipball/c95545f2b86db0791294a4b25e967a007f1dbf57",
-                "reference": "c95545f2b86db0791294a4b25e967a007f1dbf57",
+                "url": "https://api.github.com/repos/verbb/verbb-base/zipball/85a11791c811c90ea58a3718488af0e60e12ba2c",
+                "reference": "85a11791c811c90ea58a3718488af0e60e12ba2c",
                 "shasum": ""
             },
             "require": {
@@ -5865,20 +5858,20 @@
                 }
             ],
             "description": "Common utilities and building-blocks for Verbb plugins for Craft CMS.",
-            "time": "2020-01-23T22:22:44+00:00"
+            "time": "2020-04-14T23:40:29+00:00"
         },
         {
             "name": "verbb/cp-nav",
-            "version": "3.0.8.2",
+            "version": "3.0.11",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/cp-nav/zipball/38b0b495b30d0dba73751ff4582f56c78e821e7c",
-                "reference": "38b0b495b30d0dba73751ff4582f56c78e821e7c",
+                "url": "https://api.github.com/repos/verbb/cp-nav/zipball/dd685971d29d4bf68b57ca62e9ba2b183b055023",
+                "reference": "dd685971d29d4bf68b57ca62e9ba2b183b055023",
                 "shasum": ""
             },
             "require": {
                 "craftcms/cms": "^3.4.0-RC1",
-                "verbb/base": "^1.0.0"
+                "verbb/base": "^1.0.2"
             },
             "type": "craft-plugin",
             "extra": {
@@ -5918,19 +5911,20 @@
                 "docs": "https://github.com/verbb/cp-nav",
                 "rss": "https://github.com/verbb/cp-nav/commits/v2.atom"
             },
-            "time": "2020-03-31T21:36:14+00:00"
+            "time": "2020-04-21T02:28:54+00:00"
         },
         {
             "name": "verbb/field-manager",
-            "version": "2.1.1",
+            "version": "2.1.5",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/field-manager/zipball/026cc5d6c030e509158d7525d8764514e7da3a79",
-                "reference": "026cc5d6c030e509158d7525d8764514e7da3a79",
+                "url": "https://api.github.com/repos/verbb/field-manager/zipball/2b301c84f2531b7ace5194f439d1710f3f3551e0",
+                "reference": "2b301c84f2531b7ace5194f439d1710f3f3551e0",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^3.1.0"
+                "craftcms/cms": "^3.1.0",
+                "verbb/base": "^1.0.2"
             },
             "type": "craft-plugin",
             "extra": {
@@ -5968,20 +5962,20 @@
                 "docs": "https://github.com/verbb/field-manager",
                 "rss": "https://github.com/verbb/field-manager/commits/v2.atom"
             },
-            "time": "2019-11-27T06:04:29+00:00"
+            "time": "2020-04-18T05:33:21+00:00"
         },
         {
             "name": "verbb/super-table",
-            "version": "2.4.7",
+            "version": "2.4.9",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/super-table/zipball/33c1586bc153c03579087d9f1e88daef180c2200",
-                "reference": "33c1586bc153c03579087d9f1e88daef180c2200",
+                "url": "https://api.github.com/repos/verbb/super-table/zipball/cf3237d0e5be608561bfcf02d77e9bef03855a69",
+                "reference": "cf3237d0e5be608561bfcf02d77e9bef03855a69",
                 "shasum": ""
             },
             "require": {
                 "craftcms/cms": "^3.4.8",
-                "verbb/base": "^1.0.0"
+                "verbb/base": "^1.0.2"
             },
             "type": "craft-plugin",
             "extra": {
@@ -6021,7 +6015,7 @@
                 "docs": "https://github.com/verbb/super-table",
                 "rss": "https://github.com/verbb/super-table/commits/v2.atom"
             },
-            "time": "2020-04-02T10:16:04+00:00"
+            "time": "2020-04-15T22:45:13+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -6538,11 +6532,11 @@
         },
         {
             "name": "webmozart/assert",
-            "version": "1.7.0",
+            "version": "1.8.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/aed98a490f9a8f78468232db345ab9cf606cf598",
-                "reference": "aed98a490f9a8f78468232db345ab9cf606cf598",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/ab2cb0b3b559010b75981b1bdce728da3ee90ad6",
+                "reference": "ab2cb0b3b559010b75981b1bdce728da3ee90ad6",
                 "shasum": ""
             },
             "require": {
@@ -6550,7 +6544,7 @@
                 "symfony/polyfill-ctype": "^1.8"
             },
             "conflict": {
-                "vimeo/psalm": "<3.6.0"
+                "vimeo/psalm": "<3.9.1"
             },
             "type": "library",
             "autoload": {
@@ -6573,7 +6567,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2020-02-14T12:15:55+00:00"
+            "time": "2020-04-18T12:12:48+00:00"
         },
         {
             "name": "webonyx/graphql-php",
@@ -6759,19 +6753,15 @@
         },
         {
             "name": "yiisoft/yii2-composer",
-            "version": "2.0.8",
+            "version": "2.0.9",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/5c7ca9836cf80b34db265332a7f2f8438eb469b9",
-                "reference": "5c7ca9836cf80b34db265332a7f2f8438eb469b9",
+                "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/d191176c4f8372e397a9e3df27360dca6a70efaa",
+                "reference": "d191176c4f8372e397a9e3df27360dca6a70efaa",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "^1.0"
-            },
-            "require-dev": {
-                "composer/composer": "^1.0",
-                "phpunit/phpunit": "<7"
+                "composer-plugin-api": "^1.0 | ^2.0"
             },
             "type": "composer-plugin",
             "extra": {
@@ -6785,7 +6775,6 @@
                     "yii\\composer\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -6805,7 +6794,7 @@
                 "extension installer",
                 "yii2"
             ],
-            "time": "2019-07-16T13:22:30+00:00"
+            "time": "2020-04-20T18:47:46+00:00"
         },
         {
             "name": "yiisoft/yii2-debug",
