@@ -19,7 +19,9 @@
 
 return [
     'modules' => [
-        'my-module' => \modules\Module::class,
+        'qcna' => [
+            'class' => \modules\qcna\Qcna::class,
+        ],
     ],
-    //'bootstrap' => ['my-module'],
+    'bootstrap' => ['qcna'],
 ];

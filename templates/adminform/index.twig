@@ -3,209 +3,42 @@
 <html>
   <head>
     <title>Training Application Form</title>
-	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://qcna.qc.ca/dist/css/main.css">
     <style>
-      html, body {
-      min-height: 100%;
-      }
-      .imageContainer {
-       width:200px; 
-       height:200px; 
-       background-image: '';
-      }
-      body, div, form, input, select, p, textarea { 
-      padding: 0;
-      margin: 0;
-      outline: none;
-      font-family: Roboto, Arial, sans-serif;
-      font-size: 14px;
-      color: #666;
-      line-height: 22px;
-      -webkit-appearance: none;
-      }
-      h1 {
-      position: absolute;
-      margin: 0;
-      font-size: 32px;
-      color: #fff;
-      z-index: 2;
-      }
-      h2 {
-      font-weight: 400;
-      }
-      .testbox {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: inherit;
-      padding: 20px;
-      }
-      form {
-      width: 100%;
-      padding: 20px;
-      border-radius: 6px;
-      background: #fff;
-      box-shadow: 0 0 20px 0 #095484; 
-      }
       .banner {
       position: relative;
       height: 210px;
-      background-image: url("/dist/img/about-background.jpg");  
+      background-image: url(/dist/img/about-background.jpg);
       background-size: cover;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
-      }
-      .banner::after {
-      content: "";
-      background-color: rgba(0, 0, 0, 0.4); 
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      }
-      input, select {
-      margin-bottom: 10px;
-      border: 1px solid #ccc;
-      border-radius: 3px;
-      }
-      input {
-      width: calc(100% - 10px);
-      padding: 5px;
-      }
-      select {
-      width: 100%;
-      padding: 7px 0;
-      background: transparent;
-      }
-      .item:hover p, .item:hover i, .question:hover p, .question label:hover, input:hover::placeholder, a {
-      color: #095484;
-      }
-      .item input:hover, .item select:hover {
-      border: 1px solid transparent;
-      box-shadow: 0 0 6px 0 #095484;
-      color: #095484;
-      }
-      .item {
-      position: relative;
-      margin: 10px 0;
-      }
-      input[type="date"]::-webkit-inner-spin-button {
-      display: none;
-      }
-      .item i, input[type="date"]::-webkit-calendar-picker-indicator {
-      position: absolute;
-      font-size: 20px;
-      color: #a9a9a9;
-      }
-      .item i {
-      right: 2%;
-      top: 30px;
-      z-index: 1;
-      }
-      [type="date"]::-webkit-calendar-picker-indicator {
-      right: 1%;
-      z-index: 2;
-      opacity: 0;
-      cursor: pointer;
-      }
-      input[type=checkbox]  {
-      display: none;
-      }
-      label.check {
-      position: relative;
-      display: inline-block;
-      margin: 5px 20px 10px 0;
-      cursor: pointer;
-      }
-      .question span {
-      margin-left: 30px;
-      }
-      span.required {
-      margin-left: 0;
-      color: red;
-      }
-      label.check:before {
-      content: "";
-      position: absolute;
-      top: 2px;
-      left: 0;
-      width: 16px;
-      height: 16px;
-      border-radius: 2px;
-      border: 1px solid #095484;
-      }
-      input[type=checkbox]:checked + .check:before {
-      background: #095484;
-      }
-      label.check:after {
-      content: "";
-      position: absolute;
-      top: 6px;
-      left: 4px;
-      width: 8px;
-      height: 4px;
-      border: 3px solid #fff;
-      border-top: none;
-      border-right: none;
-      transform: rotate(-45deg);
-      opacity: 0;
-      }
-      input[type=checkbox]:checked + label:after {
-      opacity: 1;
-      }
-      .btn-block {
-      margin-top: 10px;
+  }
+    @media (min-width: 640px) {
+  .uk-child-width-1-2\@s > * {
+      width: 79%;
       text-align: center;
-      }
-      button {
-      width: 150px;
-      padding: 10px;
-      border: none;
-      border-radius: 5px; 
-      background: #095484;
-      font-size: 16px;
-      color: #fff;
-      cursor: pointer;
-      }
-      button:hover {
-      background: #0666a3;
-      }
-      @media (min-width: 568px) {
-      .name-item, .city-item {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      }
-      .name-item input, .city-item input {
-      width: calc(50% - 20px);
-      }
-      .city-item select {
-      width: calc(50% - 8px);
-      }
-      }
-    </style>
+      /* margin: auto; */
+  }
+  }
+  .contact-heading {
+    text-align: left;
+  }
+  .uk-textarea, .uk-select {
+    padding-left: 20px !important;
+    padding-top: 15px;
+  }
+  </style>
   </head>
   <body>
-        <nav class="navbar navbar-dark bg-primary">
-          <div class="text-left"><a href="{{ siteUrl }}" ><img src="/dist/img/qcna-logo-navbar.png" alt="QCNA"></a></div>
-        </nav>
-      <div class="banner">
-          <h1>Monthly Reporting Form</h1>
-        </div>  
-         
-        
- 
+        <div id="top-bar" class="uk-container uk-flex uk-flex-middle uk-visible@s"><ul class="list-inline"><li class="uk-margin-right"><a href="https://www.facebook.com/QuebecCommunityNewspapersAssociation?fref=ts" target="_blank" uk-icon="icon: facebook" class="uk-icon"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="facebook"><path d="M11,10h2.6l0.4-3H11V5.3c0-0.9,0.2-1.5,1.5-1.5H14V1.1c-0.3,0-1-0.1-2.1-0.1C9.6,1,8,2.4,8,5v2H5.5v3H8v8h3V10z"></path></svg></a></li><li class="uk-margin-right"><a href="https://twitter.com/QCNA" target="_blank" uk-icon="icon: twitter" class="uk-icon"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="twitter"><path d="M19,4.74 C18.339,5.029 17.626,5.229 16.881,5.32 C17.644,4.86 18.227,4.139 18.503,3.28 C17.79,3.7 17.001,4.009 16.159,4.17 C15.485,3.45 14.526,3 13.464,3 C11.423,3 9.771,4.66 9.771,6.7 C9.771,6.99 9.804,7.269 9.868,7.539 C6.795,7.38 4.076,5.919 2.254,3.679 C1.936,4.219 1.754,4.86 1.754,5.539 C1.754,6.82 2.405,7.95 3.397,8.61 C2.79,8.589 2.22,8.429 1.723,8.149 L1.723,8.189 C1.723,9.978 2.997,11.478 4.686,11.82 C4.376,11.899 4.049,11.939 3.713,11.939 C3.475,11.939 3.245,11.919 3.018,11.88 C3.49,13.349 4.852,14.419 6.469,14.449 C5.205,15.429 3.612,16.019 1.882,16.019 C1.583,16.019 1.29,16.009 1,15.969 C2.635,17.019 4.576,17.629 6.662,17.629 C13.454,17.629 17.17,12 17.17,7.129 C17.17,6.969 17.166,6.809 17.157,6.649 C17.879,6.129 18.504,5.478 19,4.74"></path></svg></a></li><li class="uk-margin-right"><a href="https://www.instagram.com/qcna.ajrq/" target="_blank" uk-icon="icon: instagram" class="uk-icon"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="instagram"><path d="M13.55,1H6.46C3.45,1,1,3.44,1,6.44v7.12c0,3,2.45,5.44,5.46,5.44h7.08c3.02,0,5.46-2.44,5.46-5.44V6.44 C19.01,3.44,16.56,1,13.55,1z M17.5,14c0,1.93-1.57,3.5-3.5,3.5H6c-1.93,0-3.5-1.57-3.5-3.5V6c0-1.93,1.57-3.5,3.5-3.5h8 c1.93,0,3.5,1.57,3.5,3.5V14z"></path><circle cx="14.87" cy="5.26" r="1.09"></circle><path d="M10.03,5.45c-2.55,0-4.63,2.06-4.63,4.6c0,2.55,2.07,4.61,4.63,4.61c2.56,0,4.63-2.061,4.63-4.61 C14.65,7.51,12.58,5.45,10.03,5.45L10.03,5.45L10.03,5.45z M10.08,13c-1.66,0-3-1.34-3-2.99c0-1.65,1.34-2.99,3-2.99s3,1.34,3,2.99 C13.08,11.66,11.74,13,10.08,13L10.08,13L10.08,13z"></path></svg></a></li><li class="uk-margin-right"><a href="https://www.linkedin.com/company/quebec-community-newspapers-association/" target="_blank" uk-icon="icon: linkedin" class="uk-icon"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="linkedin"><path d="M5.77,17.89 L5.77,7.17 L2.21,7.17 L2.21,17.89 L5.77,17.89 L5.77,17.89 Z M3.99,5.71 C5.23,5.71 6.01,4.89 6.01,3.86 C5.99,2.8 5.24,2 4.02,2 C2.8,2 2,2.8 2,3.85 C2,4.88 2.77,5.7 3.97,5.7 L3.99,5.7 L3.99,5.71 L3.99,5.71 Z"></path><path d="M7.75,17.89 L11.31,17.89 L11.31,11.9 C11.31,11.58 11.33,11.26 11.43,11.03 C11.69,10.39 12.27,9.73 13.26,9.73 C14.55,9.73 15.06,10.71 15.06,12.15 L15.06,17.89 L18.62,17.89 L18.62,11.74 C18.62,8.45 16.86,6.92 14.52,6.92 C12.6,6.92 11.75,7.99 11.28,8.73 L11.3,8.73 L11.3,7.17 L7.75,7.17 C7.79,8.17 7.75,17.89 7.75,17.89 L7.75,17.89 L7.75,17.89 Z"></path></svg></a></li></ul><ul class="list-inline uk-margin-auto-left"><li class="uk-margin-left"><a id="language-switcher" href="https://qcna.qc.ca/fr/contact" lang="fr">FR</a></li><li class="uk-margin-left"><a href="https://qcna.qc.ca/grants" class="uk-button uk-button-primary uk-button-small">LJI Grant Application</a></li><li class="uk-margin-left"><a href="/admin/entries/news" class="uk-button uk-button-primary uk-button-small">Members Area</a></li></ul></div>
+        <header id="page-header" class="uk-cover-container uk-light"><img src="https://qcna.qc.ca/dist/img/hero-background.jpg" uk-cover="" class="uk-cover" style=""><div class="navbar-wrapper uk-sticky" uk-sticky="" style=""><div class="uk-container uk-position-relative"><nav class="uk-navbar-container uk-navbar-transparent uk-light uk-navbar" uk-navbar=""><div class="uk-navbar-left"><a class="uk-navbar-item uk-logo uk-padding-remove-left" href="https://qcna.qc.ca/" aria-expanded="false"><img src="https://qcna.qc.ca/dist/img/qcna-logo-navbar.png" alt="QCNA"></a></div><div class="uk-navbar-right"><ul class="uk-navbar-nav uk-visible@m"><li><a href="https://qcna.qc.ca/about-us">About Us</a></li><li><a href="https://qcna.qc.ca/services">Our Services</a></li><li><a href="https://qcna.qc.ca/advertise-with-us">Advertise With Us</a></li><li><a href="https://qcna.qc.ca/newspapers">Our Newspapers</a></li><li><a href="https://qcna.qc.ca/news">News</a></li></ul><div class="uk-navbar-item uk-hidden@m"><a class="uk-icon-button uk-icon" href="#menu-offcanvas" uk-icon="icon: menu; ratio: 1.5" title="Menu" uk-toggle=""><svg width="30" height="30" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="menu"><rect x="2" y="4" width="16" height="1"></rect><rect x="2" y="9" width="16" height="1"></rect><rect x="2" y="14" width="16" height="1"></rect></svg></a></div></div></nav></div></div><div class="uk-sticky-placeholder" style="height: 80px; margin: 30px 0px 0px;" hidden=""></div><div class="uk-container uk-position-relative"><div class="header-inner uk-text-center uk-padding-large"><div class="uk-width-1-1"><h1>Monthly Reporting Form</h1></div></div></div></header>
       <form method="post" action="" accept-charset="UTF-8">
           {{ csrfInput() }}
           <input type="hidden" name="action" value="contact-form/send">
            {{ redirectInput('thanks') }}
-        {# <div class="banner">
-          <h1>Monthly Reporting Form</h1>
-        </div> #}
-
         {% macro errorList(errors) %}
         {% if errors %}
         <ul class="errors">
@@ -216,129 +49,135 @@
         {% endif %}
         {% endmacro %}
         {% from _self import errorList %}
-<div class="jumbotron">
-        <h2>Newspaper general information</h2>
-        <div class="item">
-          <p>Name</p>
-          <div class="name-item">
-            <input type="text" id="from-name" name="message[FirstName]" placeholder="First"/>
-            
-            <input type="text" name="message[LastName]" placeholder="Last"/>
-          </div>
-        </div>
-        <div class="item">
-          <p>Website</p>
-          <input type="text" name="message[website]"/>
-        </div>
-        <div class="item">
-          <p>Full Address</p>
-          <input type="text" name="message[fulladdress]"/>
-        </div>
-        <div class="item">
-          <p>Mailing Address (if different from primary address)</p>
-          <input type="text" name="message[MailingAddress]"/>
-        </div>
-</div>        
-        {# <div class="item">
-          <p>Company name</p>
-          <input type="text" name="name"/>
-        </div>
-        <div class="item">
-          <p>Address</p>
-          <input type="text" name="name" placeholder="Street address" />
-          <input type="text" name="name" placeholder="Street address line 2" />
-          <div class="city-item">
-            <input type="text" name="name" placeholder="City" />
-            <input type="text" name="name" placeholder="Region" />
-            <input type="text" name="name" placeholder="Postal / Zip code" />
-            <select>
-              <option value="">Country</option>
-              <option value="1">Russia</option>
-              <option value="2">Germany</option>
-              <option value="3">France</option>
-              <option value="4">Armenia</option>
-              <option value="5">USA</option>
-            </select>
-          </div>
-        </div> #}
-<div class="jumbotron">
-        <h2>Contact Information</h2>
-        <div class="item">
-          <p>Name of primary contact</p>
-          <input type="text" name="message[NameOfPrimaryContact]"/>
-        </div>
-        <div class="item">
-          <p>Title of primary contact</p>
-          <input type="text" name="message[TitleOfPrimaryContact]"/>
-        </div>
-        <div class="item">
-          <p>Contact</p>
-          <div class="name-item">
-            <input type="text" name="message[Phone]" placeholder="Phone"/>
-            <input type="text" name="message[Fax]" placeholder="Fax"/>
-          </div>
-        </div>
-        <div class="item">
-          <p>E-mail</p>
-          <input id="from-email" type="email" name="fromEmail" value="{{ message.fromEmail ?? '' }}"/>
-           {{ message is defined and message ? errorList(message.getErrors('fromEmail')) }}
-        </div>
-        <div class="question">
-          <p>Preffered mode of communication:</p>
-          <div class="question-answer checkbox-item">
-            <div>
-              <input type="checkbox" value="email" id="email" name="message[PrefferedModeOfCommunication][]" value="Email"/>
-              <label for="email" class="check"><span>E-Mail</span></label>
-            <input type="checkbox" value="email" id="phone" name="message[PrefferedModeOfCommunication][]" value="Phone"/>
-              <label for="phone" class="check"><span>Phone</span></label>
-            </div>
-          </div>
-        </div>
-</div>
-<div class="jumbotron">
-        <h2>Project Reporting</h2>
+      <div class="uk-section uk-section-muted"><div class="uk-container"><div class="uk-child-width-1-2@s uk-grid" uk-grid=""><div class="contact-form-container uk-first-column"><h3 class="contact-heading">Newspaper general information</h3>
+                <div class="uk-margin ">
+                  <label for="name" class="required">
+                                      First Name
+                                  </label>
+                                  <input type="text" name="message[FirstName]" placeholder="First Name" class="uk-input uk-form-large"/>
+                               </div>
+                               <div class="uk-margin ">
+                  <label for="name" class="required">
+                                      Last Name
+                                  </label>
+                                  <input type="text" name="message[FirstName]" placeholder="Last Name" class="uk-input uk-form-large"/>
+                               </div>
+                               <div class="uk-margin ">
+                  <label for="name" class="required">
+                                      Website
+                                  </label>
+                                  <input type="text"  name="message[website]" placeholder="Website" class="uk-input uk-form-large"/>
+                               </div>
+                               <div class="uk-margin ">
+                  <label for="name" class="required">
+                                      Full Address
+                                  </label>
+                                  <input type="text"  name="message[fulladdress]" placeholder="Full Address" class="uk-input uk-form-large"/>
+                               </div>
+                               <div class="uk-margin ">
+                  <label for="name" class="required">
+                                      Mailing Address (if different from primary address)
+                                  </label>
+                                  <input type="text"  name="message[MailingAddress]" placeholder="Mailing Address (if different from primary address)" class="uk-input uk-form-large"/>
+                               </div>
+                               <br />
+                               <h3 class="contact-heading">Contact Information</h3>
+                               <div class="uk-margin ">
+                  <label for="name" class="required">
+                                      Name of primary contact
+                                  </label>
+                                  <input type="text"  name="message[NameOfPrimaryContact]" placeholder="Name of primary contact" class="uk-input uk-form-large"/>
+                               </div>
+                                <div class="uk-margin ">
+                  <label for="name" class="required">
+                                      Title of primary contact
+                                  </label>
+                                  <input type="text"  name="message[TitleOfPrimaryContact]" placeholder="Title of primary contact" class="uk-input uk-form-large"/>
+                               </div>
+                               <br />
+                               <h3 class="contact-heading">Contact</h3>
+                               <div class="uk-margin ">
+                  <label for="name" class="required">
+                                      Phone
+                                  </label>
+                                  <input type="text"  name="message[Phone]" placeholder="Phone" class="uk-input uk-form-large"/>
+                               </div>
+                               <div class="uk-margin ">
+                  <label for="name" class="required">
+                                      Fax
+                                  </label>
+                                  <input type="text"  name="message[Fax]" placeholder="Fax" class="uk-input uk-form-large"/>
+                               </div>
+                               <div class="uk-margin ">
+                  <label for="name" class="required">
+                                      Fax
+                                  </label>
+                                  <input type="text"  name="fromEmail" placeholder="E-mail" class="uk-input uk-form-large"/>
+                               </div>
+                               <div class="uk-margin ">
+                  <p><b>Preffered mode of communication:</b></p>
+                                    <span>E-Mail</span>
+                                    <input type="checkbox" value="email" id="phone" name="message[PrefferedModeOfCommunication][]">
+                                    &nbsp;&nbsp;
+                                    <span>Phone</span>
+                                    <input type="checkbox" value="Phone" id="phone" name="message[PrefferedModeOfCommunication][]">
+                               </div>
+                               <br />
+                               <br />
+                               <h2 class="contact-heading">Project Reporting</h2>
+                               <h3 class="contact-heading">A. News Articles</h3>
+                               <div class="uk-margin ">
+                  <label for="name" class="required">
+                                      Please provide the number and titles of regular news articles produced during the month for the LJI program.
+                                  </label>
+                                  <textarea name="message[NewsArticles]"  rows="5" class="uk-textarea uk-form-large" placeholder="Please provide the number and titles of regular news articles produced during the month for the LJI program."></textarea>
+                               </div>
+                                <div class="uk-margin ">
+                  <label for="name" class="required">
+                                      Please provide the number and titles of in-depth news articles produced during the month for the LJI program.
+                                  </label>
+                                  <textarea name="message[IndepthArticles]"  rows="5" class="uk-textarea uk-form-large" placeholder="Please provide the number and titles of in-depth news articles produced during the month for the LJI program."></textarea>
+                               </div>
+                               <br />
+                               <h3 class="contact-heading">B. Demographics</h3>
+                               <div class="uk-margin ">
+                  <label for="name" class="required">
+                                      Please provide a detailed description of the demographics covered during the month for this program.
+                                  </label>
+                                  <textarea name="message[Demographics]"  rows="5" class="uk-textarea uk-form-large" placeholder="Please provide a detailed description of the demographics covered during the month for this program."></textarea>
+                               </div>
+                                <div class="uk-margin ">
+                  <label for="name" class="required">
+                                      Mention all the names and description of communities and regions covered this month for LJI.
+                                  </label>
+                                  <textarea name="message[Communities]"  rows="5" class="uk-textarea uk-form-large" placeholder="Mention all the names and description of communities and regions covered this month for LJI."></textarea>
+                               </div>
+                                <br />
+                                <h3 class="contact-heading">C. Civic institutions and Civic Issues</h3>
+                                <div class="uk-margin ">
+                  <label for="name" class="required">
+                                      Please name all the civic institutions covered for this program. If your organization has not covered any civic institutions during this month, we would like to know if you are planning to do so in the future.
+                                  </label>
+                                  <textarea name="message[CivicInstitutions]"  rows="5" class="uk-textarea uk-form-large" placeholder="Please name all the civic institutions covered for this program. If your organization has not covered any civic institutions during this month, we would like to know if you are planning to do so in the future."></textarea>
+                               </div>
+                               <div class="uk-margin ">
+                  <label for="name" class="required">
+                                      Please name and provide a brief description of all the civic issues covered for this program. If your organization has not covered any civic issues  during this month, we would like to know if you are planning to do so in the future.
+                                  </label>
+                                  <textarea name="message[CommunitiesRegions]"  rows="5" class="uk-textarea uk-form-large" placeholder="Please name and provide a brief description of all the civic issues covered for this program. If your organization has not covered any civic issues  during this month, we would like to know if you are planning to do so in the future."></textarea>
+                               </div>
+                               <br />
+                               <h3 class="contact-heading">D. Objectives</h3>
+                               <div class="uk-margin ">
+                  <label for="name" class="required">
+                                      What are the objectives achieved so far by this project ?
+                                  </label>
+                                  <textarea name="message[Objectives]"  rows="5" class="uk-textarea uk-form-large" placeholder="What are the objectives achieved so far by this project ?"></textarea>
+                               </div>
+                                <button type="submit" class="uk-button uk-button-default button-rounded button-colored">Submit</button>
+                            </div></div></div>
 
-         <h3>A. News Articles</h3>
-        <div class="item">
-          <p>Number and titles of regular news articles</p>
-          <textarea style="width:100%" name="message[NewsArticles]" placeholder="Please provide the number and titles of regular news articles produced during the month for the LJI program."/></textarea>
-        </div>
-        <div class="item">
-          <p>Number and titles for in-depth news articles</p>
-          <textarea style="width:100%" name="message[IndepthArticles]" placeholder="Please provide the number and titles of in-depth news articles produced during the month for the LJI program."/></textarea>
-        </div>
-        <h3>B. Demographics</h3>
-        <div class="item">
-          <p>Detailed descriptions of the demographics covered</p>
-          <textarea style="width:100%" name="message[Demographics]" placeholder="Please provide a detailed description of the demographics covered during the month for this program."/></textarea>
-        </div>
-        <div class="item">
-          <p>Communities and Regions</p>
-          <textarea style="width:100%" name="message[Communities]" placeholder="Mention all the names and description of communities and regions covered this month for LJI."/></textarea>
-        </div>
-        <h3>C. Civic institutions and Civic Issues</h3>
-        <div class="item">
-          <p>Civic Institutions</p>
-          <textarea style="width:100%" name="message[CivicInstitutions]" placeholder="Please name all the civic institutions covered for this program. If your organization has not covered any civic institutions during this month, we would like to know if you are planning to do so in the future."/></textarea>
-        </div>
-        <div class="item">
-          <p>Communities and Regions</p>
-          <textarea style="width:100%" style="width:100%" name="message[CommunitiesRegions]" placeholder="Please name and provide a brief description of all the civic issues covered for this program. If your organization has not covered any civic issues  during this month, we would like to know if you are planning to do so in the future."/></textarea>
-        </div>
-        <h3>D. Objectives</h3>
-        <div class="item">
-          <p>Objectives</p>
-          <textarea style="width:100%" name="message[Objectives]" placeholder="What are the objectives achieved so far by this project ?"/></textarea>
-        </div>
-</div>
-
-
-        <div class="btn-block">
-          <button type="submit" value="Send">Send</button>
-        </div>
-      </form>
- 
-	 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>

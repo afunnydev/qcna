@@ -24,7 +24,7 @@
                 <li><a href="{{ newsListing.url }}">{{ newsListing.title }}</a></li>
                 <li>{{ category.title }}</li>
             </ul>
-            {% set news = craft.entries.section('news').relatedTo(category).limit(8).all() %}
+            {% set news = craft.entries.section('news').relatedTo(category).all() %}
             {% if news|length %}
                 <section class="uk-margin-large-bottom">
                     <div class="uk-child-width-1-4@l uk-child-width-1-2@m uk-child-width-1-2@s uk-grid-match" uk-grid>

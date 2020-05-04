@@ -36,7 +36,7 @@
             <li><a href="{{ craft.entries.section('contact').one().url }}" {{ activeClass('contact') }}><span class="uk-margin-small-right uk-icon" uk-icon="icon: triangle-right"></span> {{ 'Contact Us'|t }}</a></li>
             <li class="uk-nav-header">{{ 'LJI Program'|t }}</li>
             <li><a href="{{ url('grants') }}" {{ activeClass('grants') }}><span class="uk-margin-small-right uk-icon" uk-icon="icon: triangle-right"></span> {{ 'Grant Instructions'|t }}</a></li>
-            <li><a href="/admin/entries/news"><span class="uk-margin-small-right uk-icon" uk-icon="icon: triangle-right"></span> {{ 'Journalist Login'|t }}</a></li>
+            <li><a href="/admin/entries/news"><span class="uk-margin-small-right uk-icon" uk-icon="icon: triangle-right"></span> {{ 'LJI Login'|t }}</a></li>
         </ul>
     </div>
 </div>
@@ -55,7 +55,7 @@
     <ul class="list-inline uk-margin-auto-left">
         <li class="uk-margin-left">{% include '_partials/switcher' %}</li>
         <li class="uk-margin-left">
-            <a href="{{ url('grants') }}" class="uk-button uk-button-primary uk-button-small">LJI Grant Application</a>
+            <a href="/admin/entries/news" class="uk-button uk-button-primary uk-button-small">{{ 'LJI Login'|t }}</a>
             {#
             {% if currentUser %}
                 <a href="/admin" class="uk-button uk-button-primary uk-button-small">{{ "My Dashboard"|t }}</a>
@@ -65,7 +65,7 @@
             #}
         </li>
         <li class="uk-margin-left">
-            <a href="/admin/entries/news" class="uk-button uk-button-primary uk-button-small">{{ "Members Area"|t }}</a>
+            <a href="{{ url('contact') }}" class="uk-button uk-button-primary uk-button-small">{{ "Contact Us"|t }}</a>
         </li>
     </ul>
 </div>

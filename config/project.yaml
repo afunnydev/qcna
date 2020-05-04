@@ -243,7 +243,7 @@ cp-nav:
       prevUrl: graphql
       type: ''
       url: graphql
-dateModified: 1587565988
+dateModified: 1588187672
 email:
   fromEmail: $EMAIL_USER
   fromName: QCNA
@@ -800,6 +800,18 @@ fields:
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
+  3fd7e312-3e71-4baa-bfe4-c6ef1e85582a:
+    contentColumnType: boolean
+    fieldGroup: e6553d1f-17d6-4a13-919a-d3e435f00223
+    handle: pushToCanadaLocal
+    instructions: 'Enable to push the article to qcna.canadalocal.media.'
+    name: 'Push to qcna.canadalocal.media'
+    searchable: false
+    settings:
+      default: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
   404f64c3-15a7-4208-a3bb-cf67832b33ce:
     contentColumnType: string
     fieldGroup: a9590745-8a24-4ec5-9c14-7f72d5734273
@@ -3150,12 +3162,12 @@ sections:
     propagationMethod: all
     siteSettings:
       5b81df98-3353-4519-b38a-9c7c6e3fc1e4:
-        enabledByDefault: true
+        enabledByDefault: false
         hasUrls: true
         template: index
         uriFormat: 'nouvelles/{slug}'
       d7acb83a-8fb9-4143-b21e-34c7af63bf45:
-        enabledByDefault: true
+        enabledByDefault: false
         hasUrls: true
         template: index
         uriFormat: 'news/{slug}'

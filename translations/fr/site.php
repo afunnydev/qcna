@@ -22,6 +22,8 @@ return [
     "Visit Website" => "Visiter le site web",
     "Subscribers" => "Abonnés",
     "Swipe left/right to view all the data" => "Balayez vers la gauche / droite pour afficher toutes les données",
+    "LJI Login" => "Connexion LJI",
+    "Contact Us" => "Nous Joindre",
 
     // Search
     "Search" => "Recherche",
