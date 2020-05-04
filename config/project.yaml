@@ -243,7 +243,7 @@ cp-nav:
       prevUrl: graphql
       type: ''
       url: graphql
-dateModified: 1588187672
+dateModified: 1588604844
 email:
   fromEmail: $EMAIL_USER
   fromName: QCNA
@@ -3101,6 +3101,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  wordsmith:
+    edition: standard
+    enabled: true
+    schemaVersion: 0.0.0.0
 sections:
   108495a8-0a10-4955-ac62-bdc8e88dd370:
     enableVersioning: true

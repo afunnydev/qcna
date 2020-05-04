@@ -35,7 +35,7 @@
             <h5 class="uk-card-title">
                 <a class="uk-link-heading" href="{{ article.url }}">{{ article.title }}</a>
             </h5>
-            <p>{{ article.newsSummary }}</p>
+            <p>{{ article.newsSummary|chop(limit=20, unit='w') }} [...]</p>
         </div>
         <div class="uk-card-footer">
             <a href="{{ article.url }}" class="uk-button uk-button-text">{{ 'Read more'|t }}</a>
