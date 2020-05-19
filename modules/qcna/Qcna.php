@@ -45,6 +45,9 @@ class Qcna extends Module
             Elements::class,
             Elements::EVENT_AFTER_SAVE_ELEMENT,
             function (ElementEvent $e) {
+                // Exit function until module is completed
+                return;
+
                 // @var Entry $entry
                 $entry = $e->element;
 
@@ -82,6 +85,9 @@ class Qcna extends Module
             Elements::class,
             Elements::EVENT_AFTER_DELETE_ELEMENT,
             function (ElementEvent $e) {
+                // Exit function until module is completed
+                return;
+
                 $entry = $e->element;
 
                 // Exit function if the event sender isn't an 'Entry'
@@ -189,7 +195,7 @@ class Qcna extends Module
                                 externalMappingList: [
                                     {
                                         externalMappingSystem: '',
-                                        externalId: ''
+                                        externalId: 'qcna_$entry->id',
                                     }
                                 ],
                                 canonicalUrlOverride: $entry->url,
@@ -236,6 +242,8 @@ class Qcna extends Module
             'Authorization' => 'Bearer ' . $token,
             'Content-Type'  => 'application/json'
         ];
+
+        // TODO: Unpublish article on Omerlo and delete it
     }
 
     /**
@@ -252,6 +260,8 @@ class Qcna extends Module
             'Authorization' => 'Bearer ' . $token,
             'Content-Type'  => 'application/json'
         ];
+
+        // TODO: Save the author in Omerlo
     }
 
     /**
@@ -262,7 +272,7 @@ class Qcna extends Module
      *
      * @return $author
      */
-    public function getAuthor($id, $token)
+    public function getAuthor($authorId, $token)
     {
         $url = getenv('API_GRAPHQL_URL');
         $headers = [
@@ -270,6 +280,9 @@ class Qcna extends Module
             'Content-Type'  => 'application/json'
         ];
         $author = '';
+
+        // TODO: Get Omerlo author by ID
+
         return $author;
     }
 
@@ -287,5 +300,7 @@ class Qcna extends Module
             'Authorization' => 'Bearer ' . $token,
             'Content-Type'  => 'application/json'
         ];
+
+        // TODO: Save image in Omerlo and return its ID
     }
 }
