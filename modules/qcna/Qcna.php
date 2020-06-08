@@ -46,7 +46,7 @@ class Qcna extends Module
             Elements::EVENT_AFTER_SAVE_ELEMENT,
             function (ElementEvent $e) {
                 // Exit function until module is completed
-                return;
+                //return;
 
                 // @var Entry $entry
                 $entry = $e->element;
@@ -76,7 +76,9 @@ class Qcna extends Module
                 if (!empty($loginResponse['access_token'])) {
                     $token = $loginResponse['access_token'];
                     // Push the article to Omerlo
-                    $this->pushEntry($entry, $token);
+                    $this->saveImage($entry, $token);
+                    //$this->saveAuthor($entry, $token);
+                    //$this->saveArticle($entry, $token);
                 }
             }
         );
@@ -86,7 +88,7 @@ class Qcna extends Module
             Elements::EVENT_AFTER_DELETE_ELEMENT,
             function (ElementEvent $e) {
                 // Exit function until module is completed
-                return;
+                //return;
 
                 $entry = $e->element;
 
@@ -163,7 +165,7 @@ class Qcna extends Module
      *
      * @return void
      */
-    public function pushEntry($entry, $token)
+    public function saveArticle($entry, $token)
     {
         $url = getenv('API_GRAPHQL_URL');
         $headers = [
@@ -171,6 +173,7 @@ class Qcna extends Module
             'Content-Type'  => 'application/json'
         ];
 
+        // Save article
         $curl = new curl\Curl();
         $response = $curl->setPostParams(
             [
@@ -191,10 +194,12 @@ class Qcna extends Module
                                         text: $entry->summary
                                     }
                                 ],
-                                authorIds: [],
+                                authorIds: [
+                                    $entry->author->email
+                                ],
                                 externalMappingList: [
                                     {
-                                        externalMappingSystem: '',
+                                        externalMappingSystem: 'QCNA_WEBSITE',
                                         externalId: 'qcna_$entry->id',
                                     }
                                 ],
@@ -224,7 +229,7 @@ class Qcna extends Module
                         }
                     }",
             ]
-        )->post($url);
+        )->setHeaders($headers)->post($url);
     }
 
     /**
@@ -253,7 +258,7 @@ class Qcna extends Module
      *
      * @return void
      */
-    public function saveAuthor($token)
+    public function saveAuthor($entry, $token)
     {
         $url = getenv('API_GRAPHQL_URL');
         $headers = [
@@ -261,29 +266,37 @@ class Qcna extends Module
             'Content-Type'  => 'application/json'
         ];
 
-        // TODO: Save the author in Omerlo
-    }
-
-    /**
-     * Get an author by ID
-     *
-     * @param integer $id    The Author ID
-     * @param string  $token API access token
-     *
-     * @return $author
-     */
-    public function getAuthor($authorId, $token)
-    {
-        $url = getenv('API_GRAPHQL_URL');
-        $headers = [
-            'Authorization' => 'Bearer ' . $token,
-            'Content-Type'  => 'application/json'
-        ];
-        $author = '';
-
-        // TODO: Get Omerlo author by ID
-
-        return $author;
+        // Save author
+        $curl = new curl\Curl();
+        $response = $curl->setPostParams(
+            [
+                "query" =>
+                    "mutation {
+                        saveAuthor(
+                            author: {
+                                name: $entry->author->fullname,
+                                email: $entry->author->email,
+                                externalMappingList: [
+                                    {
+                                        externalMappingSystem: 'QCNA_WEBSITE',
+                                        externalId: $entry->author->email
+                                    }
+                                ]
+                            }
+                        )
+                        {
+                            result {
+                                id
+                                name
+                                email
+                                externalMappingList {
+                                    externalId
+                                }
+                            }
+                        }
+                    }",
+            ]
+        )->setHeaders($headers)->post($url);
     }
 
     /**
@@ -293,14 +306,35 @@ class Qcna extends Module
      *
      * @return void
      */
-    public function saveImage($token)
+    public function saveImage($entry, $token)
     {
-        $url = getenv('API_GRAPHQL_URL');
+        echo '<pre>';
+        var_dump($entry->newsFeaturedImage->one()->filename);
+        echo '</pre>';
+        exit();
+
+        $url = getenv('API_IMAGE_ENDPOINT');
         $headers = [
             'Authorization' => 'Bearer ' . $token,
             'Content-Type'  => 'application/json'
         ];
+        
+        $image = $entry->newsFeaturedImage->one();
+
+        $data = [
+            'file' => $image->filename,
+            'type' => 'CONTENT'
+        ];
 
         // TODO: Save image in Omerlo and return its ID
+        $curl = new curl\Curl();
+        $response = $curl->setPostParams(
+            [
+                'body' => $data,
+
+            ]
+        )->setHeaders($headers)->post($url);
+
+        return json_decode($response, true);
     }
 }

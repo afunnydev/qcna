@@ -243,7 +243,7 @@ cp-nav:
       prevUrl: graphql
       type: ''
       url: graphql
-dateModified: 1588604844
+dateModified: 1591627919
 email:
   fromEmail: $EMAIL_USER
   fromName: QCNA
@@ -3088,7 +3088,7 @@ plugins:
   seo:
     edition: standard
     enabled: true
-    schemaVersion: 3.1.0
+    schemaVersion: 3.1.1
   sprout-active:
     edition: standard
     enabled: true
@@ -3129,10 +3129,10 @@ sections:
                     required: false
                     sortOrder: 2
                   a40560ab-5017-4950-abd0-368255b64916:
-                    required: false
+                    required: true
                     sortOrder: 4
                   b35dee1a-fb6e-4b8e-9000-04af1fc94aed:
-                    required: false
+                    required: true
                     sortOrder: 3
                 name: Body
                 sortOrder: 2
