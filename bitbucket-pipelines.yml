@@ -1,0 +1,22 @@
+pipelines:
+  default:
+    - step:
+        name: Default deployment
+        image: eeacms/rsync:2.3
+        script:
+          - echo "Deploy to Staging!"
+
+  branches:
+     master:
+      - step:
+          image: eeacms/rsync:2.3
+          script:
+            - echo "Deploy to Staging!"
+            - rsync -aclvrzp --rsync-path="rsync" --no-perms --chown=www-data:www-data --exclude config/ --exclude .git/  -e "ssh -p22" ./ $DEV_URL
+  tags:
+     v*:
+      - step:
+          image: eeacms/rsync:2.3
+          script:
+            - echo "Deploy to Staging!"
+            - rsync -aclvrzp --rsync-path="rsync" --no-perms --exclude config/ --exclude .git/  -e "ssh -p22" ./ $PROD_URL

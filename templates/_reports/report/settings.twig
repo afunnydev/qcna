@@ -1,0 +1,37 @@
+{% import '_includes/forms' as forms %}
+
+{% set month = craft.request.getParam('month') %}
+{% set year = craft.request.getParam('year')  %}
+
+{% set value = now|date_modify('first day of ' ~ month ~ ' ' ~ year ~ ' 23:59:59') %}
+
+{{ forms.dateField({
+    label: "Start Date"|t,
+    instructions: "The start date of the date range you wish to display in your report."|t,
+    id: "startdate",
+    name: "startdate",
+    class: "datepicker",
+    size: 10,
+    value: settings.startdate is defined ? settings.startdate : now|date_modify('first day of ' ~ month ~ ' ' ~ year ~ ' 00:00:00'),
+    first: true
+}) }}
+
+{{ forms.dateField({
+    label: "End Date"|t,
+    instructions: "The end date of the date range you wish to display in your report."|t,
+    id: "enddate",
+    name: "enddate",
+    size: 10,
+    value: (settings.enddate is defined ? settings.enddate : now|date_modify('last day of ' ~ month ~ ' ' ~ year ~ ' 23:59:59'))
+}) }}
+
+{%- js -%}
+
+$('#settings\u002Dstartdate\u002Ddate').datepicker($.extend({
+            defaultDate: new Date({% if value %}{{ value.format('Y') }}, {{ value.format('n')-1 }}, {{ value.format('j') }}{% endif %})
+        }, Craft.datepickerOptions));
+$('#settings\u002Denddate\u002Ddate').datepicker($.extend({
+            defaultDate: new Date({% if value %}{{ value.format('Y') }}, {{ value.format('n') }}, {{ value.format('j') }}{% endif %})
+        }, Craft.datepickerOptions));
+
+{%- endjs -%}

@@ -2,22 +2,23 @@
   "require": {
     "aelvan/imager": "v2.4.0",
     "barrelstrength/sprout-active": "2.2.0",
-    "craftcms/cms": "3.4.22.1",
+    "barrelstrength/sprout-reports": "1.5.10",
+    "craftcms/cms": "3.7.16",
     "craftcms/contact-form": "2.2.7",
-    "craftcms/feed-me": "4.2.3",
-    "craftcms/redactor": "2.6.1",
+    "craftcms/feed-me": "4.4.0",
+    "craftcms/redactor": "2.8.8",
     "dukt/analytics": "4.0.10",
-    "ether/seo": "3.6.5.1",
+    "ether/seo": "3.7.4",
     "linslin/yii2-curl": "^1.3",
     "misterbk/mix": "1.5.2",
-    "sebastianlenz/linkfield": "1.0.22",
-    "solspace/craft-express-forms": "1.0.5",
-    "topshelfcraft/wordsmith": "3.2.0",
-    "verbb/cp-nav": "3.0.12",
-    "verbb/field-manager": "2.1.6",
-    "verbb/super-table": "2.5.0",
+    "sebastianlenz/linkfield": "1.0.25",
+    "solspace/craft-express-forms": "1.1.1",
+    "topshelfcraft/wordsmith": "3.3.0.1",
+    "verbb/cp-nav": "3.0.17",
+    "verbb/field-manager": "2.2.4",
+    "verbb/super-table": "2.6.8",
     "vlucas/phpdotenv": "^3.4.0",
-    "wbrowar/craft-communicator": "1.0.0"
+    "wbrowar/craft-communicator": "1.0.2"
   },
   "autoload": {
     "psr-4": {
@@ -28,7 +29,7 @@
     "sort-packages": true,
     "optimize-autoloader": true,
     "platform": {
-      "php": "7.0"
+      "php": "7.4"
     }
   },
   "scripts": {

@@ -1,0 +1,36 @@
+{# addHeaderRow accepts a single array with a comma-separated list of values #}
+{% do craft.sproutReports.addHeaderRow(['News Title', 'Author', 'Date','Newspapers']) %}
+
+{% set startDay = settings.startdate.date %}
+{% set endDay = settings.enddate.date %}
+
+
+{% set news = craft.entries
+    .section('news')
+    .after(startDay|atom)
+    .before(endDay|atom)
+    .all()
+%}
+
+
+{% for item in news %}
+	{% set authorID = item.author.id %}
+    
+   {% set newspapers = craft.entries
+        .section('newspapers')        
+        .relatedTo({
+            element: authorID,
+            field: 'journalists'
+        })
+        .all()        
+    %}
+    
+    {% do craft.sproutReports.addRow([
+        item.title,
+		item.author,
+        item.postDate|date('d F Y'),
+        newspapers|join(', ')
+    ]) %}
+    
+    
+{% endfor %}
