@@ -16,5 +16,6 @@ return [
     'database' => getenv('DB_DATABASE'),
     'schema' => getenv('DB_SCHEMA'),
     'tablePrefix' => getenv('DB_TABLE_PREFIX'),
-    'port' => getenv('DB_PORT')
+    'port' => getenv('DB_PORT'),
+//    'attributes' => [PDO::ATTR_CASE => PDO::CASE_LOWER]
 ];
